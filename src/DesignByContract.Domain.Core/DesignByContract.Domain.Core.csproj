@@ -31,11 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\Entities\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
-    <Folder Include="Interfaces\Entities\" />
     <Folder Include="Interfaces\ValueObjects\" />
     <Folder Include="ValueObjects\" />
   </ItemGroup>
