@@ -32,11 +32,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Interfaces\Entities\IEntity.cs" />
+    <Compile Include="Interfaces\ValueObjects\IValueObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
-    <Folder Include="Interfaces\ValueObjects\" />
     <Folder Include="ValueObjects\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
