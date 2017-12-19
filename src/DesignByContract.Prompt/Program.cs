@@ -7,8 +7,8 @@ namespace DesignByContract.Prompt
     {
         private static void Main()
         {
-            var validEmail = new Email("tiagopariz@gmail.com");
-            var invalidEmail = new Email("tiagopariz_gmail.comtiagopariz_gmail.comtiagopariz_gmail.comtiagopariz_gmail.comtiagopariz_gmail.comtiagopariz_gmail.comtiagopariz_gmail.com" +
+            var validName = new PersonName("Tiago Pariz");
+            var invalidName = new PersonName("tiagopariz_gmail.comtiagopariz_gmail.comtiagopariz_gmail.comtiagopariz_gmail.comtiagopariz_gmail.comtiagopariz_gmail.comtiagopariz_gmail.com" +
                                          "tiagopariz_gmail.comtiagopariz_gmail.comtiagopariz_gmail.comtiagopariz_gmail.comtiagopariz_gmail.comtiagopariz_gmail.comtiagopariz_gmail.com");
 
             Console.WriteLine("Pausa");
