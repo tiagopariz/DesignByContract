@@ -19,7 +19,7 @@ namespace DesignByContract.Domain.Specifications.ValueObjects
         public override bool IsSatisfiedBy(T candidate)
         {
             var email = candidate as Email;
-            email?.Notification.List.Clear();
+            //email?.Notification.List.Clear();
 
             if (string.IsNullOrEmpty(email?.Address) && !_required)
                 return true;
@@ -34,7 +34,7 @@ namespace DesignByContract.Domain.Specifications.ValueObjects
             if (!Regex.IsMatch(email?.Address ?? "", pattern))
                 email?.Notification.Add(new ErrorDescription("Formato de e-mail inválido", new Critical()));
 
-            return email?.Notification.HasErrors ?? false;
+            return !email?.Notification.HasErrors ?? false;
         }
     }
 }

@@ -18,5 +18,16 @@ namespace DesignByContract.Domain.Core.Notifications
         {
             List.Add(description);
         }
+
+        public void Concat(params Notification[] args)
+        {
+            foreach (var notification in args)
+            {
+                foreach (var description in notification.List)
+                {
+                    List.Add(description);
+                }
+            }
+        }
     }
 }

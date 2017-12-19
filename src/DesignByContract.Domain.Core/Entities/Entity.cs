@@ -1,5 +1,7 @@
 ﻿using System;
+using DesignByContract.Domain.Core.Errors;
 using DesignByContract.Domain.Core.Interfaces.Entities;
+using DesignByContract.Domain.Core.Specifications;
 
 namespace DesignByContract.Domain.Core.Entities
 {
@@ -11,5 +13,14 @@ namespace DesignByContract.Domain.Core.Entities
         }
 
         public Guid Id { get; }
+        public Error Notification { get; } = new Error();
+        public CompositeSpecification<object> ValidSpecification { get; set; } = null;
+
+        public virtual void Validate(bool isRequired) { }
+
+        public bool IsValid()
+        {
+            return !Notification.HasErrors;
+        }
     }
 }

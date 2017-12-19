@@ -18,7 +18,6 @@ namespace DesignByContract.Domain.Specifications.ValueObjects
         public override bool IsSatisfiedBy(T candidate)
         {
             var personName = candidate as PersonName;
-            personName?.Notification.List.Clear();
 
             if (string.IsNullOrEmpty(personName?.Name) && !_required)
                 return true;

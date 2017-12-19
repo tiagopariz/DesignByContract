@@ -33,6 +33,7 @@
   <ItemGroup>
     <Compile Include="Entities\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specifications\ValueObjects\PersonValidSpecification.cs" />
     <Compile Include="Specifications\ValueObjects\PersonNameValidSpecification.cs" />
     <Compile Include="Specifications\ValueObjects\EmailValidSpecification.cs" />
     <Compile Include="ValueObjects\PersonName.cs" />
