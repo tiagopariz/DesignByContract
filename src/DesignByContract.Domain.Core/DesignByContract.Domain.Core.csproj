@@ -34,6 +34,7 @@
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Interfaces\Entities\IEntity.cs" />
     <Compile Include="Interfaces\Notifications\IDescription.cs" />
+    <Compile Include="Interfaces\Notifications\INotification.cs" />
     <Compile Include="Interfaces\ValueObjects\IValueObject.cs" />
     <Compile Include="Notifications\Description.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
