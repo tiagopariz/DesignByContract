@@ -7,19 +7,13 @@ namespace DesignByContract.Domain.Core.ValueObjects
     public abstract class ValueObject : IValueObject
     {
         public Error Notification { get; } = new Error();
-        protected CompositeSpecification<object> ValidSpecification = null;
+        public CompositeSpecification<object> ValidSpecification { get; set; } = null;
 
-        public virtual void Validate() { }
-
-        protected void Fail(bool condition, ErrorDescription error)
-        {
-            if (condition)
-                Notification.Add(error);
-        }
+        public virtual void Validate(bool isRequired) { }
 
         public bool IsValid()
         {
-            return ValidSpecification?.IsSatisfiedBy(this) ?? true;
+            return !Notification.HasErrors;
         }
     }
 }
