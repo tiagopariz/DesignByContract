@@ -35,12 +35,11 @@
     <Compile Include="Interfaces\Entities\IEntity.cs" />
     <Compile Include="Interfaces\Notifications\IDescription.cs" />
     <Compile Include="Interfaces\ValueObjects\IValueObject.cs" />
+    <Compile Include="Notifications\Description.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValueObjects\ValueObject.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Notifications\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
