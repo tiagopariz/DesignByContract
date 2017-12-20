@@ -16,6 +16,7 @@ namespace DesignByContract.Domain.Core.Entities
         public Guid Id { get; }
         public Error Notification { get; } = new Error();
         public CompositeSpecification<object> ValidSpecification { get; set; } = null;
+        public string FieldName => GetType().Name;
 
         public virtual void Validate(bool isRequired) { }
 

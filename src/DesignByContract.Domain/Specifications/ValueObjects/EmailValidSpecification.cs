@@ -25,14 +25,14 @@ namespace DesignByContract.Domain.Specifications.ValueObjects
                 return true;
 
             if ((email?.Address ?? "").Length < AddressMinLength)
-                email?.Notification.Add(new ErrorDescription("Email não atende o limite mínimo de caracteres", new Critical()));
+                email?.Notification.Add(new ErrorDescription("Email não atende o limite mínimo de caracteres", new Critical(), email.FieldName));
 
             if ((email?.Address ?? "").Length > AddressMaxLength)
-                email?.Notification.Add(new ErrorDescription("Email excedeu o limite máximo de caracteres", new Critical()));
+                email?.Notification.Add(new ErrorDescription("Email excedeu o limite máximo de caracteres", new Critical(), email.FieldName));
 
             const string pattern = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
             if (!Regex.IsMatch(email?.Address ?? "", pattern))
-                email?.Notification.Add(new ErrorDescription("Formato de e-mail inválido", new Critical()));
+                email?.Notification.Add(new ErrorDescription("Formato de e-mail inválido", new Critical(), email.FieldName));
 
             return !email?.Notification.HasErrors ?? false;
         }

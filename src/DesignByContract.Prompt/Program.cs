@@ -25,7 +25,7 @@ namespace DesignByContract.Prompt
 
             foreach (var error in invalidPerson.Notification.Errors)
             {
-                Console.WriteLine(error.ToString());    
+                Console.WriteLine(error.Message + " | " + error.FieldName);
             }
 
             Console.ReadKey();

@@ -23,10 +23,10 @@ namespace DesignByContract.Domain.Specifications.ValueObjects
                 return true;
 
             if ((personName?.Name ?? "").Length < NameMinLength)
-                personName?.Notification.Add(new ErrorDescription("Nome não atende o limite mínimo de caracteres", new Critical()));
+                personName?.Notification.Add(new ErrorDescription("Nome não atende o limite mínimo de caracteres", new Critical(), personName.FieldName));
 
             if ((personName?.Name ?? "").Length > NameMaxLength)
-                personName?.Notification.Add(new ErrorDescription("Nome excedeu o limite máximo de caracteres", new Critical()));
+                personName?.Notification.Add(new ErrorDescription("Nome excedeu o limite máximo de caracteres", new Critical(), personName.FieldName));
 
             return true;
         }

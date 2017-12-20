@@ -23,10 +23,10 @@ namespace DesignByContract.Domain.Specifications.Entities
                 return true;
 
             if ((category?.Description ?? "").Length < DescriptionMinLength)
-                category?.Notification.Add(new ErrorDescription("Descrição não atende o limite mínimo de caracteres", new Critical()));
+                category?.Notification.Add(new ErrorDescription("Descrição não atende o limite mínimo de caracteres", new Critical(), category.FieldName));
 
             if ((category?.Description ?? "").Length > DescriptionMaxLength)
-                category?.Notification.Add(new ErrorDescription("Descrição excedeu o limite máximo de caracteres", new Critical()));
+                category?.Notification.Add(new ErrorDescription("Descrição excedeu o limite máximo de caracteres", new Critical(), category.FieldName));
 
             return true;
         }

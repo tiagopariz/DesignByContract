@@ -8,6 +8,7 @@ namespace DesignByContract.Domain.Core.ValueObjects
     {
         public Error Notification { get; } = new Error();
         public CompositeSpecification<object> ValidSpecification { get; set; } = null;
+        public string FieldName => GetType().Name;
 
         public virtual void Validate(bool isRequired) { }
 
