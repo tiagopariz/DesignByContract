@@ -41,6 +41,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DesignByContract.Domain.Core\DesignByContract.Domain.Core.csproj">
+      <Project>{b16ffc43-ac50-4f9f-8d08-9b75b92a16d0}</Project>
+      <Name>DesignByContract.Domain.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DesignByContract.Domain\DesignByContract.Domain.csproj">
       <Project>{8be05555-264e-4aff-9485-978f03df8ef3}</Project>
       <Name>DesignByContract.Domain</Name>

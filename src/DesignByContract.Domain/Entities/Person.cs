@@ -1,6 +1,6 @@
 ﻿using System;
 using DesignByContract.Domain.Core.Entities;
-using DesignByContract.Domain.Specifications.ValueObjects;
+using DesignByContract.Domain.Specifications.Entities;
 using DesignByContract.Domain.ValueObjects;
 
 namespace DesignByContract.Domain.Entities
@@ -10,11 +10,13 @@ namespace DesignByContract.Domain.Entities
         public Person(Guid id,
                       PersonName name,
                       Email email,
+                      Category category,
                       bool isRequired = false) 
             : base(id)
         {
             Name = name;
             Email = email;
+            Category = category;
             Validate(isRequired);
         }
 
@@ -26,5 +28,6 @@ namespace DesignByContract.Domain.Entities
 
         public PersonName Name { get; }
         public Email Email { get; }
+        public Category Category { get; }
     }
 }

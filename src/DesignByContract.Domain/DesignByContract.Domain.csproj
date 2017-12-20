@@ -31,9 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Specifications\ValueObjects\PersonValidSpecification.cs" />
+    <Compile Include="Specifications\Entities\CategoryValidSpecification.cs" />
+    <Compile Include="Specifications\Entities\PersonValidSpecification.cs" />
     <Compile Include="Specifications\ValueObjects\PersonNameValidSpecification.cs" />
     <Compile Include="Specifications\ValueObjects\EmailValidSpecification.cs" />
     <Compile Include="ValueObjects\PersonName.cs" />

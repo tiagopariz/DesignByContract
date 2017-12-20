@@ -1,7 +1,7 @@
 ﻿using DesignByContract.Domain.Core.Specifications;
 using DesignByContract.Domain.Entities;
 
-namespace DesignByContract.Domain.Specifications.ValueObjects
+namespace DesignByContract.Domain.Specifications.Entities
 {
     public class PersonValidSpecification<T> : CompositeSpecification<T>
     {
@@ -20,7 +20,8 @@ namespace DesignByContract.Domain.Specifications.ValueObjects
                 return true;
 
             person?.Notification.Concat(person.Name.Notification,
-                                        person.Email.Notification);
+                                        person.Email.Notification,
+                                        person.Category.Notification);
 
             return person?.Notification.HasErrors ?? false;
         }
