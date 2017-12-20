@@ -7,16 +7,18 @@ namespace DesignByContract.Domain.ValueObjects
     {
         public const int AddressMinLength = EmailValidSpecification<object>.AddressMinLength;
         public const int AddressMaxLength = EmailValidSpecification<object>.AddressMinLength;
+        public const bool AddressRequired = EmailValidSpecification<object>.AddressRequired;
 
-        public Email(string address, bool isRequired = false)
+        public Email(string address, string fieldName = null)
+            : base(fieldName)
         {
             Address = address;
-            Validate(isRequired);
+            Validate();
         }
 
-        public sealed override void Validate(bool isRequired)
+        public sealed override void Validate()
         {
-            ValidSpecification = new EmailValidSpecification<object>(isRequired);
+            ValidSpecification = new EmailValidSpecification<object>();
             ValidSpecification.IsSatisfiedBy(this);
         }
 

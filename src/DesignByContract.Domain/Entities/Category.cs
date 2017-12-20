@@ -6,19 +6,22 @@ namespace DesignByContract.Domain.Entities
 {
     public class Category : Entity
     {
-        public const int DescriptionMinLength = 1;
-        public const int DescriptionMaxLength = 20;
+        public const int DescriptionMinLength = CategoryValidSpecification<object>.DescriptionMinLength;
+        public const int DescriptionMaxLength = CategoryValidSpecification<object>.DescriptionMaxLength;
+        public const bool DescriptionRequired = CategoryValidSpecification<object>.DescriptionRequired;
 
-        public Category(Guid id, string description, bool isRequired = false) : 
-            base(id)
+        public Category(Guid id,
+                        string description,
+                        string fieldName = null)
+            : base(id, fieldName)
         {
             Description = description;
-            Validate(isRequired);
+            Validate();
         }
 
-        public sealed override void Validate(bool isRequired)
+        public sealed override void Validate()
         {
-            ValidSpecification = new CategoryValidSpecification<object>(isRequired);
+            ValidSpecification = new CategoryValidSpecification<object>();
             ValidSpecification.IsSatisfiedBy(this);
         }
 

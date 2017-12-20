@@ -7,22 +7,16 @@ namespace DesignByContract.Domain.Specifications.ValueObjects
 {
     public class EmailValidSpecification<T> : CompositeSpecification<T>
     {
-        private readonly bool _required;
         public const int AddressMinLength = 3;
         public const int AddressMaxLength = 255;
-
-        public EmailValidSpecification(bool required = false)
-        {
-            _required = required;
-        }
+        public const bool AddressRequired = true;
 
         public override bool IsSatisfiedBy(T candidate)
         {
             var email = candidate as Email;
-            //email?.Notification.List.Clear();
 
-            if (string.IsNullOrEmpty(email?.Address) && !_required)
-                return true;
+            if (string.IsNullOrEmpty(email?.Address))
+                email?.Notification.Add(new ErrorDescription("O endereço do E-Mail é requerido.", new Critical(), email.FieldName));
 
             if ((email?.Address ?? "").Length < AddressMinLength)
                 email?.Notification.Add(new ErrorDescription("Email não atende o limite mínimo de caracteres", new Critical(), email.FieldName));

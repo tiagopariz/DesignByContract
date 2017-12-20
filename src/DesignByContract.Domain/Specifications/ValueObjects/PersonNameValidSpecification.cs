@@ -6,21 +6,16 @@ namespace DesignByContract.Domain.Specifications.ValueObjects
 {
     public class PersonNameValidSpecification<T> : CompositeSpecification<T>
     {
-        private readonly bool _required;
         public const int NameMinLength = 1;
         public const int NameMaxLength = 255;
-
-        public PersonNameValidSpecification(bool required = false)
-        {
-            _required = required;
-        }
+        public const bool NameRequired = true;
 
         public override bool IsSatisfiedBy(T candidate)
         {
             var personName = candidate as PersonName;
 
-            if (string.IsNullOrEmpty(personName?.Name) && !_required)
-                return true;
+            if (string.IsNullOrEmpty(personName?.Name))
+                personName?.Notification.Add(new ErrorDescription("O Nome é requerido", new Critical(), personName.FieldName));
 
             if ((personName?.Name ?? "").Length < NameMinLength)
                 personName?.Notification.Add(new ErrorDescription("Nome não atende o limite mínimo de caracteres", new Critical(), personName.FieldName));
@@ -28,7 +23,7 @@ namespace DesignByContract.Domain.Specifications.ValueObjects
             if ((personName?.Name ?? "").Length > NameMaxLength)
                 personName?.Notification.Add(new ErrorDescription("Nome excedeu o limite máximo de caracteres", new Critical(), personName.FieldName));
 
-            return true;
+            return !personName?.Notification.HasErrors ?? false;
         }
     }
 }

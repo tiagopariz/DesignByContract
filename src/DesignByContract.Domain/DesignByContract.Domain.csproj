@@ -38,7 +38,7 @@
     <Compile Include="Specifications\Entities\PersonValidSpecification.cs" />
     <Compile Include="Specifications\ValueObjects\PersonNameValidSpecification.cs" />
     <Compile Include="Specifications\ValueObjects\EmailValidSpecification.cs" />
-    <Compile Include="ValueObjects\PersonName.cs" />
+    <Compile Include="ValueObjects\Name.cs" />
     <Compile Include="ValueObjects\Email.cs" />
   </ItemGroup>
   <ItemGroup>

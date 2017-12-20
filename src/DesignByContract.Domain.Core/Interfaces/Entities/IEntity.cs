@@ -11,7 +11,7 @@ namespace DesignByContract.Domain.Core.Interfaces.Entities
         Error Notification { get; }
         CompositeSpecification<object> ValidSpecification { get; }
         string FieldName { get; }
-        void Validate(bool isRequired);
+        void Validate();
         //void Fail(bool condition, ErrorDescription error);
         bool IsValid();
     }

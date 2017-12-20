@@ -7,16 +7,18 @@ namespace DesignByContract.Domain.ValueObjects
     {
         public const int NameMinLength = PersonNameValidSpecification<object>.NameMinLength;
         public const int NameMaxLength = PersonNameValidSpecification<object>.NameMinLength;
+        public const bool NameRequired = PersonNameValidSpecification<object>.NameRequired;
 
-        public PersonName(string name, bool isRequired = false)
+        public PersonName(string name, string fieldName = null)
+            : base(fieldName)
         {
             Name = name;
-            Validate(isRequired);
+            Validate();
         }
 
-        public sealed override void Validate(bool isRequired)
+        public sealed override void Validate()
         {
-            ValidSpecification = new PersonNameValidSpecification<object>(isRequired);
+            ValidSpecification = new PersonNameValidSpecification<object>();
             ValidSpecification.IsSatisfiedBy(this);
         }
 

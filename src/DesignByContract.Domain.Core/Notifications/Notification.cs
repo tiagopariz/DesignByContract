@@ -23,10 +23,9 @@ namespace DesignByContract.Domain.Core.Notifications
         {
             foreach (var notification in args)
             {
+                if (notification?.List == null) continue;
                 foreach (var description in notification.List)
-                {
                     List.Add(description);
-                }
             }
         }
     }

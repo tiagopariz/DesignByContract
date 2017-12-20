@@ -9,6 +9,7 @@ namespace DesignByContract.Domain.Specifications.Entities
         private readonly bool _required;
         public const int DescriptionMinLength = 1;
         public const int DescriptionMaxLength = 30;
+        public const bool DescriptionRequired = true;
 
         public CategoryValidSpecification(bool required = false)
         {
@@ -28,7 +29,7 @@ namespace DesignByContract.Domain.Specifications.Entities
             if ((category?.Description ?? "").Length > DescriptionMaxLength)
                 category?.Notification.Add(new ErrorDescription("Descrição excedeu o limite máximo de caracteres", new Critical(), category.FieldName));
 
-            return true;
+            return !category?.Notification.HasErrors ?? false;
         }
     }
 }
