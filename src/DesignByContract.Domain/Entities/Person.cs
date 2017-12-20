@@ -7,7 +7,11 @@ namespace DesignByContract.Domain.Entities
 {
     public class Person : Entity
     {
-        public Person(Guid id, PersonName name, Email email, bool isRequired = false) : base(id)
+        public Person(Guid id,
+                      PersonName name,
+                      Email email,
+                      bool isRequired = false) 
+            : base(id)
         {
             Name = name;
             Email = email;

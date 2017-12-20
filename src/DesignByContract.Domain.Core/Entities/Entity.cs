@@ -9,6 +9,7 @@ namespace DesignByContract.Domain.Core.Entities
     {
         protected Entity(Guid id)
         {
+            if (id == Guid.Empty) id = Guid.NewGuid();
             Id = id;
         }
 
