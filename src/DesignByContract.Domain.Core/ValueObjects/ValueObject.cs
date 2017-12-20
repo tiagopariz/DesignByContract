@@ -18,9 +18,10 @@ namespace DesignByContract.Domain.Core.ValueObjects
         public CompositeSpecification<object> ValidSpecification { get; set; } = null;
         public string FieldName { get; private set; }
 
-        public void SetFieldName(string value)
+        public ValueObject SetFieldName(string value)
         {
             FieldName = value;
+            return this;
         }
 
         public virtual void Validate() { }

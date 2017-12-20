@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 using DesignByContract.Domain.Core.Errors;
 using DesignByContract.Domain.Core.Interfaces.Entities;
 using DesignByContract.Domain.Core.Specifications;
@@ -31,6 +32,11 @@ namespace DesignByContract.Domain.Core.Entities
         public bool IsValid()
         {
             return !Notification.HasErrors;
+        }
+
+        public static string GetPropertyName<T>(Expression<Func<T>> propertyExpression)
+        {
+            return (propertyExpression.Body as MemberExpression)?.Member.Name ?? "";
         }
     }
 }
