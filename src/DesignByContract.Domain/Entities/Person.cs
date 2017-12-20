@@ -14,11 +14,6 @@ namespace DesignByContract.Domain.Entities
         public const bool CategoryRequired = PersonValidSpecification<object>.CategoryRequired;
         public const bool ManagerRequired = PersonValidSpecification<object>.ManagerRequired;
 
-        public const string PersonNameFieldName = PersonValidSpecification<object>.PersonNameFieldName;
-        public const string EmailFieldName = PersonValidSpecification<object>.EmailFieldName;
-        public const string CategoryFieldName = PersonValidSpecification<object>.CategoryFieldName;
-        public const string ManagerFieldName = PersonValidSpecification<object>.ManagerFieldName;
-
         #endregion
 
         public Person(Guid id,
@@ -29,16 +24,17 @@ namespace DesignByContract.Domain.Entities
                       string fieldName = null) 
             : base(id, fieldName)
         {
-            name?.SetFieldName(PersonNameFieldName);
-            email?.SetFieldName(EmailFieldName);
-            category?.SetFieldName(CategoryFieldName);
-            manager?.SetFieldName(ManagerFieldName);
 
             Name = name;
             Email = email;
             Category = category;
             Manager = manager;
-            
+
+            Name?.SetFieldName(GetPropertyName(() => Name));
+            Email?.SetFieldName(GetPropertyName(() => Email));
+            Category?.SetFieldName(GetPropertyName(() => Category));
+            Manager?.SetFieldName(GetPropertyName(() => Manager));
+
             Validate();
         }
 

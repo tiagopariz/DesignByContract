@@ -1,4 +1,6 @@
-﻿using DesignByContract.Domain.Core.Errors;
+﻿using System;
+using System.Linq.Expressions;
+using DesignByContract.Domain.Core.Errors;
 using DesignByContract.Domain.Core.Interfaces.ValueObjects;
 using DesignByContract.Domain.Core.Specifications;
 
@@ -18,9 +20,10 @@ namespace DesignByContract.Domain.Core.ValueObjects
         public CompositeSpecification<object> ValidSpecification { get; set; } = null;
         public string FieldName { get; private set; }
 
-        public void SetFieldName(string value)
+        public ValueObject SetFieldName(string value)
         {
             FieldName = value;
+            return this;
         }
 
         public virtual void Validate() { }
@@ -28,6 +31,11 @@ namespace DesignByContract.Domain.Core.ValueObjects
         public bool IsValid()
         {
             return !Notification.HasErrors;
+        }
+
+        public static string GetPropertyName<T>(Expression<Func<T>> propertyExpression)
+        {
+            return (propertyExpression.Body as MemberExpression)?.Member.Name ?? "";
         }
     }
 }

@@ -6,22 +6,16 @@ namespace DesignByContract.Domain.Specifications.Entities
 {
     public class CategoryValidSpecification<T> : CompositeSpecification<T>
     {
-        private readonly bool _required;
         public const int DescriptionMinLength = 1;
         public const int DescriptionMaxLength = 30;
         public const bool DescriptionRequired = true;
-
-        public CategoryValidSpecification(bool required = false)
-        {
-            _required = required;
-        }
 
         public override bool IsSatisfiedBy(T candidate)
         {
             var category = candidate as Category;
 
-            if (string.IsNullOrEmpty(category?.Description) && !_required)
-                return true;
+            if (string.IsNullOrEmpty(category?.Description))
+                category?.Notification.Add(new ErrorDescription("{0} is required", new Critical(), "Description", "Description"));               
 
             if ((category?.Description ?? "").Length < DescriptionMinLength)
                 category?.Notification.Add(new ErrorDescription("Descrição não atende o limite mínimo de caracteres", new Critical(), category.FieldName));

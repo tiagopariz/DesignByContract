@@ -11,23 +11,18 @@ namespace DesignByContract.Domain.Specifications.Entities
         public const bool CategoryRequired = true;
         public const bool ManagerRequired = false;
 
-        public const string PersonNameFieldName = "Nome da pessoa";
-        public const string EmailFieldName = "E-Mail";
-        public const string CategoryFieldName = "Categoria";
-        public const string ManagerFieldName = "Gerente";
-
         public override bool IsSatisfiedBy(T candidate)
         {
             var person = candidate as Person;
 
             if (string.IsNullOrEmpty(person?.Name?.ToString()))
-                person?.Notification.Add(new ErrorDescription("O nome é requerido", new Critical(), PersonNameFieldName));
+                person?.Notification.Add(new ErrorDescription("{0} is required", new Critical(), "Name", "Name"));
 
             if (string.IsNullOrEmpty(person?.Email?.ToString()))
-                person?.Notification.Add(new ErrorDescription("O E-Mail é requerido", new Critical(), EmailFieldName));
+                person?.Notification.Add(new ErrorDescription("{0} is required", new Critical(), "E-Mail", "E-Mail"));
 
             if (string.IsNullOrEmpty(person?.Category?.ToString()))
-                person?.Notification.Add(new ErrorDescription("A Categoria é requerida", new Critical(), CategoryFieldName));
+                person?.Notification.Add(new ErrorDescription("{0} is required", new Critical(), "Category", "Category"));
 
             person?.Notification.Concat(person.Name?.Notification,
                                         person.Email?.Notification,
