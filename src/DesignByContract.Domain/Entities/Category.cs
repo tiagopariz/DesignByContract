@@ -1,6 +1,6 @@
-﻿using System;
-using DesignByContract.Domain.Core.Entities;
+﻿using DesignByContract.Domain.Core.Entities;
 using DesignByContract.Domain.Specifications.Entities;
+using System;
 
 namespace DesignByContract.Domain.Entities
 {
@@ -16,6 +16,7 @@ namespace DesignByContract.Domain.Entities
             : base(id, fieldName)
         {
             Description = description;
+
             Validate();
         }
 

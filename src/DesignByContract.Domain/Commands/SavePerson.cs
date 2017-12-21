@@ -12,27 +12,36 @@ namespace DesignByContract.Domain.Commands
             : base(person)
         {
             _person = person;
-            var newPersonOnMemory = new ErrorDescription("New person instance create on memory.", new Warning(), "Person");
-            _person.Notification.Add(newPersonOnMemory);
+            var errorDescription = 
+                new ErrorItemDetail("New person instance create on memory.", 
+                                    new Warning(), 
+                                    "Person");
+            _person.ErrorList.Add(errorDescription);
         }
 
         public void Run()
         {
-            if (!_person.Notification.HasErrors)
+            if (!_person.ErrorList.HasCriticals)
             {
                 SavePersonInBackendSystems();
             }
             else
             {
-                var error = new ErrorDescription("Registration not saved.", new Critical(), "Person");
-                _person.Notification.Add(error);
+                var errorDescription = 
+                    new ErrorItemDetail("Registration not saved.",
+                                        new Critical(),
+                                        "Person");
+                _person.ErrorList.Add(errorDescription);
             }
         }
 
         private void SavePersonInBackendSystems()
         {
-            var message = new ErrorDescription("Registration succeeded.", new Information(), "Person");
-            _person.Notification.Add(message);
+            var errorDescription = 
+                new ErrorItemDetail("Registration succeeded.",
+                                    new Information(),
+                                    "Person");
+            _person.ErrorList.Add(errorDescription);
         }
     }
 }

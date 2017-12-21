@@ -1,20 +1,16 @@
-﻿using System;
-using DesignByContract.Domain.Core.Entities;
+﻿using DesignByContract.Domain.Core.Entities;
 using DesignByContract.Domain.Specifications.Entities;
 using DesignByContract.Domain.ValueObjects;
+using System;
 
 namespace DesignByContract.Domain.Entities
 {
     public class Person : Entity
     {
-        #region Contract Terms
-
         public const bool NameRequired = PersonValidSpecification<object>.PersonNameRequired;
         public const bool EmailRequired = PersonValidSpecification<object>.PersonNameRequired;
         public const bool CategoryRequired = PersonValidSpecification<object>.CategoryRequired;
         public const bool ManagerRequired = PersonValidSpecification<object>.ManagerRequired;
-
-        #endregion
 
         public Person(Guid id,
                       PersonName name,

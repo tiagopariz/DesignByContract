@@ -16,19 +16,31 @@ namespace DesignByContract.Domain.Specifications.ValueObjects
             var email = candidate as Email;
 
             if (string.IsNullOrEmpty(email?.Address))
-                email?.Notification.Add(new ErrorDescription("O endereço do E-Mail é requerido.", new Critical(), email.FieldName));
+                email?.ErrorList.Add(
+                    new ErrorItemDetail("O endereço do E-Mail é requerido.",
+                                        new Critical(),
+                                        email.FieldName));
 
             if ((email?.Address ?? "").Length < AddressMinLength)
-                email?.Notification.Add(new ErrorDescription("Email não atende o limite mínimo de caracteres", new Critical(), email.FieldName));
+                email?.ErrorList.Add(
+                    new ErrorItemDetail("Email não atende o limite mínimo de caracteres",
+                                        new Critical(),
+                                        email.FieldName));
 
             if ((email?.Address ?? "").Length > AddressMaxLength)
-                email?.Notification.Add(new ErrorDescription("Email excedeu o limite máximo de caracteres", new Critical(), email.FieldName));
+                email?.ErrorList.Add(
+                    new ErrorItemDetail("Email excedeu o limite máximo de caracteres",
+                                        new Critical(),
+                                        email.FieldName));
 
-            const string pattern = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
-            if (!Regex.IsMatch(email?.Address ?? "", pattern))
-                email?.Notification.Add(new ErrorDescription("Formato de e-mail inválido", new Critical(), email.FieldName));
+            const string emailPattern = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
+            if (!Regex.IsMatch(email?.Address ?? "", emailPattern))
+                email?.ErrorList.Add(
+                    new ErrorItemDetail("Formato de e-mail inválido",
+                                        new Critical(),
+                                        email.FieldName));
 
-            return !email?.Notification.HasErrors ?? false;
+            return !email?.ErrorList.HasCriticals ?? false;
         }
     }
 }

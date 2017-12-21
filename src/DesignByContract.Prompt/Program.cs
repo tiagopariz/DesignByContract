@@ -30,23 +30,26 @@ namespace DesignByContract.Prompt
             Console.ReadKey();
         }
 
-        public static void Submit(PersonService personService, PersonDto personDto)
+        public static void Submit(PersonService personService,
+                                  PersonDto personDto)
         {
             personService.SavePerson(personDto.PersonId,
                 personDto.Name);
 
-            if (personService.HasNotifications)
-                ShowNotifications(personService);
+            if (personService.HasErrors)
+                ShowErrorList(personService);
         }
 
-        private static void ShowNotifications(Service personService)
+        private static void ShowErrorList(Service personService)
         {
-            if (!personService.HasNotifications) return;
+            if (!personService.HasErrors) return;
 
-            if (personService.HasErrors)
+            Console.WriteLine("\nError list\n");
+
+            if (personService.HasCriticals)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("\nErrors\n");
+                Console.WriteLine("\nCriticals\n");
 
                 foreach (var error in personService.Errors())
                 {

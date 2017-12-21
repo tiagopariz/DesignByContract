@@ -15,15 +15,25 @@ namespace DesignByContract.Domain.Specifications.Entities
             var category = candidate as Category;
 
             if (string.IsNullOrEmpty(category?.Description))
-                category?.Notification.Add(new ErrorDescription("{0} is required", new Critical(), "Description", "Description"));               
+                category?.ErrorList.Add(
+                    new ErrorItemDetail("{0} is required",
+                                        new Critical(),
+                                        "Description",
+                                        "Description"));
 
             if ((category?.Description ?? "").Length < DescriptionMinLength)
-                category?.Notification.Add(new ErrorDescription("Descrição não atende o limite mínimo de caracteres", new Critical(), category.FieldName));
+                category?.ErrorList.Add(
+                    new ErrorItemDetail("Descrição não atende o limite mínimo de caracteres",
+                                        new Critical(),
+                                        category.FieldName));
 
             if ((category?.Description ?? "").Length > DescriptionMaxLength)
-                category?.Notification.Add(new ErrorDescription("Descrição excedeu o limite máximo de caracteres", new Critical(), category.FieldName));
+                category?.ErrorList.Add(
+                    new ErrorItemDetail("Descrição excedeu o limite máximo de caracteres",
+                                        new Critical(),
+                                        category.FieldName));
 
-            return !category?.Notification.HasErrors ?? false;
+            return !category?.ErrorList.HasCriticals ?? false;
         }
     }
 }

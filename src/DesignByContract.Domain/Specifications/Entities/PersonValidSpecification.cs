@@ -16,20 +16,32 @@ namespace DesignByContract.Domain.Specifications.Entities
             var person = candidate as Person;
 
             if (string.IsNullOrEmpty(person?.Name?.ToString()))
-                person?.Notification.Add(new ErrorDescription("{0} is required", new Critical(), "Name", "Name"));
+                person?.ErrorList.Add(
+                    new ErrorItemDetail("{0} is required",
+                                        new Critical(),
+                                        "Name",
+                                        "Name"));
 
             if (string.IsNullOrEmpty(person?.Email?.ToString()))
-                person?.Notification.Add(new ErrorDescription("{0} is required", new Critical(), "E-Mail", "E-Mail"));
+                person?.ErrorList.Add(
+                    new ErrorItemDetail("{0} is required",
+                                        new Critical(),
+                                        "E-Mail",
+                                        "E-Mail"));
 
             if (string.IsNullOrEmpty(person?.Category?.ToString()))
-                person?.Notification.Add(new ErrorDescription("{0} is required", new Critical(), "Category", "Category"));
+                person?.ErrorList.Add(
+                    new ErrorItemDetail("{0} is required",
+                                        new Critical(),
+                                        "Category",
+                                        "Category"));
 
-            person?.Notification.Concat(person.Name?.Notification,
-                                        person.Email?.Notification,
-                                        person.Category?.Notification,
-                                        person.Manager?.Notification);
+            person?.ErrorList.Concat(person.Name?.ErrorList,
+                                        person.Email?.ErrorList,
+                                        person.Category?.ErrorList,
+                                        person.Manager?.ErrorList);
 
-            return !person?.Notification.HasErrors ?? false;
+            return !person?.ErrorList.HasCriticals ?? false;
         }
     }
 }

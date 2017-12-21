@@ -1,20 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using DesignByContract.Domain.Core.Interfaces.Notifications;
+using System.Collections.Generic;
 using System.Linq;
-using DesignByContract.Domain.Core.Interfaces.Notifications;
 
 namespace DesignByContract.Domain.Core.Notifications
 {
     public abstract class Notification : INotification
     {
-        public IList<object> List { get; } = new List<object>(); // TODO: fechar a lista e só ser acessível pelo comando Add e Concat
-        public bool HasNotifications => List.Any();
+        // TODO: Tornar lista somente acessível pelo Add e Concat
+        public IList<object> List { get; } = new List<object>();
+        public bool Any => List.Any();
 
-        public bool Includes(Description error)
+        public bool Includes(ItemDetail error)
         {
             return List.Contains(error);
         }
 
-        public void Add(Description description)
+        public void Add(ItemDetail description)
         {
             List.Add(description);
         }

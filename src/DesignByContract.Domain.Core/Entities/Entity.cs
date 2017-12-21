@@ -10,7 +10,8 @@ namespace DesignByContract.Domain.Core.Entities
     {
         protected Entity(Guid id, string fieldName = null)
         {
-            if (string.IsNullOrWhiteSpace(fieldName)) fieldName = GetType().Name;
+            if (string.IsNullOrWhiteSpace(fieldName))
+                fieldName = GetType().Name;
             if (id == Guid.Empty) id = Guid.NewGuid();
 
             Id = id;
@@ -18,7 +19,7 @@ namespace DesignByContract.Domain.Core.Entities
         }
 
         public Guid Id { get; }
-        public Error Notification { get; } = new Error();
+        public ErrorList ErrorList { get; } = new ErrorList();
         public CompositeSpecification<object> ValidSpecification { get; set; } = null;
         public string FieldName { get; private set; }
 
@@ -31,7 +32,7 @@ namespace DesignByContract.Domain.Core.Entities
 
         public bool IsValid()
         {
-            return !Notification.HasErrors;
+            return !ErrorList.HasCriticals;
         }
 
         public static string GetPropertyName<T>(Expression<Func<T>> propertyExpression)

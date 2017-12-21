@@ -1,6 +1,6 @@
 ﻿namespace DesignByContract.Domain.Core.Interfaces.Notifications
 {
-    public interface IDescription
+    public interface IItemDetail
     {
         string Message { get; }
 

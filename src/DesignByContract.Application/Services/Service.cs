@@ -1,23 +1,27 @@
-﻿using System.Collections;
+﻿using DesignByContract.Domain.Core.Entities;
+using System.Collections;
 using System.Linq;
-using DesignByContract.Domain.Core.Entities;
 
 namespace DesignByContract.Application.Services
 {
     public abstract class Service
     {
-        protected Entity NotificationEntity;
+        protected Entity ErrorEntity;
 
-        public bool HasNotifications => NotificationEntity != null && NotificationEntity.Notification.HasNotifications;
-        public bool HasErrors => NotificationEntity != null && NotificationEntity.Notification.HasErrors;
-        public bool HasWarnings => NotificationEntity != null && NotificationEntity.Notification.HasWarnings;
-        public bool HasInformations => NotificationEntity != null && NotificationEntity.Notification.HasInformations;
+        public bool HasErrors => 
+            ErrorEntity != null && ErrorEntity.ErrorList.Any;
+        public bool HasCriticals => 
+            ErrorEntity != null && ErrorEntity.ErrorList.HasCriticals;
+        public bool HasWarnings =>
+            ErrorEntity != null && ErrorEntity.ErrorList.HasWarnings;
+        public bool HasInformations => 
+            ErrorEntity != null && ErrorEntity.ErrorList.HasInformations;
 
         public IEnumerable Errors()
         {
-            if (NotificationEntity?.Notification.Errors == null) return null;
+            if (ErrorEntity?.ErrorList.Criticals == null) return null;
 
-            var notifications = (from error in NotificationEntity?.Notification.Errors
+            var notifications = (from error in ErrorEntity?.ErrorList.Criticals
                                  select $"Description: {error.Message} | " +
                                         $"Level: {error.Level.Description} | " +
                                         $"Field: {error.FieldName}").ToList();
@@ -27,9 +31,9 @@ namespace DesignByContract.Application.Services
 
         public IEnumerable Warnings()
         {
-            if (NotificationEntity?.Notification.Warnings == null) return null;
+            if (ErrorEntity?.ErrorList.Warnings == null) return null;
 
-            var notifications = (from error in NotificationEntity?.Notification.Warnings
+            var notifications = (from error in ErrorEntity?.ErrorList.Warnings
                                  select $"Description: {error.Message} | " +
                                         $"Level: {error.Level.Description} | " +
                                         $"Field: {error.FieldName}").ToList();
@@ -39,9 +43,9 @@ namespace DesignByContract.Application.Services
 
         public IEnumerable Informations()
         {
-            if (NotificationEntity?.Notification.Informations == null) return null;
+            if (ErrorEntity?.ErrorList.Informations == null) return null;
 
-            var notifications = (from error in NotificationEntity?.Notification.Informations
+            var notifications = (from error in ErrorEntity?.ErrorList.Informations
                                  select $"Description: {error.Message} | " +
                                         $"Level: {error.Level.Description} | " +
                                         $"Field: {error.FieldName}").ToList();

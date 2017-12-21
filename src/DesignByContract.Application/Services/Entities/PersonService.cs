@@ -15,11 +15,22 @@ namespace DesignByContract.Application.Services.Entities
                              Guid categoryId,
                              Guid managerId)
         {
-            var category = new Category(categoryId, "Especial"); // TODO: Criar serviço que verifica se a categoria existe
-            var manager = new Person(managerId, new PersonName("chefe"), new Email("chefe@aquelequetudopode.eu"), new Category(Guid.NewGuid(), "Manager")); // TODO: Criar serviço que verifica o gerente
+            // TODO: Criar serviço de categoria
+            var category = new Category(categoryId, "Especial");
+            // TODO: Criar serviço de gerente
+            var manager = new Person(managerId,
+                                     new PersonName("chefe"),
+                                     new Email("chefe@aquelequetudopode.eu"),
+                                     new Category(Guid.NewGuid(),
+                                     "Manager"));
 
-            _entity = new Person(personId, new PersonName(name), new Email(email), category, manager);
-            NotificationEntity = _entity;
+            _entity = new Person(personId,
+                                 new PersonName(name),
+                                 new Email(email),
+                                 category,
+                                 manager);
+
+            ErrorEntity = _entity;
         }
 
         public void SavePerson(Guid personId, string name)

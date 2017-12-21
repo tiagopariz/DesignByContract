@@ -7,7 +7,8 @@ namespace DesignByContract.Domain.Core.Specifications
         private readonly ISpecification<T> _leftSpecification;
         private readonly ISpecification<T> _rightSpecification;
 
-        public OrSpecification(ISpecification<T> left, ISpecification<T> right)
+        public OrSpecification(ISpecification<T> left,
+                               ISpecification<T> right)
         {
             _leftSpecification = left;
             _rightSpecification = right;

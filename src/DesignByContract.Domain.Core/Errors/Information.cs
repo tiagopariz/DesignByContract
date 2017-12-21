@@ -11,9 +11,6 @@ namespace DesignByContract.Domain.Core.Errors
 
         public string Description { get; }
 
-        public override string ToString()
-        {
-            return Description;
-        }
+        public override string ToString() => Description;
     }
 }
