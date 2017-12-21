@@ -6,7 +6,7 @@ namespace DesignByContract.Domain.Core.Notifications
 {
     public abstract class Notification : INotification
     {
-        public IList<object> List { get; } = new List<object>();
+        public IList<object> List { get; } = new List<object>(); // TODO: fechar a lista e só ser acessível pelo comando Add e Concat
         public bool HasNotifications => List.Any();
 
         public bool Includes(Description error)

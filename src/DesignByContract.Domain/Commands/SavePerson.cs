@@ -8,11 +8,12 @@ namespace DesignByContract.Domain.Commands
     {
         private readonly Person _person;
 
-        public SavePerson(Person person) : base(person)
+        public SavePerson(Person person)
+            : base(person)
         {
             _person = person;
-            var description = new ErrorDescription("New person instance create on memory.", new Warning(), "Person");
-            _person.Notification.Errors.Add(description);
+            var newPersonOnMemory = new ErrorDescription("New person instance create on memory.", new Warning(), "Person");
+            _person.Notification.Add(newPersonOnMemory);
         }
 
         public void Run()
@@ -24,14 +25,14 @@ namespace DesignByContract.Domain.Commands
             else
             {
                 var error = new ErrorDescription("Registration not saved.", new Critical(), "Person");
-                _person.Notification.Errors.Add(error);
+                _person.Notification.Add(error);
             }
         }
 
         private void SavePersonInBackendSystems()
         {
             var message = new ErrorDescription("Registration succeeded.", new Information(), "Person");
-            _person.Notification.Errors.Add(message);
+            _person.Notification.Add(message);
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using DesignByContract.Domain.Core.Entities;
-using DesignByContract.Domain.Core.Errors;
+﻿using DesignByContract.Domain.Core.Entities;
 
 namespace DesignByContract.Domain.Core.Commands
 {
@@ -12,6 +10,5 @@ namespace DesignByContract.Domain.Core.Commands
         }
 
         protected Entity Entity;
-        //protected IList<ErrorDescription> Errors => Entity.Notification.Errors;
     }
 }

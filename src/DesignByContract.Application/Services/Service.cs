@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using DesignByContract.Domain.Core.Entities;
 
 namespace DesignByContract.Application.Services
@@ -14,17 +15,38 @@ namespace DesignByContract.Application.Services
 
         public IEnumerable Errors()
         {
-            return NotificationEntity?.Notification.Errors;
+            if (NotificationEntity?.Notification.Errors == null) return null;
+
+            var notifications = (from error in NotificationEntity?.Notification.Errors
+                                 select $"Description: {error.Message} | " +
+                                        $"Level: {error.Level.Description} | " +
+                                        $"Field: {error.FieldName}").ToList();
+
+            return notifications;
         }
 
         public IEnumerable Warnings()
         {
-            return NotificationEntity?.Notification.Warnings;
+            if (NotificationEntity?.Notification.Warnings == null) return null;
+
+            var notifications = (from error in NotificationEntity?.Notification.Warnings
+                                 select $"Description: {error.Message} | " +
+                                        $"Level: {error.Level.Description} | " +
+                                        $"Field: {error.FieldName}").ToList();
+
+            return notifications;
         }
 
         public IEnumerable Informations()
         {
-            return NotificationEntity?.Notification.Informations;
+            if (NotificationEntity?.Notification.Informations == null) return null;
+
+            var notifications = (from error in NotificationEntity?.Notification.Informations
+                                 select $"Description: {error.Message} | " +
+                                        $"Level: {error.Level.Description} | " +
+                                        $"Field: {error.FieldName}").ToList();
+
+            return notifications;
         }
     }
 }
