@@ -1,6 +1,7 @@
 ﻿using System;
-using DesignByContract.Domain.Entities;
-using DesignByContract.Domain.ValueObjects;
+using DesignByContract.Application.Services;
+using DesignByContract.Prompt.Dto;
+using DesignByContract.Application.Services.Entities;
 
 namespace DesignByContract.Prompt
 {
@@ -8,39 +9,72 @@ namespace DesignByContract.Prompt
     {
         private static void Main()
         {
-            //var validPerson = new Person(Guid.NewGuid(),
-            //                             new PersonName("Tiago Pariz"),
-            //                             new Email("tiagopariz@gmail.com"),
-            //                             new Category(Guid.NewGuid(), "Gerente"));
+            Console.WriteLine("Type your name");
+            var name = Console.ReadLine();
+            Console.WriteLine("Type your E-Mail");
+            var email = Console.ReadLine();
 
-            //var invalidPerson = new Person(Guid.NewGuid(),
-            //                               new PersonName(""),
-            //                               new Email("dfsjdlskfjl"),
-            //                               new Category(Guid.NewGuid(), "Cliente"),
-            //                               validPerson);
+            var personDto = new PersonDto(Guid.NewGuid(),
+                                          name,
+                                          email,
+                                          Guid.NewGuid(),
+                                          Guid.NewGuid());
 
-            var nullPerson = new Person(Guid.Empty,
-                                        null,
-                                        null,
-                                        null);
+            var personService = new PersonService(personDto.PersonId,
+                                                  personDto.Name,
+                                                  personDto.Email,
+                                                  personDto.CategoryId,
+                                                  personDto.ManagerId);
 
-            //Console.ForegroundColor = ConsoleColor.Red;
-            //Console.WriteLine(":: INVALID ::");
+            Submit(personService, personDto);
+            Console.ReadKey();
+        }
 
-            //foreach (var error in invalidPerson.Notification.Errors)
-            //{
-            //    Console.WriteLine(error.Message + " | " + error.FieldName);
-            //}
+        public static void Submit(PersonService personService, PersonDto personDto)
+        {
+            personService.SavePerson(personDto.PersonId,
+                personDto.Name);
 
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("\n:: NULL ::");
+            if (personService.HasNotifications)
+                ShowNotifications(personService);
+        }
 
-            foreach (var error in nullPerson.Notification.Errors)
+        private static void ShowNotifications(Service personService)
+        {
+            if (!personService.HasNotifications) return;
+
+            if (personService.HasErrors)
             {
-                Console.WriteLine(error.Message + " | " + error.FieldName);
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("\nErrors\n");
+
+                foreach (var error in personService.Errors())
+                {
+                    Console.WriteLine(error.ToString());
+                }
             }
 
-            Console.ReadKey();
+            if (personService.HasWarnings)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("\nWarnings\n");
+
+                foreach (var error in personService.Warnings())
+                {
+                    Console.WriteLine(error.ToString());
+                }
+            }
+
+            if (personService.HasInformations)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("\nInformations\n");
+
+                foreach (var error in personService.Informations())
+                {
+                    Console.WriteLine(error.ToString());
+                }
+            }
         }
     }
 }

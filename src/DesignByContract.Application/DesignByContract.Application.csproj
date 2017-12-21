@@ -32,6 +32,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Entities\PersonService.cs" />
+    <Compile Include="Services\Service.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DesignByContract.Domain.Core\DesignByContract.Domain.Core.csproj">
+      <Project>{B16FFC43-AC50-4F9F-8D08-9B75B92A16D0}</Project>
+      <Name>DesignByContract.Domain.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DesignByContract.Domain\DesignByContract.Domain.csproj">
+      <Project>{8BE05555-264E-4AFF-9485-978F03DF8EF3}</Project>
+      <Name>DesignByContract.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
