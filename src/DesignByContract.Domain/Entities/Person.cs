@@ -34,7 +34,7 @@ namespace DesignByContract.Domain.Entities
             Validate();
         }
 
-        public sealed override void Validate()
+        private void Validate()
         {
             ValidSpecification = new PersonValidSpecification<object>();
             ValidSpecification.IsSatisfiedBy(this);

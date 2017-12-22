@@ -16,7 +16,7 @@ namespace DesignByContract.Domain.ValueObjects
             Validate();
         }
 
-        public sealed override void Validate()
+        private void Validate()
         {
             ValidSpecification = new PersonNameValidSpecification<object>();
             ValidSpecification.IsSatisfiedBy(this);

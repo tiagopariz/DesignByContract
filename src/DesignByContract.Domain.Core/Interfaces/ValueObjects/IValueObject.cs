@@ -9,7 +9,6 @@ namespace DesignByContract.Domain.Core.Interfaces.ValueObjects
         CompositeSpecification<object> ValidSpecification { get; }
         string FieldName { get; }
 
-        void Validate();
         bool IsValid();
     }
 }

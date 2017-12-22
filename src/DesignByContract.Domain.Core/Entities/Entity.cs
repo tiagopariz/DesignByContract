@@ -28,8 +28,6 @@ namespace DesignByContract.Domain.Core.Entities
             FieldName = value;
         }
 
-        public virtual void Validate() { }
-
         public bool IsValid()
         {
             return !ErrorList.HasCriticals;

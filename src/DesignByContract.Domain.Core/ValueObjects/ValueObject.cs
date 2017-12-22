@@ -23,8 +23,6 @@ namespace DesignByContract.Domain.Core.ValueObjects
             FieldName = value;
         }
 
-        public virtual void Validate() { }
-
         public bool IsValid()
         {
             return !ErrorList.HasCriticals;

@@ -22,7 +22,7 @@ namespace DesignByContract.Domain.Core.Tests.FakeDomain.Entities
             Validate();
         }
 
-        public sealed override void Validate()
+        private void Validate()
         {
             ValidSpecification = new EntityFakeValidSpecification<object>();
             ValidSpecification.IsSatisfiedBy(this);

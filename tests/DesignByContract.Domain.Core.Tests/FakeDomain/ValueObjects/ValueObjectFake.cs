@@ -16,7 +16,7 @@ namespace DesignByContract.Domain.Core.Tests.FakeDomain.ValueObjects
             Validate();
         }
 
-        public sealed override void Validate()
+        private void Validate()
         {
             ValidSpecification = new ValueObjectFakeValidSpecification<object>();
             ValidSpecification.IsSatisfiedBy(this);

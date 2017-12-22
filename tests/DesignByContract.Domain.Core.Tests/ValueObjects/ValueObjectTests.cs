@@ -205,15 +205,5 @@ namespace DesignByContract.Domain.Core.Tests.ValueObjects
             sut.SetFieldName("NewFieldName");
             Assert.AreEqual("NewFieldName", sut.FieldName);
         }
-
-        [TestMethod]
-        public void ValueObject_When_Validate()
-        {
-            var sut = new ValueObjectFake("N");
-            var errorsCount = sut.ErrorList.List.Count;
-            sut.Validate();
-            // TODO: Talvez seja interessante o Validate não duplicar os erros
-            Assert.AreEqual(errorsCount * 2, sut.ErrorList.List.Count);
-        }
     }
 }

@@ -11,7 +11,6 @@ namespace DesignByContract.Domain.Core.Interfaces.Entities
         CompositeSpecification<object> ValidSpecification { get; }
         string FieldName { get; }
 
-        void Validate();
         bool IsValid();
     }
 }

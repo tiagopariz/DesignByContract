@@ -20,7 +20,7 @@ namespace DesignByContract.Domain.Entities
             Validate();
         }
 
-        public sealed override void Validate()
+        private void Validate()
         {
             ValidSpecification = new CategoryValidSpecification<object>();
             ValidSpecification.IsSatisfiedBy(this);
