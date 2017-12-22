@@ -1,8 +1,8 @@
-﻿using System;
-using System.Linq.Expressions;
-using DesignByContract.Domain.Core.Errors;
+﻿using DesignByContract.Domain.Core.Errors;
 using DesignByContract.Domain.Core.Interfaces.Entities;
 using DesignByContract.Domain.Core.Specifications;
+using System;
+using System.Linq.Expressions;
 
 namespace DesignByContract.Domain.Core.Entities
 {

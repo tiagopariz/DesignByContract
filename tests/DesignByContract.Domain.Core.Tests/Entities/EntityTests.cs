@@ -1,4 +1,5 @@
-﻿using DesignByContract.Domain.Core.Errors;
+﻿using DesignByContract.Domain.Core.Entities;
+using DesignByContract.Domain.Core.Errors;
 using DesignByContract.Domain.Core.Tests.FakeDomain.Entities;
 using DesignByContract.Domain.Core.Tests.FakeDomain.ValueObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -11,10 +12,59 @@ namespace DesignByContract.Domain.Core.Tests.Entities
     public class EntityTests
     {
         [TestMethod]
-        public void Entity_New_When_Parse_FieldName()
+        public void Entity_New_When_Parse_Valid_Entity_HasCriticals_False()
         {
-            var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"), "fieldName");
-            Assert.AreEqual("fieldName", sut.FieldName);
+            var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
+            Assert.AreEqual(false, sut.ErrorList.HasCriticals);
+        }
+
+        [TestMethod]
+        public void Entity_New_When_Parse_Valid_Entity_HasWarnings_False()
+        {
+            var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
+            Assert.AreEqual(false, sut.ErrorList.HasWarnings);
+        }
+
+        [TestMethod]
+        public void Entity_New_When_Parse_Valid_Entity_HasInformations_False()
+        {
+            var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
+            Assert.AreEqual(false, sut.ErrorList.HasInformations);
+        }
+
+        [TestMethod]
+        public void Entity_New_When_Parse_Valid_Entity_Errors_Any_False()
+        {
+            var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
+            Assert.AreEqual(false, sut.ErrorList.Any);
+        }
+
+        [TestMethod]
+        public void Entity_New_When_Parse_Empty_Id()
+        {
+            var sut = new EntityFake(Guid.Empty, null);
+            Assert.AreNotEqual(Guid.Empty, sut.Id);
+        }
+
+        [TestMethod]
+        public void Entity_New_When_Parse_Valid_Id()
+        {
+            var sut = new EntityFake(Guid.NewGuid(), null);
+            Assert.AreNotEqual(Guid.Empty, sut.Id);
+        }
+
+        [TestMethod]
+        public void Entity_New_When_Parse_ValueObject_Null()
+        {
+            var sut = new EntityFake(Guid.NewGuid(), null);
+            Assert.AreEqual(null, sut.ValueObjectFake);
+        }
+
+        [TestMethod]
+        public void Entity_New_When_Parse_ValueObject_FieldName()
+        {
+            var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name", "fieldName"));
+            Assert.AreEqual(Entity.GetPropertyName(() => sut.ValueObjectFake), sut.ValueObjectFake.FieldName);
         }
 
         [TestMethod]
@@ -25,10 +75,24 @@ namespace DesignByContract.Domain.Core.Tests.Entities
         }
 
         [TestMethod]
+        public void Entity_New_When_Parse_ValueObject_Null_FieldName()
+        {
+            var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
+            Assert.AreEqual("ValueObjectFake", sut.ValueObjectFake.FieldName);
+        }
+
+        [TestMethod]
         public void Entity_New_When_Parse_Empty_FieldName()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"), "");
             Assert.AreEqual("EntityFake", sut.FieldName);
+        }
+
+        [TestMethod]
+        public void Entity_New_When_Parse_ValueObject_Empty_FieldName()
+        {
+            var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name", ""));
+            Assert.AreEqual("ValueObjectFake", sut.ValueObjectFake.FieldName);
         }
 
         [TestMethod]
@@ -195,11 +259,18 @@ namespace DesignByContract.Domain.Core.Tests.Entities
         }
 
         [TestMethod]
-        public void Entity_When_ValueObject_Set_Field_Name()
+        public void Entity_New_When_ValueObject_Set_Field_Name()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("N", "FieldName"), "FieldName");
             sut.ValueObjectFake.SetFieldName("NewFieldName");
             Assert.AreEqual("NewFieldName", sut.ValueObjectFake.FieldName);
+        }
+
+        [TestMethod]
+        public void Entity_New_When_Parse_FieldName()
+        {
+            var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"), "fieldName");
+            Assert.AreEqual("fieldName", sut.FieldName);
         }
     }
 }
