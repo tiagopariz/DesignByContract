@@ -6,7 +6,7 @@ namespace DesignByContract.Domain.ValueObjects
     public class Email : ValueObject
     {
         public const int AddressMinLength = EmailValidSpecification<object>.AddressMinLength;
-        public const int AddressMaxLength = EmailValidSpecification<object>.AddressMinLength;
+        public const int AddressMaxLength = EmailValidSpecification<object>.AddressMaxLength;
         public const bool AddressRequired = EmailValidSpecification<object>.AddressRequired;
 
         public Email(string address, string fieldName = null)

@@ -6,14 +6,8 @@ namespace DesignByContract.Domain.Core.Tests.FakeDomain.ValueObjects
     public class ValueObjectFake : ValueObject
     {
         public const int NameMinLength = ValueObjectFakeValidSpecification<object>.NameMinLength;
-        public const int NameMaxLength = ValueObjectFakeValidSpecification<object>.NameMinLength;
+        public const int NameMaxLength = ValueObjectFakeValidSpecification<object>.NameMaxLength;
         public const bool NameRequired = ValueObjectFakeValidSpecification<object>.NameRequired;
-
-        public ValueObjectFake(string fieldName = null)
-            : base(fieldName)
-        {
-            
-        }
 
         public ValueObjectFake(string name, string fieldName = null)
             : base(fieldName)

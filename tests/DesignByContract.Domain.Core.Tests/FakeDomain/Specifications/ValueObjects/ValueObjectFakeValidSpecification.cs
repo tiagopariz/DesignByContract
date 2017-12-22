@@ -7,32 +7,32 @@ namespace DesignByContract.Domain.Core.Tests.FakeDomain.Specifications.ValueObje
     public class ValueObjectFakeValidSpecification<T> : CompositeSpecification<T>
     {
         public const int NameMinLength = 3;
-        public const int NameMaxLength = 255;
+        public const int NameMaxLength = 15;
         public const bool NameRequired = true;
 
         public override bool IsSatisfiedBy(T candidate)
         {
-            var email = candidate as ValueObjectFake;
+            var valueObjectFake = candidate as ValueObjectFake;
 
-            if (string.IsNullOrEmpty(email?.Name))
-                email?.ErrorList.Add(
+            if (string.IsNullOrEmpty(valueObjectFake?.Name))
+                valueObjectFake?.ErrorList.Add(
                     new ErrorItemDetail("The Name is required.",
                                         new Critical(),
-                                        email.FieldName));
+                                        valueObjectFake.FieldName));
 
-            if ((email?.Name ?? "").Length < NameMinLength)
-                email?.ErrorList.Add(
+            if ((valueObjectFake?.Name ?? "").Length < NameMinLength)
+                valueObjectFake?.ErrorList.Add(
                     new ErrorItemDetail("Min error",
                                         new Critical(),
-                                        email.FieldName));
+                                        valueObjectFake.FieldName));
 
-            if ((email?.Name ?? "").Length > NameMaxLength)
-                email?.ErrorList.Add(
+            if ((valueObjectFake?.Name ?? "").Length > NameMaxLength)
+                valueObjectFake?.ErrorList.Add(
                     new ErrorItemDetail("Max error",
                                         new Critical(),
-                                        email.FieldName));
+                                        valueObjectFake.FieldName));
 
-            return !email?.ErrorList.HasCriticals ?? false;
+            return !valueObjectFake?.ErrorList.HasCriticals ?? false;
         }
     }
 }

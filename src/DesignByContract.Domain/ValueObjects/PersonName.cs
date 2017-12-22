@@ -6,7 +6,7 @@ namespace DesignByContract.Domain.ValueObjects
     public class PersonName : ValueObject
     {
         public const int NameMinLength = PersonNameValidSpecification<object>.NameMinLength;
-        public const int NameMaxLength = PersonNameValidSpecification<object>.NameMinLength;
+        public const int NameMaxLength = PersonNameValidSpecification<object>.NameMaxLength;
         public const bool NameRequired = PersonNameValidSpecification<object>.NameRequired;
 
         public PersonName(string name, string fieldName = null)
