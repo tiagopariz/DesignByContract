@@ -30,10 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Entities\EntityTests.cs" />
     <Compile Include="FakeDomain\Commands\SaveEntityFake.cs" />
     <Compile Include="FakeDomain\Entities\EntityFake.cs" />
-    <Compile Include="FakeDomain\Specifications\Entities\EntityFakeValidSpecification.cs" />
-    <Compile Include="FakeDomain\Specifications\ValueObjects\ValueObjectFakeValidSpecification.cs" />
+    <Compile Include="FakeDomain\Contracts\Entities\EntityFakeValidation.cs" />
+    <Compile Include="FakeDomain\Contracts\ValueObjects\ValueObjectFakeValidation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FakeDomain\ValueObjects\ValueObjectFake.cs" />
     <Compile Include="ValueObjects\ValueObjectTests.cs" />
@@ -49,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
-    <Folder Include="Entities\" />
     <Folder Include="Errors\" />
     <Folder Include="FakeDomain\Interfaces\Entities\" />
     <Folder Include="FakeDomain\Interfaces\ValueObjects\" />

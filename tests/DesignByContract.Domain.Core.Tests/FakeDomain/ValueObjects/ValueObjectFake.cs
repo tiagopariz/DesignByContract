@@ -1,13 +1,13 @@
-﻿using DesignByContract.Domain.Core.Tests.FakeDomain.Specifications.ValueObjects;
+﻿using DesignByContract.Domain.Core.Tests.FakeDomain.Contracts.ValueObjects;
 using DesignByContract.Domain.Core.ValueObjects;
 
 namespace DesignByContract.Domain.Core.Tests.FakeDomain.ValueObjects
 {
     public class ValueObjectFake : ValueObject
     {
-        public const int NameMinLength = ValueObjectFakeValidSpecification<object>.NameMinLength;
-        public const int NameMaxLength = ValueObjectFakeValidSpecification<object>.NameMaxLength;
-        public const bool NameRequired = ValueObjectFakeValidSpecification<object>.NameRequired;
+        public const int NameMinLength = ValueObjectFakeValidation<object>.NameMinLength;
+        public const int NameMaxLength = ValueObjectFakeValidation<object>.NameMaxLength;
+        public const bool NameRequired = ValueObjectFakeValidation<object>.NameRequired;
 
         public ValueObjectFake(string name, string fieldName = null)
             : base(fieldName)
@@ -18,7 +18,7 @@ namespace DesignByContract.Domain.Core.Tests.FakeDomain.ValueObjects
 
         private void Validate()
         {
-            ValidSpecification = new ValueObjectFakeValidSpecification<object>();
+            ValidSpecification = new ValueObjectFakeValidation<object>();
             ValidSpecification.IsSatisfiedBy(this);
         }
 

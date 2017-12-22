@@ -7,10 +7,10 @@ namespace DesignByContract.Domain.Entities
 {
     public class Person : Entity
     {
-        public const bool NameRequired = PersonValidSpecification<object>.PersonNameRequired;
-        public const bool EmailRequired = PersonValidSpecification<object>.PersonNameRequired;
-        public const bool CategoryRequired = PersonValidSpecification<object>.CategoryRequired;
-        public const bool ManagerRequired = PersonValidSpecification<object>.ManagerRequired;
+        public const bool NameRequired = PersonValidation<object>.PersonNameRequired;
+        public const bool EmailRequired = PersonValidation<object>.PersonNameRequired;
+        public const bool CategoryRequired = PersonValidation<object>.CategoryRequired;
+        public const bool ManagerRequired = PersonValidation<object>.ManagerRequired;
 
         public Person(Guid id,
                       PersonName name,
@@ -36,7 +36,7 @@ namespace DesignByContract.Domain.Entities
 
         private void Validate()
         {
-            ValidSpecification = new PersonValidSpecification<object>();
+            ValidSpecification = new PersonValidation<object>();
             ValidSpecification.IsSatisfiedBy(this);
         }
 

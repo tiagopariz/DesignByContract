@@ -2,9 +2,9 @@
 using DesignByContract.Domain.Core.Specifications;
 using DesignByContract.Domain.Core.Tests.FakeDomain.Entities;
 
-namespace DesignByContract.Domain.Core.Tests.FakeDomain.Specifications.Entities
+namespace DesignByContract.Domain.Core.Tests.FakeDomain.Contracts.Entities
 {
-    public class EntityFakeValidSpecification<T> : Specification<T>
+    public class EntityFakeValidation<T> : Specification<T>
     {
         public const bool ValueObjectFakeRequired = true;
 

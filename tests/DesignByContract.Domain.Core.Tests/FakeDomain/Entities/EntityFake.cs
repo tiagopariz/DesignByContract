@@ -1,13 +1,13 @@
 ﻿using System;
 using DesignByContract.Domain.Core.Entities;
-using DesignByContract.Domain.Core.Tests.FakeDomain.Specifications.Entities;
+using DesignByContract.Domain.Core.Tests.FakeDomain.Contracts.Entities;
 using DesignByContract.Domain.Core.Tests.FakeDomain.ValueObjects;
 
 namespace DesignByContract.Domain.Core.Tests.FakeDomain.Entities
 {
     public class EntityFake : Entity
     {
-        public const bool ValueObjectFakeRequired = EntityFakeValidSpecification<object>.ValueObjectFakeRequired;
+        public const bool ValueObjectFakeRequired = EntityFakeValidation<object>.ValueObjectFakeRequired;
 
         public EntityFake(Guid id,
                           ValueObjectFake valueObjectFake,
@@ -24,7 +24,7 @@ namespace DesignByContract.Domain.Core.Tests.FakeDomain.Entities
 
         private void Validate()
         {
-            ValidSpecification = new EntityFakeValidSpecification<object>();
+            ValidSpecification = new EntityFakeValidation<object>();
             ValidSpecification.IsSatisfiedBy(this);
         }
 

@@ -1,7 +1,7 @@
-﻿using System.Linq;
-using DesignByContract.Domain.Core.Errors;
+﻿using DesignByContract.Domain.Core.Errors;
 using DesignByContract.Domain.Core.Tests.FakeDomain.ValueObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 
 namespace DesignByContract.Domain.Core.Tests.ValueObjects
 {
