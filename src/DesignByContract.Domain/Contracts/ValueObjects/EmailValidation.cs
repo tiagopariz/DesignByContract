@@ -3,9 +3,9 @@ using DesignByContract.Domain.Core.Errors;
 using DesignByContract.Domain.Core.Specifications;
 using DesignByContract.Domain.ValueObjects;
 
-namespace DesignByContract.Domain.Specifications.ValueObjects
+namespace DesignByContract.Domain.Contracts.ValueObjects
 {
-    public class EmailValidSpecification<T> : Specification<T>
+    public class EmailValidation<T> : Specification<T>
     {
         public const int AddressMinLength = 3;
         public const int AddressMaxLength = 255;

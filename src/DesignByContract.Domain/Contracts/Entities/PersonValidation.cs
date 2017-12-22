@@ -2,9 +2,9 @@
 using DesignByContract.Domain.Core.Specifications;
 using DesignByContract.Domain.Entities;
 
-namespace DesignByContract.Domain.Specifications.Entities
+namespace DesignByContract.Domain.Contracts.Entities
 {
-    public class PersonValidSpecification<T> : Specification<T>
+    public class PersonValidation<T> : Specification<T>
     {
         public const bool PersonNameRequired = true;
         public const bool EmailRequired = true;

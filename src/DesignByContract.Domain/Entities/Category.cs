@@ -1,14 +1,14 @@
 ﻿using DesignByContract.Domain.Core.Entities;
-using DesignByContract.Domain.Specifications.Entities;
 using System;
+using DesignByContract.Domain.Contracts.Entities;
 
 namespace DesignByContract.Domain.Entities
 {
     public class Category : Entity
     {
-        public const int DescriptionMinLength = CategoryValidSpecification<object>.DescriptionMinLength;
-        public const int DescriptionMaxLength = CategoryValidSpecification<object>.DescriptionMaxLength;
-        public const bool DescriptionRequired = CategoryValidSpecification<object>.DescriptionRequired;
+        public const int DescriptionMinLength = CategoryValidation<object>.DescriptionMinLength;
+        public const int DescriptionMaxLength = CategoryValidation<object>.DescriptionMaxLength;
+        public const bool DescriptionRequired = CategoryValidation<object>.DescriptionRequired;
 
         public Category(Guid id,
                         string description,
@@ -22,7 +22,7 @@ namespace DesignByContract.Domain.Entities
 
         private void Validate()
         {
-            ValidSpecification = new CategoryValidSpecification<object>();
+            ValidSpecification = new CategoryValidation<object>();
             ValidSpecification.IsSatisfiedBy(this);
         }
 

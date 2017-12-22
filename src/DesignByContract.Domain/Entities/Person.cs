@@ -1,7 +1,7 @@
 ﻿using DesignByContract.Domain.Core.Entities;
-using DesignByContract.Domain.Specifications.Entities;
 using DesignByContract.Domain.ValueObjects;
 using System;
+using DesignByContract.Domain.Contracts.Entities;
 
 namespace DesignByContract.Domain.Entities
 {

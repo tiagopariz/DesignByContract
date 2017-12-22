@@ -1,13 +1,13 @@
-﻿using DesignByContract.Domain.Core.ValueObjects;
-using DesignByContract.Domain.Specifications.ValueObjects;
+﻿using DesignByContract.Domain.Contracts.ValueObjects;
+using DesignByContract.Domain.Core.ValueObjects;
 
 namespace DesignByContract.Domain.ValueObjects
 {
     public class Email : ValueObject
     {
-        public const int AddressMinLength = EmailValidSpecification<object>.AddressMinLength;
-        public const int AddressMaxLength = EmailValidSpecification<object>.AddressMaxLength;
-        public const bool AddressRequired = EmailValidSpecification<object>.AddressRequired;
+        public const int AddressMinLength = EmailValidation<object>.AddressMinLength;
+        public const int AddressMaxLength = EmailValidation<object>.AddressMaxLength;
+        public const bool AddressRequired = EmailValidation<object>.AddressRequired;
 
         public Email(string address, string fieldName = null)
             : base(fieldName)
@@ -18,7 +18,7 @@ namespace DesignByContract.Domain.ValueObjects
 
         private void Validate()
         {
-            ValidSpecification = new EmailValidSpecification<object>();
+            ValidSpecification = new EmailValidation<object>();
             ValidSpecification.IsSatisfiedBy(this);
         }
 

@@ -53,7 +53,7 @@
     <Compile Include="Specifications\NotSpecification.cs" />
     <Compile Include="Specifications\OrNotSpecification.cs" />
     <Compile Include="Specifications\OrSpecification.cs" />
-    <Compile Include="Specifications\CompositeSpecification.cs" />
+    <Compile Include="Specifications\Specification.cs" />
     <Compile Include="ValueObjects\ValueObject.cs" />
   </ItemGroup>
   <ItemGroup />

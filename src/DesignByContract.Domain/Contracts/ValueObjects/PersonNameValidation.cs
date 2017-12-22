@@ -2,9 +2,9 @@
 using DesignByContract.Domain.Core.Specifications;
 using DesignByContract.Domain.ValueObjects;
 
-namespace DesignByContract.Domain.Specifications.ValueObjects
+namespace DesignByContract.Domain.Contracts.ValueObjects
 {
-    public class PersonNameValidSpecification<T> : Specification<T>
+    public class PersonNameValidation<T> : Specification<T>
     {
         public const int NameMinLength = 1;
         public const int NameMaxLength = 255;

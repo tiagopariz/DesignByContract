@@ -2,9 +2,9 @@
 using DesignByContract.Domain.Core.Specifications;
 using DesignByContract.Domain.Entities;
 
-namespace DesignByContract.Domain.Specifications.Entities
+namespace DesignByContract.Domain.Contracts.Entities
 {
-    public class CategoryValidSpecification<T> : Specification<T>
+    public class CategoryValidation<T> : Specification<T>
     {
         public const int DescriptionMinLength = 1;
         public const int DescriptionMaxLength = 30;
