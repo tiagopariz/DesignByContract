@@ -5,7 +5,7 @@ using DesignByContract.Domain.ValueObjects;
 
 namespace DesignByContract.Domain.Specifications.ValueObjects
 {
-    public class EmailValidSpecification<T> : CompositeSpecification<T>
+    public class EmailValidSpecification<T> : Specification<T>
     {
         public const int AddressMinLength = 3;
         public const int AddressMaxLength = 255;

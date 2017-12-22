@@ -4,7 +4,7 @@ using DesignByContract.Domain.Entities;
 
 namespace DesignByContract.Domain.Specifications.Entities
 {
-    public class PersonValidSpecification<T> : CompositeSpecification<T>
+    public class PersonValidSpecification<T> : Specification<T>
     {
         public const bool PersonNameRequired = true;
         public const bool EmailRequired = true;

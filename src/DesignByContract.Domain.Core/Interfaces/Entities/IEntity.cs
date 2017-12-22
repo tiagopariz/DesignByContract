@@ -8,7 +8,7 @@ namespace DesignByContract.Domain.Core.Interfaces.Entities
     {
         Guid Id { get; }
         ErrorList ErrorList { get; }
-        CompositeSpecification<object> ValidSpecification { get; }
+        Specification<object> ValidSpecification { get; }
         string FieldName { get; }
 
         bool IsValid();

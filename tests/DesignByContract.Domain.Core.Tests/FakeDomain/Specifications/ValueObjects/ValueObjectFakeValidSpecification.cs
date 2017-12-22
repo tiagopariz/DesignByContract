@@ -4,7 +4,7 @@ using DesignByContract.Domain.Core.Tests.FakeDomain.ValueObjects;
 
 namespace DesignByContract.Domain.Core.Tests.FakeDomain.Specifications.ValueObjects
 {
-    public class ValueObjectFakeValidSpecification<T> : CompositeSpecification<T>
+    public class ValueObjectFakeValidSpecification<T> : Specification<T>
     {
         public const int NameMinLength = 3;
         public const int NameMaxLength = 15;

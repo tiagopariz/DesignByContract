@@ -20,7 +20,7 @@ namespace DesignByContract.Domain.Core.Entities
 
         public Guid Id { get; }
         public ErrorList ErrorList { get; } = new ErrorList();
-        public CompositeSpecification<object> ValidSpecification { get; set; } = null;
+        public Specification<object> ValidSpecification { get; set; } = null;
         public string FieldName { get; private set; }
 
         public void SetFieldName(string value)

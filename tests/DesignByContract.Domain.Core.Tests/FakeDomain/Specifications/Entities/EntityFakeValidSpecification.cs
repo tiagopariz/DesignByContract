@@ -4,7 +4,7 @@ using DesignByContract.Domain.Core.Tests.FakeDomain.Entities;
 
 namespace DesignByContract.Domain.Core.Tests.FakeDomain.Specifications.Entities
 {
-    public class EntityFakeValidSpecification<T> : CompositeSpecification<T>
+    public class EntityFakeValidSpecification<T> : Specification<T>
     {
         public const bool ValueObjectFakeRequired = true;
 

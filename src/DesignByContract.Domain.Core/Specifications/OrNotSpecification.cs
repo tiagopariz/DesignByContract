@@ -2,7 +2,7 @@
 
 namespace DesignByContract.Domain.Core.Specifications
 {
-    public class OrNotSpecification<T> : CompositeSpecification<T>
+    public class OrNotSpecification<T> : Specification<T>
     {
         private readonly ISpecification<T> _leftSpecification;
         private readonly ISpecification<T> _rightSpecification;

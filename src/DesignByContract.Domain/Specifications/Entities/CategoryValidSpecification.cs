@@ -4,7 +4,7 @@ using DesignByContract.Domain.Entities;
 
 namespace DesignByContract.Domain.Specifications.Entities
 {
-    public class CategoryValidSpecification<T> : CompositeSpecification<T>
+    public class CategoryValidSpecification<T> : Specification<T>
     {
         public const int DescriptionMinLength = 1;
         public const int DescriptionMaxLength = 30;

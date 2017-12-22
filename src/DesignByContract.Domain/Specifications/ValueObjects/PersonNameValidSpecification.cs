@@ -4,7 +4,7 @@ using DesignByContract.Domain.ValueObjects;
 
 namespace DesignByContract.Domain.Specifications.ValueObjects
 {
-    public class PersonNameValidSpecification<T> : CompositeSpecification<T>
+    public class PersonNameValidSpecification<T> : Specification<T>
     {
         public const int NameMinLength = 1;
         public const int NameMaxLength = 255;

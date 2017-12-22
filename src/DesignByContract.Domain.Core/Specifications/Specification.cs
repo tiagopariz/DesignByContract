@@ -2,7 +2,7 @@
 
 namespace DesignByContract.Domain.Core.Specifications
 {
-    public abstract class CompositeSpecification<T> : ISpecification<T>
+    public abstract class Specification<T> : ISpecification<T>
     {
         public abstract bool IsSatisfiedBy(T candidate);
         public ISpecification<T> And(ISpecification<T> specification) =>

@@ -2,7 +2,7 @@
 
 namespace DesignByContract.Domain.Core.Specifications
 {
-    public class ExpressionSpecification<T> : CompositeSpecification<T>
+    public class ExpressionSpecification<T> : Specification<T>
     {
         private readonly Func<T, bool> _expression;
 
