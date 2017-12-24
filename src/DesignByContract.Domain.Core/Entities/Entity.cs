@@ -33,7 +33,7 @@ namespace DesignByContract.Domain.Core.Entities
             return !ErrorList.HasCriticals;
         }
 
-        public static string GetPropertyName<T>(Expression<Func<T>> propertyExpression)
+        public static string GetPropertyName<T>(System.Linq.Expressions.Expression<Func<T>> propertyExpression)
         {
             return (propertyExpression.Body as MemberExpression)?.Member.Name ?? "";
         }

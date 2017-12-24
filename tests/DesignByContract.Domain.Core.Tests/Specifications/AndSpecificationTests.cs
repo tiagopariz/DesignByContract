@@ -19,8 +19,8 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
                 new Fake { Id = 3, Name = "Name03", Category = "Customer", City = "Rio" },
             };
 
-            ISpecification<Fake> isCustomer = new ExpressionSpecification<Fake>(x => x.Category == "Customer");
-            ISpecification<Fake> livesInPorto = new ExpressionSpecification<Fake>(x => x.City == "Porto");
+            ISpecification<Fake> isCustomer = new Expression<Fake>(x => x.Category == "Customer");
+            ISpecification<Fake> livesInPorto = new Expression<Fake>(x => x.City == "Porto");
             var sut = isCustomer.And(livesInPorto);
 
             var listFakeFiltered = listFake.FindAll(x => sut.IsSatisfiedBy(x));
@@ -44,9 +44,9 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
                 new Fake { Id = 6, Name = "Name06", Category = "Customer", City = "New York", Active = true },
             };
 
-            ISpecification<Fake> isCustomer = new ExpressionSpecification<Fake>(x => x.Category == "Customer");
-            ISpecification<Fake> livesInNewYork = new ExpressionSpecification<Fake>(x => x.City == "New York");
-            ISpecification<Fake> isActive = new ExpressionSpecification<Fake>(x => x.Active);
+            ISpecification<Fake> isCustomer = new Expression<Fake>(x => x.Category == "Customer");
+            ISpecification<Fake> livesInNewYork = new Expression<Fake>(x => x.City == "New York");
+            ISpecification<Fake> isActive = new Expression<Fake>(x => x.Active);
             var sut = isCustomer.And(livesInNewYork)
                                 .And(isActive);
 

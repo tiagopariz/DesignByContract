@@ -47,12 +47,12 @@
     <Compile Include="Notifications\ItemDetail.cs" />
     <Compile Include="Notifications\Notification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Specifications\AndSpecification.cs" />
-    <Compile Include="Specifications\AndNotSpecification.cs" />
-    <Compile Include="Specifications\ExpressionSpecification.cs" />
-    <Compile Include="Specifications\NotSpecification.cs" />
-    <Compile Include="Specifications\OrNotSpecification.cs" />
-    <Compile Include="Specifications\OrSpecification.cs" />
+    <Compile Include="Specifications\And.cs" />
+    <Compile Include="Specifications\AndNot.cs" />
+    <Compile Include="Specifications\Expression.cs" />
+    <Compile Include="Specifications\Not.cs" />
+    <Compile Include="Specifications\OrNot.cs" />
+    <Compile Include="Specifications\Or.cs" />
     <Compile Include="Specifications\Specification.cs" />
     <Compile Include="ValueObjects\ValueObject.cs" />
   </ItemGroup>
