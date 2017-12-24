@@ -7,10 +7,10 @@ using System.Collections.Generic;
 namespace DesignByContract.Domain.Core.Tests.Specifications
 {
     [TestClass]
-    public class AndSpecificationTests
+    public class AndNotSpecificationTests
     {
         [TestMethod]
-        public void AndSpecification_When_Filter_With_Two_Specifications()
+        public void AndNotSpecification_When_Filter_With_Two_Specifications()
         {
             var listFake = new List<Fake>()
             {
@@ -20,8 +20,8 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
             };
 
             ISpecification<Fake> isCustomer = new ExpressionSpecification<Fake>(x => x.Category == "Customer");
-            ISpecification<Fake> livesInPorto = new ExpressionSpecification<Fake>(x => x.City == "Porto");
-            var sut = isCustomer.And(livesInPorto);
+            ISpecification<Fake> livesInRio = new ExpressionSpecification<Fake>(x => x.City == "Rio");
+            var sut = isCustomer.AndNot(livesInRio);
 
             var listFakeFiltered = listFake.FindAll(x => sut.IsSatisfiedBy(x));
 
@@ -32,23 +32,23 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
         }
 
         [TestMethod]
-        public void AndSpecification_When_Filter_With_Many_Specifications()
+        public void AndNotSpecification_When_Filter_With_Many_Specifications()
         {
             var listFake = new List<Fake>()
             {
                 new Fake { Id = 1, Name = "Name01", Category = "Customer", City = "New York", Active = true },
-                new Fake { Id = 2, Name = "Name02", Category = "Customer", City = "New York", Active = false },
+                new Fake { Id = 2, Name = "Name02", Category = "Partner", City = "Rio", Active = false },
                 new Fake { Id = 3, Name = "Name03", Category = "Customer", City = "Rio", Active = true },
-                new Fake { Id = 4, Name = "Name04", Category = "Customer", City = "New York", Active = false },
-                new Fake { Id = 5, Name = "Name05", Category = "Partner", City = "New York", Active = false },
-                new Fake { Id = 6, Name = "Name06", Category = "Customer", City = "New York", Active = true },
+                //new Fake { Id = 4, Name = "Name04", Category = "Customer", City = "New York", Active = false },
+                //new Fake { Id = 5, Name = "Name05", Category = "Partner", City = "New York", Active = false },
+                //new Fake { Id = 6, Name = "Name06", Category = "Customer", City = "New York", Active = true },
             };
 
-            ISpecification<Fake> isCustomer = new ExpressionSpecification<Fake>(x => x.Category == "Customer");
-            ISpecification<Fake> livesInNewYork = new ExpressionSpecification<Fake>(x => x.City == "New York");
-            ISpecification<Fake> isActive = new ExpressionSpecification<Fake>(x => x.Active);
-            var sut = isCustomer.And(livesInNewYork)
-                                .And(isActive);
+            ISpecification<Fake> isCustomer = new ExpressionSpecification<Fake>(x => x.Category != "Customer");
+            ISpecification<Fake> livesInNewYork = new ExpressionSpecification<Fake>(x => x.City != "New York");
+            //ISpecification<Fake> isActive = new ExpressionSpecification<Fake>(x => !x.Active);
+            var sut = isCustomer.AndNot(livesInNewYork);
+                                //.AndNot(isActive);
 
             var listFakeFiltered = listFake.FindAll(x => sut.IsSatisfiedBy(x));
 
