@@ -1,0 +1,88 @@
+﻿using DesignByContract.Domain.Core.Errors;
+using DesignByContract.Domain.Core.Tests.FakeDomain.ValueObjects;
+using DesignByContract.Domain.Core.Tests.Mocks;
+using DesignByContract.Domain.Core.Tests.Mocks.Notification;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace DesignByContract.Domain.Core.Tests.Notifications
+{
+    [TestClass]
+    public class NotificationTests
+    {
+        [TestMethod]
+        public void NotificationNewHasList()
+        {
+            var fake = new Fake { Name = "Test"};
+            Assert.IsTrue(fake.NotificationFake != null);
+        }
+
+        [TestMethod]
+        public void NotificationNewAnyReturnTrue()
+        {
+            var fake = new Fake { Name = "Test" };
+            fake.NotificationFake.Add(new FakeItemDetail("Test"));
+            Assert.IsTrue(fake.NotificationFake.Any);
+        }
+
+        [TestMethod]
+        public void NotificationNewAnyReturnFalse()
+        {
+            var fake = new Fake { Name = "Test" };
+            Assert.IsFalse(fake.NotificationFake.Any);
+        }
+
+        [TestMethod]
+        public void NotificationNewListIncludeReturnTrue()
+        {
+            var required = new FakeItemDetail("The Name is required.");
+            var fake = new Fake { Name = "Test" };
+            fake.NotificationFake.Add(required);
+            Assert.IsTrue(fake.NotificationFake.Includes(required));
+        }
+
+        [TestMethod]
+        public void NotificationNewListIncludeReturnFalse()
+        {
+            var required = new FakeItemDetail("The Name is required.");
+            var fake = new Fake { Name = "Test" };
+            Assert.IsFalse(fake.NotificationFake.Includes(required));
+        }
+
+        [TestMethod]
+        public void NotificationNewListAddReturnTrue()
+        {
+            var required = new FakeItemDetail("The Name is required.");
+            var fake = new Fake { Name = "Test" };
+            fake.NotificationFake.List.Add(required);
+            Assert.IsTrue(fake.NotificationFake.Includes(required));
+        }
+
+        [TestMethod]
+        public void NotificationNewListAddReturnFalse()
+        {
+            var required = new FakeItemDetail("The Name is required.");
+            var requiredWarning = new FakeItemDetail("The Name is required.");
+            var fake = new Fake { Name = "Test" };
+            fake.NotificationFake.List.Add(requiredWarning);
+            Assert.IsFalse(fake.NotificationFake.Includes(required));
+        }
+
+        [TestMethod]
+        public void NotificationNewConcatSuccess()
+        {
+            var requiredWarning = new FakeItemDetail("The Name is required.");
+            var fake1 = new Fake { Name = "Test" };
+            fake1.NotificationFake.Add(requiredWarning);
+
+            var required = new FakeItemDetail("The Name is required.");
+            var fake2 = new Fake { Name = "Test" };
+            fake2.NotificationFake.Add(required);
+
+            fake2.NotificationFake.Concat(fake1.NotificationFake);
+
+            Assert.IsTrue(fake2.NotificationFake.Includes(required) && fake2.NotificationFake.Includes(requiredWarning));
+        }
+
+        // TODO: Testar os args
+    }
+}
