@@ -46,6 +46,7 @@
     <Compile Include="FakeDomain\ValueObjects\ValueObjectFake.cs" />
     <Compile Include="Mocks\Fake.cs" />
     <Compile Include="Specifications\AndNotTests.cs" />
+    <Compile Include="Specifications\NotTests.cs" />
     <Compile Include="Specifications\ExpressionTests.cs" />
     <Compile Include="Specifications\AndTests.cs" />
     <Compile Include="Specifications\SpecificationTests.cs" />

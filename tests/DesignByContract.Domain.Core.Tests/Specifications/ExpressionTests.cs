@@ -44,7 +44,7 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
             ISpecification<Fake> livesInNewYork = new Expression<Fake>(x => x.City == "New York");
             ISpecification<Fake> isActive = new Expression<Fake>(x => x.Active);
             var sut = isCustomer.And(livesInNewYork)
-                .And(isActive);
+                                .And(isActive);
             Assert.IsFalse(sut.IsSatisfiedBy(new Fake { Category = "Customer", City = "Rio", Active = true }));
         }
     }
