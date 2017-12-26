@@ -15,7 +15,7 @@ namespace DesignByContract.Domain.Core.Specifications
         }
 
         public override bool IsSatisfiedBy(T candidate) =>
-            (_left.IsSatisfiedBy(candidate) &&
-             _right.IsSatisfiedBy(candidate)) != true;
+            !(_left.IsSatisfiedBy(candidate) &&
+              _right.IsSatisfiedBy(candidate));
     }
 }

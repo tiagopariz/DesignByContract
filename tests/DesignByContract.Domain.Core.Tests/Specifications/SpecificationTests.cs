@@ -8,19 +8,19 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
     public class SpecificationTests
     {
         [TestMethod]
-        public void Specification_New_IsSatisfiedBy_True()
+        public void SpecificationNewIsSatisfiedByReturnTrue()
         {
             var valueObjectFake = new ValueObjectFake("Name");
             var sut = new ValueObjectFakeValidation<ValueObjectFake>();
-            Assert.AreEqual(true, sut.IsSatisfiedBy(valueObjectFake));
+            Assert.IsTrue(sut.IsSatisfiedBy(valueObjectFake));
         }
 
         [TestMethod]
-        public void Specification_New_IsSatisfiedBy_False()
+        public void SpecificationNewIsSatisfiedByReturnFalse()
         {
             var valueObjectFake = new ValueObjectFake("N");
             var sut = new ValueObjectFakeValidation<ValueObjectFake>();
-            Assert.AreEqual(false, sut.IsSatisfiedBy(valueObjectFake));
+            Assert.IsFalse(sut.IsSatisfiedBy(valueObjectFake));
         }
     }
 }
