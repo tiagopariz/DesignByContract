@@ -45,9 +45,10 @@
     <Compile Include="FakeDomain\Contracts\ValueObjects\ValueObjectFakeValidation.cs" />
     <Compile Include="FakeDomain\Entities\EntityFake.cs" />
     <Compile Include="FakeDomain\ValueObjects\ValueObjectFake.cs" />
-    <Compile Include="Mocks\Notification\ErrorItemDetail.cs" />
+    <Compile Include="Mocks\Notification\ItemDetailFake.cs" />
     <Compile Include="Mocks\Notification\NotificationFake.cs" />
     <Compile Include="Mocks\Fake.cs" />
+    <Compile Include="Notifications\ItemDetailTests.cs" />
     <Compile Include="Notifications\NotificationTests.cs" />
     <Compile Include="Specifications\OrTests.cs" />
     <Compile Include="Specifications\OrNotTests.cs" />
@@ -79,7 +80,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

@@ -2,9 +2,9 @@
 
 namespace DesignByContract.Domain.Core.Tests.Mocks.Notification
 {
-    public class FakeItemDetail : ItemDetail
+    public class ItemDetailFake : ItemDetail
     {
-        public FakeItemDetail(string message, params string[] args)
+        public ItemDetailFake(string message, params string[] args)
             : base(message, args)
         {
 

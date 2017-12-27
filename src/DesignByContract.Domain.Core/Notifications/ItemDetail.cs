@@ -10,6 +10,8 @@ namespace DesignByContract.Domain.Core.Notifications
         {
             Message = message;
 
+            if (string.IsNullOrWhiteSpace(Message)) return;
+
             for (var i = 0; i < args.Length; i++)
             {
                 Message = Message.Replace("{" + i + "}", args[i]);
