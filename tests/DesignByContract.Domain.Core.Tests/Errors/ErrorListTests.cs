@@ -65,6 +65,25 @@ namespace DesignByContract.Domain.Core.Tests.Errors
         }
 
         [TestMethod]
+        public void ErrorlistNewInvalidErrorListAddWithArgsReturnTrue()
+        {
+            var requiredError = new ErrorItemDetail("The {0} is required.", new Critical(), "", "Name");
+            var valueObjectFake = new ValueObjectFake("");
+            valueObjectFake.ErrorList.List.Add(requiredError);
+            Assert.IsTrue(valueObjectFake.ErrorList.Includes(requiredError));
+        }
+
+        [TestMethod]
+        public void ErrorlistNewInvalidErrorListAddWithArgsReturnFalse()
+        {
+            var requiredError = new ErrorItemDetail("The {0} is required.", new Critical(), "", "Name");
+            var requiredWarning = new ErrorItemDetail("The {0} is required.", new Warning(), "", "Name");
+            var valueObjectFake = new ValueObjectFake("");
+            valueObjectFake.ErrorList.List.Add(requiredWarning);
+            Assert.IsFalse(valueObjectFake.ErrorList.Includes(requiredError));
+        }
+
+        [TestMethod]
         public void ErrorlistNewInvalidErrorConcatSuccess()
         {
             var requiredWarning = new ErrorItemDetail("The Name is required.", new Warning(), "");
@@ -79,7 +98,5 @@ namespace DesignByContract.Domain.Core.Tests.Errors
 
             Assert.IsTrue(valueObjectFake2.ErrorList.Includes(requiredError) && valueObjectFake2.ErrorList.Includes(requiredWarning));
         }
-
-        // TODO: Testar os args
     }
 }

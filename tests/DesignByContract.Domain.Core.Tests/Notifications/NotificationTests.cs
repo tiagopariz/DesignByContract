@@ -66,6 +66,25 @@ namespace DesignByContract.Domain.Core.Tests.Notifications
         }
 
         [TestMethod]
+        public void NotificationNewListAddWithArgsReturnTrue()
+        {
+            var required = new ItemDetailFake("The {0} is required.", "Name");
+            var fake = new Fake { Name = "Test" };
+            fake.NotificationFake.List.Add(required);
+            Assert.IsTrue(fake.NotificationFake.Includes(required));
+        }
+
+        [TestMethod]
+        public void NotificationNewListAddWithArgsReturnFalse()
+        {
+            var required = new ItemDetailFake("The {0} is required.", "Name");
+            var requiredWarning = new ItemDetailFake("The {0} is required.", "Name");
+            var fake = new Fake { Name = "Test" };
+            fake.NotificationFake.List.Add(requiredWarning);
+            Assert.IsFalse(fake.NotificationFake.Includes(required));
+        }
+
+        [TestMethod]
         public void NotificationNewConcatSuccess()
         {
             var requiredWarning = new ItemDetailFake("The Name is required.");
@@ -80,7 +99,5 @@ namespace DesignByContract.Domain.Core.Tests.Notifications
 
             Assert.IsTrue(fake2.NotificationFake.Includes(required) && fake2.NotificationFake.Includes(requiredWarning));
         }
-
-        // TODO: Testar os args
     }
 }
