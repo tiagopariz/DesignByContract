@@ -1,10 +1,10 @@
 ﻿using DesignByContract.Domain.Core.Entities;
 using DesignByContract.Domain.Core.Errors;
-using DesignByContract.Domain.Core.Tests.FakeDomain.Entities;
-using DesignByContract.Domain.Core.Tests.FakeDomain.ValueObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Linq;
+using DesignByContract.Domain.Core.Tests.DomainFake.Entities;
+using DesignByContract.Domain.Core.Tests.DomainFake.ValueObjects;
 
 namespace DesignByContract.Domain.Core.Tests.Entities
 {

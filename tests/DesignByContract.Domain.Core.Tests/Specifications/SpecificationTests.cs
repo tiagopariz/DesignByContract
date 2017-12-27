@@ -1,5 +1,5 @@
-﻿using DesignByContract.Domain.Core.Tests.FakeDomain.Contracts.ValueObjects;
-using DesignByContract.Domain.Core.Tests.FakeDomain.ValueObjects;
+﻿using DesignByContract.Domain.Core.Tests.DomainFake.Contracts.ValueObjects;
+using DesignByContract.Domain.Core.Tests.DomainFake.ValueObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DesignByContract.Domain.Core.Tests.Specifications

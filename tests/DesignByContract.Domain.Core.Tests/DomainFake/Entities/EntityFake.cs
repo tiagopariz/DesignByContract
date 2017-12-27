@@ -1,9 +1,9 @@
 ﻿using System;
 using DesignByContract.Domain.Core.Entities;
-using DesignByContract.Domain.Core.Tests.FakeDomain.Contracts.Entities;
-using DesignByContract.Domain.Core.Tests.FakeDomain.ValueObjects;
+using DesignByContract.Domain.Core.Tests.DomainFake.Contracts.Entities;
+using DesignByContract.Domain.Core.Tests.DomainFake.ValueObjects;
 
-namespace DesignByContract.Domain.Core.Tests.FakeDomain.Entities
+namespace DesignByContract.Domain.Core.Tests.DomainFake.Entities
 {
     public class EntityFake : Entity
     {

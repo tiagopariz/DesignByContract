@@ -38,13 +38,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DomainFake\Entities\EntityFakeSimple.cs" />
     <Compile Include="Entities\EntityTests.cs" />
     <Compile Include="Errors\ErrorListTests.cs" />
-    <Compile Include="FakeDomain\Commands\SaveEntityFake.cs" />
-    <Compile Include="FakeDomain\Contracts\Entities\EntityFakeValidation.cs" />
-    <Compile Include="FakeDomain\Contracts\ValueObjects\ValueObjectFakeValidation.cs" />
-    <Compile Include="FakeDomain\Entities\EntityFake.cs" />
-    <Compile Include="FakeDomain\ValueObjects\ValueObjectFake.cs" />
+    <Compile Include="DomainFake\Commands\SaveEntityFake.cs" />
+    <Compile Include="DomainFake\Contracts\Entities\EntityFakeValidation.cs" />
+    <Compile Include="DomainFake\Contracts\ValueObjects\ValueObjectFakeValidation.cs" />
+    <Compile Include="DomainFake\Entities\EntityFake.cs" />
+    <Compile Include="DomainFake\ValueObjects\ValueObjectFake.cs" />
     <Compile Include="Mocks\Notification\ItemDetailFake.cs" />
     <Compile Include="Mocks\Notification\NotificationFake.cs" />
     <Compile Include="Mocks\Fake.cs" />
@@ -68,8 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
-    <Folder Include="FakeDomain\Interfaces\Entities\" />
-    <Folder Include="FakeDomain\Interfaces\ValueObjects\" />
+    <Folder Include="DomainFake\Interfaces\Entities\" />
+    <Folder Include="DomainFake\Interfaces\ValueObjects\" />
     <Folder Include="Interfaces\Entities\" />
     <Folder Include="Interfaces\Errors\" />
     <Folder Include="Interfaces\Notifications\" />
