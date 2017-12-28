@@ -10,17 +10,17 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
         [TestMethod]
         public void SpecificationNewIsSatisfiedByReturnTrue()
         {
-            var valueObjectFake = new ValueObjectFake("Name");
-            var sut = new ValueObjectFakeValidation<ValueObjectFake>();
-            Assert.IsTrue(sut.IsSatisfiedBy(valueObjectFake));
+            var valueObjectFakeForSpecification = new ValueObjectFakeForSpecification("Name");
+            var sut = new ValueObjectFakeForSpecificationValidation<ValueObjectFakeForSpecification>();
+            Assert.IsTrue(sut.IsSatisfiedBy(valueObjectFakeForSpecification));
         }
 
         [TestMethod]
         public void SpecificationNewIsSatisfiedByReturnFalse()
         {
-            var valueObjectFake = new ValueObjectFake("N");
-            var sut = new ValueObjectFakeValidation<ValueObjectFake>();
-            Assert.IsFalse(sut.IsSatisfiedBy(valueObjectFake));
+            var valueObjectFakeForSpecification = new ValueObjectFakeForSpecification("N");
+            var sut = new ValueObjectFakeForSpecificationValidation<ValueObjectFakeForSpecification>();
+            Assert.IsFalse(sut.IsSatisfiedBy(valueObjectFakeForSpecification));
         }
     }
 }

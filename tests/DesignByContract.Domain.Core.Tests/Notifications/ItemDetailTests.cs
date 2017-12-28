@@ -1,4 +1,4 @@
-﻿using DesignByContract.Domain.Core.Tests.Mocks.Notification;
+﻿using DesignByContract.Domain.Core.Tests.DomainCoreFake.Notification;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DesignByContract.Domain.Core.Tests.Notifications

@@ -1,8 +1,8 @@
-﻿using DesignByContract.Domain.Core.Tests.Mocks.Notification;
+﻿using DesignByContract.Domain.Core.Tests.DomainCoreFake.Notification;
 
-namespace DesignByContract.Domain.Core.Tests.Mocks
+namespace DesignByContract.Domain.Core.Tests.DomainFake.Entities
 {
-    public class Fake
+    public class EntityFakeForNotification
     {
         public int Id { get; set; }
         public string Name { get; set; }
