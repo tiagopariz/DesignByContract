@@ -3,9 +3,9 @@ using DesignByContract.Domain.Core.Entities;
 
 namespace DesignByContract.Domain.Core.Tests.DomainFake.Entities
 {
-    public class EntitySimpleFake : Entity
+    public class EntityFakeForInterfaces : Entity
     {
-        public EntitySimpleFake(Guid id) : 
+        public EntityFakeForInterfaces(Guid id) : 
             base(id)
         {
         }

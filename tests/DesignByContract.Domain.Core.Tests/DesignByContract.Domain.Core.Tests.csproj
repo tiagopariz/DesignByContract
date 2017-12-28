@@ -38,9 +38,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\Entities\EntityFakeForInterfaces1Tests.cs" />
+    <Compile Include="Interfaces\Entities\AbstractFakeForInterfacesTests.cs" />
     <Compile Include="DomainFake\Contracts\ValueObjects\ValueObjectFakeForSpecificationValidation.cs" />
     <Compile Include="DomainFake\Entities\EntityFakeForSpecification.cs" />
-    <Compile Include="DomainFake\Entities\EntityFakeSimple.cs" />
+    <Compile Include="DomainFake\Entities\EntityFakeForInterfaces.cs" />
     <Compile Include="DomainFake\ValueObjects\ValueObjectFakeForSpecification.cs" />
     <Compile Include="Entities\EntityTests.cs" />
     <Compile Include="Errors\ErrorListTests.cs" />
@@ -72,9 +74,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
+    <Folder Include="DomainCoreFake\Entities\" />
     <Folder Include="DomainFake\Interfaces\Entities\" />
     <Folder Include="DomainFake\Interfaces\ValueObjects\" />
-    <Folder Include="Interfaces\Entities\" />
     <Folder Include="Interfaces\Errors\" />
     <Folder Include="Interfaces\Notifications\" />
     <Folder Include="Interfaces\Specifications\" />
