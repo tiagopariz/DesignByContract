@@ -38,7 +38,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\Entities\EntityFakeForInterfaces1Tests.cs" />
+    <Compile Include="DomainFake\Contracts\Entities\EntityFakeValidationForInterfaces.cs" />
+    <Compile Include="Interfaces\Entities\EntityFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\Entities\AbstractFakeForInterfacesTests.cs" />
     <Compile Include="DomainFake\Contracts\ValueObjects\ValueObjectFakeForSpecificationValidation.cs" />
     <Compile Include="DomainFake\Entities\EntityFakeForSpecification.cs" />
