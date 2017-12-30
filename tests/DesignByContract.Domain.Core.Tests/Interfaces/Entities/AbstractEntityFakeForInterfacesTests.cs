@@ -6,7 +6,7 @@ using DesignByContract.Domain.Core.Errors;
 namespace DesignByContract.Domain.Core.Tests.Interfaces.Entities
 {
     [TestClass]
-    public abstract class AbstractFakeForInterfacesTests
+    public abstract class AbstractEntityFakeForInterfacesTests
     {
         public abstract IEntity GetEntityInstanceParseEmptyId();
         public abstract IEntity GetEntityInstanceParseValidId();

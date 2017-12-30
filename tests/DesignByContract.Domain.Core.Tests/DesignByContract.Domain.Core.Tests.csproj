@@ -39,8 +39,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DomainFake\Contracts\Entities\EntityFakeValidationForInterfaces.cs" />
+    <Compile Include="DomainCoreFake\Errors\LevelFakeForInterfaces.cs" />
     <Compile Include="Interfaces\Entities\EntityFakeForInterfacesTests.cs" />
-    <Compile Include="Interfaces\Entities\AbstractFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\Entities\AbstractEntityFakeForInterfacesTests.cs" />
     <Compile Include="DomainFake\Contracts\ValueObjects\ValueObjectFakeForSpecificationValidation.cs" />
     <Compile Include="DomainFake\Entities\EntityFakeForSpecification.cs" />
     <Compile Include="DomainFake\Entities\EntityFakeForInterfaces.cs" />
@@ -55,6 +56,8 @@
     <Compile Include="DomainCoreFake\Notification\ItemDetailFake.cs" />
     <Compile Include="DomainCoreFake\Notification\NotificationFake.cs" />
     <Compile Include="DomainFake\Entities\EntityFakeForNotification.cs" />
+    <Compile Include="Interfaces\Errors\AbstractLevelFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\Errors\LevelFakeForInterfacesTests.cs" />
     <Compile Include="Notifications\ItemDetailTests.cs" />
     <Compile Include="Notifications\NotificationTests.cs" />
     <Compile Include="Specifications\OrTests.cs" />
@@ -78,7 +81,6 @@
     <Folder Include="DomainCoreFake\Entities\" />
     <Folder Include="DomainFake\Interfaces\Entities\" />
     <Folder Include="DomainFake\Interfaces\ValueObjects\" />
-    <Folder Include="Interfaces\Errors\" />
     <Folder Include="Interfaces\Notifications\" />
     <Folder Include="Interfaces\Specifications\" />
     <Folder Include="Interfaces\ValueObjects\" />
