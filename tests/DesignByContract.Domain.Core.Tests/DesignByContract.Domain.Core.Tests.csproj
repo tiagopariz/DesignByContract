@@ -42,10 +42,13 @@
     <Compile Include="Interfaces\Notifications\ItemDetailAbstractFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\Notifications\NotificationFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\Notifications\ItemDetailFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\Specifications\SpecificationAbstractFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\Specifications\SpecificationFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\ValueObjects\ValueObjectAbstractFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\ValueObjects\ValueObjectFakeForInterfacesTests.cs" />
     <Compile Include="Mocks\DomainCoreFake\Notification\NotificationFakeForInterfaces.cs" />
     <Compile Include="Mocks\DomainCoreFake\Notification\ItemDetailFakeForInterfaces.cs" />
+    <Compile Include="Mocks\DomainCoreFake\Specifications\SpecificationFakeForInterfaces.cs" />
     <Compile Include="Mocks\DomainFake\Contracts\Entities\EntityFakeValidationForInterfaces.cs" />
     <Compile Include="Mocks\DomainCoreFake\Errors\LevelFakeForInterfaces.cs" />
     <Compile Include="Interfaces\Entities\EntityFakeForInterfacesTests.cs" />
@@ -88,7 +91,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
-    <Folder Include="Interfaces\Specifications\" />
     <Folder Include="Mocks\DomainCoreFake\Entities\" />
     <Folder Include="Mocks\DomainFake\Interfaces\Entities\" />
     <Folder Include="Mocks\DomainFake\Interfaces\ValueObjects\" />
