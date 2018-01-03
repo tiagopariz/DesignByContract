@@ -4,7 +4,7 @@ using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.ValueObjects;
 
 namespace DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Contracts.ValueObjects
 {
-    public class ValueObjectFakeForSpecificationValidation<T> : Specification<T>
+    public class ValueObjectFakeValidationForSpecification<T> : Specification<T>
     {
         public const int NameMinLength = 3;
         public const int NameMaxLength = 15;

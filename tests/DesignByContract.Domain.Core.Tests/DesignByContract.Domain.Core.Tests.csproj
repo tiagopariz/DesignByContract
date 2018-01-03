@@ -38,11 +38,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ValueObjects\ValueObjectAbstractFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\ValueObjects\ValueObjectFakeForInterfacesTests.cs" />
     <Compile Include="Mocks\DomainFake\Contracts\Entities\EntityFakeValidationForInterfaces.cs" />
     <Compile Include="Mocks\DomainCoreFake\Errors\LevelFakeForInterfaces.cs" />
     <Compile Include="Interfaces\Entities\EntityFakeForInterfacesTests.cs" />
-    <Compile Include="Interfaces\Entities\AbstractEntityFakeForInterfacesTests.cs" />
-    <Compile Include="Mocks\DomainFake\Contracts\ValueObjects\ValueObjectFakeForSpecificationValidation.cs" />
+    <Compile Include="Interfaces\Entities\EntityAbstractFakeForInterfacesTests.cs" />
+    <Compile Include="Mocks\DomainFake\Contracts\ValueObjects\ValueObjectFakeValidationForInterfaces.cs" />
+    <Compile Include="Mocks\DomainFake\Contracts\ValueObjects\ValueObjectFakeValidationForSpecification.cs" />
+    <Compile Include="Mocks\DomainFake\ValueObjects\ValueObjectFakeForInterfaces.cs" />
     <Compile Include="Mocks\DomainFake\Entities\EntityFakeForSpecification.cs" />
     <Compile Include="Mocks\DomainFake\Entities\EntityFakeForInterfaces.cs" />
     <Compile Include="Mocks\DomainFake\ValueObjects\ValueObjectFakeForSpecification.cs" />
@@ -80,7 +84,6 @@
     <Folder Include="Commands\" />
     <Folder Include="Interfaces\Notifications\" />
     <Folder Include="Interfaces\Specifications\" />
-    <Folder Include="Interfaces\ValueObjects\" />
     <Folder Include="Mocks\DomainCoreFake\Entities\" />
     <Folder Include="Mocks\DomainFake\Interfaces\Entities\" />
     <Folder Include="Mocks\DomainFake\Interfaces\ValueObjects\" />

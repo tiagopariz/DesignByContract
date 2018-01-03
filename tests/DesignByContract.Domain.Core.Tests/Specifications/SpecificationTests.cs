@@ -11,7 +11,7 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
         public void SpecificationNewIsSatisfiedByReturnTrue()
         {
             var valueObjectFakeForSpecification = new ValueObjectFakeForSpecification("Name");
-            var sut = new ValueObjectFakeForSpecificationValidation<ValueObjectFakeForSpecification>();
+            var sut = new ValueObjectFakeValidationForSpecification<ValueObjectFakeForSpecification>();
             Assert.IsTrue(sut.IsSatisfiedBy(valueObjectFakeForSpecification));
         }
 
@@ -19,7 +19,7 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
         public void SpecificationNewIsSatisfiedByReturnFalse()
         {
             var valueObjectFakeForSpecification = new ValueObjectFakeForSpecification("N");
-            var sut = new ValueObjectFakeForSpecificationValidation<ValueObjectFakeForSpecification>();
+            var sut = new ValueObjectFakeValidationForSpecification<ValueObjectFakeForSpecification>();
             Assert.IsFalse(sut.IsSatisfiedBy(valueObjectFakeForSpecification));
         }
     }

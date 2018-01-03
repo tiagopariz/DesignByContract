@@ -6,7 +6,7 @@ using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Entities;
 namespace DesignByContract.Domain.Core.Tests.Interfaces.Entities
 {
     [TestClass]
-    public class EntityFakeForInterfacesTests : AbstractEntityFakeForInterfacesTests
+    public class EntityFakeForInterfacesTests : EntityAbstractFakeForInterfacesTests
     {
         public override IEntity GetEntityInstanceParseEmptyId()
         {

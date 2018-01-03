@@ -1,12 +1,12 @@
-﻿using DesignByContract.Domain.Core.Interfaces.Entities;
+﻿using DesignByContract.Domain.Core.Errors;
+using DesignByContract.Domain.Core.Interfaces.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using DesignByContract.Domain.Core.Errors;
 
 namespace DesignByContract.Domain.Core.Tests.Interfaces.Entities
 {
     [TestClass]
-    public abstract class AbstractEntityFakeForInterfacesTests
+    public abstract class EntityAbstractFakeForInterfacesTests
     {
         public abstract IEntity GetEntityInstanceParseEmptyId();
         public abstract IEntity GetEntityInstanceParseValidId();
