@@ -9,7 +9,6 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.ValueObjects
     {
         public abstract IValueObject GetValueObjectInstance();
 
-
         [TestMethod]
         public void ValueObjectErrorListAddReturnAnyTrue()
         {

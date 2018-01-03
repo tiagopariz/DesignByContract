@@ -1,12 +1,12 @@
 ﻿using DesignByContract.Domain.Core.Interfaces.Notifications;
+using DesignByContract.Domain.Core.Notifications;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DesignByContract.Domain.Core.Notifications
+namespace DesignByContract.Domain.Core.Tests.Mocks.DomainCoreFake.Notification
 {
-    public abstract class Notification : INotification
+    public class NotificationFakeForInterfaces : INotification
     {
-        // TODO: Tornar lista somente acessível pelo Add e Concat
         public IList<object> List { get; } = new List<object>();
         public bool Any => List.Any();
 
@@ -20,7 +20,7 @@ namespace DesignByContract.Domain.Core.Notifications
             List.Add(description);
         }
 
-        public void Concat(params Notification[] args)
+        public void Concat(params INotification[] args)
         {
             foreach (var notification in args)
             {

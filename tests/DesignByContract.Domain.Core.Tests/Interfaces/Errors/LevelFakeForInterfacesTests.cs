@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DesignByContract.Domain.Core.Tests.Interfaces.Errors
 {
     [TestClass]
-    public class LevelFakeForInterfacesTests : AbstractLevelFakeForInterfacesTests
+    public class LevelFakeForInterfacesTests : LevelAbstractFakeForInterfacesTests
     {
         public override ILevel GetILevelInstance()
         {

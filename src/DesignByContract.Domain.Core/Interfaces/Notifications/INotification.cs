@@ -8,7 +8,7 @@ namespace DesignByContract.Domain.Core.Interfaces.Notifications
         IList<object> List { get; }
         bool Any { get; }
 
-        bool Includes(ItemDetail error);
-        void Add(ItemDetail error);
+        bool Includes(ItemDetail itemDetail);
+        void Add(ItemDetail itemDetail);
     }
 }

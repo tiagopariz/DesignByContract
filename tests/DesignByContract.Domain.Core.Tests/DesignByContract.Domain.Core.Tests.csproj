@@ -38,8 +38,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\Notifications\NotificationAbstractFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\Notifications\ItemDetailAbstractFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\Notifications\NotificationFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\Notifications\ItemDetailFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\ValueObjects\ValueObjectAbstractFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\ValueObjects\ValueObjectFakeForInterfacesTests.cs" />
+    <Compile Include="Mocks\DomainCoreFake\Notification\NotificationFakeForInterfaces.cs" />
+    <Compile Include="Mocks\DomainCoreFake\Notification\ItemDetailFakeForInterfaces.cs" />
     <Compile Include="Mocks\DomainFake\Contracts\Entities\EntityFakeValidationForInterfaces.cs" />
     <Compile Include="Mocks\DomainCoreFake\Errors\LevelFakeForInterfaces.cs" />
     <Compile Include="Interfaces\Entities\EntityFakeForInterfacesTests.cs" />
@@ -60,7 +66,7 @@
     <Compile Include="Mocks\DomainCoreFake\Notification\ItemDetailFake.cs" />
     <Compile Include="Mocks\DomainCoreFake\Notification\NotificationFake.cs" />
     <Compile Include="Mocks\DomainFake\Entities\EntityFakeForNotification.cs" />
-    <Compile Include="Interfaces\Errors\AbstractLevelFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\Errors\LevelAbstractFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\Errors\LevelFakeForInterfacesTests.cs" />
     <Compile Include="Notifications\ItemDetailTests.cs" />
     <Compile Include="Notifications\NotificationTests.cs" />
@@ -82,7 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
-    <Folder Include="Interfaces\Notifications\" />
     <Folder Include="Interfaces\Specifications\" />
     <Folder Include="Mocks\DomainCoreFake\Entities\" />
     <Folder Include="Mocks\DomainFake\Interfaces\Entities\" />
