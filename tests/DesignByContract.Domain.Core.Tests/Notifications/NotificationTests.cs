@@ -1,6 +1,5 @@
-﻿using DesignByContract.Domain.Core.Tests.DomainCoreFake;
-using DesignByContract.Domain.Core.Tests.DomainCoreFake.Notification;
-using DesignByContract.Domain.Core.Tests.DomainFake.Entities;
+﻿using DesignByContract.Domain.Core.Tests.Mocks.DomainCoreFake.Notification;
+using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DesignByContract.Domain.Core.Tests.Notifications

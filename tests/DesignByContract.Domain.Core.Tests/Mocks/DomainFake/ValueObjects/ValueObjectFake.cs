@@ -1,7 +1,7 @@
-﻿using DesignByContract.Domain.Core.Tests.DomainFake.Contracts.ValueObjects;
+﻿using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Contracts.ValueObjects;
 using DesignByContract.Domain.Core.ValueObjects;
 
-namespace DesignByContract.Domain.Core.Tests.DomainFake.ValueObjects
+namespace DesignByContract.Domain.Core.Tests.Mocks.DomainFake.ValueObjects
 {
     public class ValueObjectFake : ValueObject
     {

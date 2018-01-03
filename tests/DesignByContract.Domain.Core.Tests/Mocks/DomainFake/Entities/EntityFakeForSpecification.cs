@@ -1,6 +1,6 @@
-﻿using DesignByContract.Domain.Core.Tests.DomainCoreFake.Notification;
+﻿using DesignByContract.Domain.Core.Tests.Mocks.DomainCoreFake.Notification;
 
-namespace DesignByContract.Domain.Core.Tests.DomainFake.Entities
+namespace DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Entities
 {
     public class EntityFakeForSpecification
     {

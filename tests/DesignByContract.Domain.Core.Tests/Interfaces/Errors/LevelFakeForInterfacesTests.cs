@@ -1,5 +1,5 @@
 ﻿using DesignByContract.Domain.Core.Interfaces.Errors;
-using DesignByContract.Domain.Core.Tests.DomainCoreFake.Errors;
+using DesignByContract.Domain.Core.Tests.Mocks.DomainCoreFake.Errors;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DesignByContract.Domain.Core.Tests.Interfaces.Errors

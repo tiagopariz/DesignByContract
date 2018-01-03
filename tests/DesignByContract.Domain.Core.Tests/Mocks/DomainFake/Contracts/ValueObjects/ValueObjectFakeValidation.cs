@@ -1,8 +1,8 @@
 ﻿using DesignByContract.Domain.Core.Errors;
 using DesignByContract.Domain.Core.Specifications;
-using DesignByContract.Domain.Core.Tests.DomainFake.ValueObjects;
+using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.ValueObjects;
 
-namespace DesignByContract.Domain.Core.Tests.DomainFake.Contracts.ValueObjects
+namespace DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Contracts.ValueObjects
 {
     public class ValueObjectFakeValidation<T> : Specification<T>
     {

@@ -38,24 +38,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DomainFake\Contracts\Entities\EntityFakeValidationForInterfaces.cs" />
-    <Compile Include="DomainCoreFake\Errors\LevelFakeForInterfaces.cs" />
+    <Compile Include="Mocks\DomainFake\Contracts\Entities\EntityFakeValidationForInterfaces.cs" />
+    <Compile Include="Mocks\DomainCoreFake\Errors\LevelFakeForInterfaces.cs" />
     <Compile Include="Interfaces\Entities\EntityFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\Entities\AbstractEntityFakeForInterfacesTests.cs" />
-    <Compile Include="DomainFake\Contracts\ValueObjects\ValueObjectFakeForSpecificationValidation.cs" />
-    <Compile Include="DomainFake\Entities\EntityFakeForSpecification.cs" />
-    <Compile Include="DomainFake\Entities\EntityFakeForInterfaces.cs" />
-    <Compile Include="DomainFake\ValueObjects\ValueObjectFakeForSpecification.cs" />
+    <Compile Include="Mocks\DomainFake\Contracts\ValueObjects\ValueObjectFakeForSpecificationValidation.cs" />
+    <Compile Include="Mocks\DomainFake\Entities\EntityFakeForSpecification.cs" />
+    <Compile Include="Mocks\DomainFake\Entities\EntityFakeForInterfaces.cs" />
+    <Compile Include="Mocks\DomainFake\ValueObjects\ValueObjectFakeForSpecification.cs" />
     <Compile Include="Entities\EntityTests.cs" />
     <Compile Include="Errors\ErrorListTests.cs" />
-    <Compile Include="DomainFake\Commands\SaveEntityFake.cs" />
-    <Compile Include="DomainFake\Contracts\Entities\EntityFakeValidation.cs" />
-    <Compile Include="DomainFake\Contracts\ValueObjects\ValueObjectFakeValidation.cs" />
-    <Compile Include="DomainFake\Entities\EntityFake.cs" />
-    <Compile Include="DomainFake\ValueObjects\ValueObjectFake.cs" />
-    <Compile Include="DomainCoreFake\Notification\ItemDetailFake.cs" />
-    <Compile Include="DomainCoreFake\Notification\NotificationFake.cs" />
-    <Compile Include="DomainFake\Entities\EntityFakeForNotification.cs" />
+    <Compile Include="Mocks\DomainFake\Commands\SaveEntityFake.cs" />
+    <Compile Include="Mocks\DomainFake\Contracts\Entities\EntityFakeValidation.cs" />
+    <Compile Include="Mocks\DomainFake\Contracts\ValueObjects\ValueObjectFakeValidation.cs" />
+    <Compile Include="Mocks\DomainFake\Entities\EntityFake.cs" />
+    <Compile Include="Mocks\DomainFake\ValueObjects\ValueObjectFake.cs" />
+    <Compile Include="Mocks\DomainCoreFake\Notification\ItemDetailFake.cs" />
+    <Compile Include="Mocks\DomainCoreFake\Notification\NotificationFake.cs" />
+    <Compile Include="Mocks\DomainFake\Entities\EntityFakeForNotification.cs" />
     <Compile Include="Interfaces\Errors\AbstractLevelFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\Errors\LevelFakeForInterfacesTests.cs" />
     <Compile Include="Notifications\ItemDetailTests.cs" />
@@ -78,13 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
-    <Folder Include="DomainCoreFake\Entities\" />
-    <Folder Include="DomainFake\Interfaces\Entities\" />
-    <Folder Include="DomainFake\Interfaces\ValueObjects\" />
     <Folder Include="Interfaces\Notifications\" />
     <Folder Include="Interfaces\Specifications\" />
     <Folder Include="Interfaces\ValueObjects\" />
-    <Folder Include="Mocks\" />
+    <Folder Include="Mocks\DomainCoreFake\Entities\" />
+    <Folder Include="Mocks\DomainFake\Interfaces\Entities\" />
+    <Folder Include="Mocks\DomainFake\Interfaces\ValueObjects\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

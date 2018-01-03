@@ -1,6 +1,6 @@
 ﻿using DesignByContract.Domain.Core.Specifications;
 
-namespace DesignByContract.Domain.Core.Tests.DomainFake.Contracts.Entities
+namespace DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Contracts.Entities
 {
     public class EntityFakeValidationForInterfaces<T> : Specification<T>
     {

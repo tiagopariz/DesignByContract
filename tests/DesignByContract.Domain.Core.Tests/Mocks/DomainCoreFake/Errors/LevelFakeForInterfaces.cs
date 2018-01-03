@@ -1,6 +1,6 @@
 ﻿using DesignByContract.Domain.Core.Interfaces.Errors;
 
-namespace DesignByContract.Domain.Core.Tests.DomainCoreFake.Errors
+namespace DesignByContract.Domain.Core.Tests.Mocks.DomainCoreFake.Errors
 {
     public class LevelFakeForInterfaces : ILevel
     {

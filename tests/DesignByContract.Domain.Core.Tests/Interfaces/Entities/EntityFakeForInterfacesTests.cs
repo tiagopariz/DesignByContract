@@ -1,7 +1,7 @@
 ﻿using DesignByContract.Domain.Core.Interfaces.Entities;
-using DesignByContract.Domain.Core.Tests.DomainFake.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Entities;
 
 namespace DesignByContract.Domain.Core.Tests.Interfaces.Entities
 {

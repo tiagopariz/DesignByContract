@@ -1,8 +1,8 @@
 ﻿using DesignByContract.Domain.Core.Commands;
 using DesignByContract.Domain.Core.Errors;
-using DesignByContract.Domain.Core.Tests.DomainFake.Entities;
+using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Entities;
 
-namespace DesignByContract.Domain.Core.Tests.DomainFake.Commands
+namespace DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Commands
 {
     public class SaveEntityFake : Command
     {

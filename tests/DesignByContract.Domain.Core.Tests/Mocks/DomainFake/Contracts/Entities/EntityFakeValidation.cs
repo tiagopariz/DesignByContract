@@ -1,8 +1,8 @@
 ﻿using DesignByContract.Domain.Core.Errors;
 using DesignByContract.Domain.Core.Specifications;
-using DesignByContract.Domain.Core.Tests.DomainFake.Entities;
+using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Entities;
 
-namespace DesignByContract.Domain.Core.Tests.DomainFake.Contracts.Entities
+namespace DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Contracts.Entities
 {
     public class EntityFakeValidation<T> : Specification<T>
     {
