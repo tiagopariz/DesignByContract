@@ -1,7 +1,7 @@
-﻿using System;
-using DesignByContract.Domain.Core.Entities;
+﻿using DesignByContract.Domain.Core.Entities;
 using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Contracts.Entities;
 using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.ValueObjects;
+using System;
 
 namespace DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Entities
 {

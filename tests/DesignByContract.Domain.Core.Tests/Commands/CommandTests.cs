@@ -1,8 +1,8 @@
-﻿using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.ValueObjects;
+﻿using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Commands;
+using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Entities;
+using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.ValueObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Commands;
-using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Entities;
 
 namespace DesignByContract.Domain.Core.Tests.Commands
 {
