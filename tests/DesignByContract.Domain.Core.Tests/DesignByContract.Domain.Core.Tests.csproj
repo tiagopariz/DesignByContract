@@ -38,6 +38,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Commands\CommandTests.cs" />
     <Compile Include="Interfaces\Notifications\NotificationAbstractFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\Notifications\ItemDetailAbstractFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\Notifications\NotificationFakeForInterfacesTests.cs" />
@@ -90,7 +91,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Commands\" />
     <Folder Include="Mocks\DomainCoreFake\Entities\" />
     <Folder Include="Mocks\DomainFake\Interfaces\Entities\" />
     <Folder Include="Mocks\DomainFake\Interfaces\ValueObjects\" />
