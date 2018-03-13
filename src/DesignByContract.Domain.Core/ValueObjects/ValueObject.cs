@@ -27,5 +27,10 @@ namespace DesignByContract.Domain.Core.ValueObjects
         {
             return !ErrorList.HasCriticals;
         }
+
+        public void Dispose()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
