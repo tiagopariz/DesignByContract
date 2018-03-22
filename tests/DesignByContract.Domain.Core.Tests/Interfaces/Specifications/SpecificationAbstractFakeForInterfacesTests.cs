@@ -1,21 +1,21 @@
 ﻿using DesignByContract.Domain.Core.Interfaces.Specifications;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace DesignByContract.Domain.Core.Tests.Interfaces.Specifications
 {
-    [TestClass]
+    [TestFixture]
     public abstract class SpecificationAbstractFakeForInterfacesTests
     {
         public abstract ISpecification<object> GetISpecificationInstance();
 
-        [TestMethod]
+        [Test]
         public void SpecificationParseObjectReturnIsSatisfiedByTrue()
         {
             var specification = GetISpecificationInstance();
             Assert.IsTrue(specification.IsSatisfiedBy(new object()));
         }
 
-        [TestMethod]
+        [Test]
         public void SpecificationAndReturnIsSatisfiedByTrue()
         {
             var specification1 = GetISpecificationInstance();
@@ -24,7 +24,7 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.Specifications
             Assert.IsTrue(specification3.IsSatisfiedBy(new object()));
         }
 
-        [TestMethod]
+        [Test]
         public void SpecificationAndNotReturnIsSatisfiedByTrue()
         {
             var specification1 = GetISpecificationInstance();
@@ -33,7 +33,7 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.Specifications
             Assert.IsTrue(!specification3.IsSatisfiedBy(new object()));
         }
 
-        [TestMethod]
+        [Test]
         public void SpecificationOrReturnIsSatisfiedByTrue()
         {
             var specification1 = GetISpecificationInstance();
@@ -42,7 +42,7 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.Specifications
             Assert.IsTrue(specification3.IsSatisfiedBy(new object()));
         }
 
-        [TestMethod]
+        [Test]
         public void SpecificationOrNotReturnIsSatisfiedByTrue()
         {
             var specification1 = GetISpecificationInstance();
@@ -51,7 +51,7 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.Specifications
             Assert.IsTrue(!specification3.IsSatisfiedBy(new object()));
         }
 
-        [TestMethod]
+        [Test]
         public void SpecificationNotReturnIsSatisfiedByTrue()
         {
             var specification1 = GetISpecificationInstance();

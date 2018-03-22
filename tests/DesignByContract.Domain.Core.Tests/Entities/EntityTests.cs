@@ -1,231 +1,231 @@
 ﻿using DesignByContract.Domain.Core.Entities;
 using DesignByContract.Domain.Core.Errors;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Linq;
 using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Entities;
 using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.ValueObjects;
+using NUnit.Framework;
+using System;
+using System.Linq;
 
 namespace DesignByContract.Domain.Core.Tests.Entities
 {
-    [TestClass]
+    [TestFixture]
     public class EntityTests
     {
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValidEntityHasCriticalsFalse()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
             Assert.AreEqual(false, sut.ErrorList.HasCriticals);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValidEntityHasWarningsFalse()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
             Assert.AreEqual(false, sut.ErrorList.HasWarnings);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValidEntityHasInformationsFalse()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
             Assert.AreEqual(false, sut.ErrorList.HasInformations);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValidEntityErrorsAnyFalse()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
             Assert.AreEqual(false, sut.ErrorList.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseEmptyId()
         {
             var sut = new EntityFake(Guid.Empty, null);
             Assert.AreNotEqual(Guid.Empty, sut.Id);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValidId()
         {
             var sut = new EntityFake(Guid.NewGuid(), null);
             Assert.AreNotEqual(Guid.Empty, sut.Id);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNull()
         {
             var sut = new EntityFake(Guid.NewGuid(), null);
             Assert.AreEqual(null, sut.ValueObjectFake);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectFieldName()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name", "fieldName"));
             Assert.AreEqual(Entity.GetPropertyName(() => sut.ValueObjectFake), sut.ValueObjectFake.FieldName);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseNullFieldName()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
             Assert.AreEqual("EntityFake", sut.FieldName);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNullFieldName()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
             Assert.AreEqual("ValueObjectFake", sut.ValueObjectFake.FieldName);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseEmptyFieldName()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"), "");
             Assert.AreEqual("EntityFake", sut.FieldName);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectEmptyFieldName()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name", ""));
             Assert.AreEqual("ValueObjectFake", sut.ValueObjectFake.FieldName);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectName()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
             Assert.AreEqual("Name", sut.ValueObjectFake.Name);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNullName()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake(null));
             Assert.AreEqual(null, sut.ValueObjectFake.Name);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectEmptyName()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake(""));
             Assert.AreEqual("", sut.ValueObjectFake.Name);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNameNoErrors()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
             Assert.AreEqual(false, sut.ValueObjectFake.ErrorList.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNullNameHasErrors()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake(null));
             Assert.AreEqual(true, sut.ValueObjectFake.ErrorList.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectEmptyNameHasErrors()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake(""));
             Assert.AreEqual(true, sut.ValueObjectFake.ErrorList.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNameIsValidTrue()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
             Assert.AreEqual(true, sut.ValueObjectFake.IsValid());
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectEmptyNameIsValidFalse()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake(""));
             Assert.AreEqual(false, sut.ValueObjectFake.IsValid());
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNullNameIsValidFalse()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake(null));
             Assert.AreEqual(false, sut.ValueObjectFake.IsValid());
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNameInsufficientCharactersIsValidFalse()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("N"));
             Assert.AreEqual(false, sut.ValueObjectFake.IsValid());
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNameInsufficientCharactersHasErrors()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("N"));
             Assert.AreEqual(true, sut.ValueObjectFake.ErrorList.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNameMaximumExceededIsValidFalse()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name Name Name Name"));
             Assert.AreEqual(false, sut.ValueObjectFake.IsValid());
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNameMaximumExceededHasErrors()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name Name Name Name"));
             Assert.AreEqual(true, sut.ValueObjectFake.ErrorList.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityVerifyValueObjectIsRequired()
-        { 
+        {
             Assert.AreEqual(true, EntityFake.ValueObjectFakeRequired);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNameMaximumExceededVerifyMessage()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name Name Name Name"));
-            Assert.AreEqual("Max error", 
+            Assert.AreEqual("Max error",
                             (sut.ValueObjectFake.
                                 ErrorList.List
                                     .FirstOrDefault(x => x.ToString() == "Max error")
                                         as ErrorItemDetail)?.Message);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNameMaximumExceededVerifyLevel()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name Name Name Name"));
-            Assert.AreEqual("Critical", 
+            Assert.AreEqual("Critical",
                             (sut.ValueObjectFake.
                                 ErrorList.List
                                     .FirstOrDefault(x => x.ToString() == "Max error")
                                         as ErrorItemDetail)?.Level.ToString());
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNameMaximumExceededVerifyFieldName()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name Name Name Name"));
-            Assert.AreEqual("ValueObjectFake", 
+            Assert.AreEqual("ValueObjectFake",
                             (sut.ValueObjectFake.
                                 ErrorList.List
                                     .FirstOrDefault(x => x.ToString() == "Max error")
                                         as ErrorItemDetail)?.FieldName);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNameInsufficientCharactersVerifyMessage()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("N"));
@@ -236,7 +236,7 @@ namespace DesignByContract.Domain.Core.Tests.Entities
                                         as ErrorItemDetail)?.Message);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNameInsufficientCharactersVerifyLevel()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("N"));
@@ -247,7 +247,7 @@ namespace DesignByContract.Domain.Core.Tests.Entities
                                         as ErrorItemDetail)?.Level.ToString());
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseValueObjectNameInsufficientCharactersVerifyFieldName()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("N"));
@@ -258,7 +258,7 @@ namespace DesignByContract.Domain.Core.Tests.Entities
                                         as ErrorItemDetail)?.FieldName);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenValueObjectSetFieldName()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("N", "FieldName"), "FieldName");
@@ -266,7 +266,7 @@ namespace DesignByContract.Domain.Core.Tests.Entities
             Assert.AreEqual("NewFieldName", sut.ValueObjectFake.FieldName);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityNewWhenParseFieldName()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"), "fieldName");

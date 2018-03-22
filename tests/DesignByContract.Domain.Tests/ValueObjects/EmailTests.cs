@@ -1,37 +1,37 @@
 ﻿using DesignByContract.Domain.ValueObjects;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace DesignByContract.Domain.Tests.ValueObjects
 {
-    [TestClass]
+    [TestFixture]
     public class EmailTests
     {
-        [TestMethod]
-        [TestCategory("ValueObjects")]
+        [Test]
+        [Category("ValueObjects")]
         public void EmailNewEmptyAddress()
         {
             var sut = new Email("");
             Assert.AreEqual(sut.IsValid(), false);
         }
 
-        [TestMethod]
-        [TestCategory("ValueObjects")]
+        [Test]
+        [Category("ValueObjects")]
         public void EmailNewNullAddress()
         {
             var sut = new Email(null);
             Assert.AreEqual(sut.IsValid(), false);
         }
 
-        [TestMethod]
-        [TestCategory("ValueObjects")]
+        [Test]
+        [Category("ValueObjects")]
         public void EmailNewWhiteSpaceAddress()
         {
             var sut = new Email(" ");
             Assert.AreEqual(sut.IsValid(), false);
         }
 
-        [TestMethod]
-        [TestCategory("ValueObjects")]
+        [Test]
+        [Category("ValueObjects")]
         public void EmailNewValidAddres()
         {
             var sut = new Email("contato@email.com.br");
@@ -39,16 +39,16 @@ namespace DesignByContract.Domain.Tests.ValueObjects
             Assert.AreEqual(sut.IsValid(), true);
         }
 
-        [TestMethod]
-        [TestCategory("ValueObjects")]
+        [Test]
+        [Category("ValueObjects")]
         public void EmailNewInvalidAddress()
         {
             var sut = new Email("contato#email.com.br");
             Assert.AreEqual(sut.IsValid(), false);
         }
 
-        [TestMethod]
-        [TestCategory("ValueObjects")]
+        [Test]
+        [Category("ValueObjects")]
         public void EmailNewErrorWhemAddressMaxLengthExceeded()
         {
             var address = "contato@email.com.br";
@@ -60,8 +60,8 @@ namespace DesignByContract.Domain.Tests.ValueObjects
             Assert.AreEqual(sut.IsValid(), false);
         }
 
-        [TestMethod]
-        [TestCategory("ValueObjects")]
+        [Test]
+        [Category("ValueObjects")]
         public void EmailNewErrorWhemAddressMinLengthAllowed()
         {
             var sut = new Email("@");

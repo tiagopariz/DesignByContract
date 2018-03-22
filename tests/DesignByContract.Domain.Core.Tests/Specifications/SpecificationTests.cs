@@ -1,13 +1,13 @@
 ﻿using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Contracts.ValueObjects;
 using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.ValueObjects;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace DesignByContract.Domain.Core.Tests.Specifications
 {
-    [TestClass]
+    [TestFixture]
     public class SpecificationTests
     {
-        [TestMethod]
+        [Test]
         public void SpecificationNewIsSatisfiedByReturnTrue()
         {
             var valueObjectFakeForSpecification = new ValueObjectFakeForSpecification("Name");
@@ -15,7 +15,7 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
             Assert.IsTrue(sut.IsSatisfiedBy(valueObjectFakeForSpecification));
         }
 
-        [TestMethod]
+        [Test]
         public void SpecificationNewIsSatisfiedByReturnFalse()
         {
             var valueObjectFakeForSpecification = new ValueObjectFakeForSpecification("N");

@@ -1,144 +1,144 @@
 ﻿using DesignByContract.Domain.Core.Errors;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Linq;
 using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.ValueObjects;
 
 namespace DesignByContract.Domain.Core.Tests.ValueObjects
 {
-    [TestClass]
+    [TestFixture]
     public class ValueObjectTests
     {
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseFieldName()
         {
             var sut = new ValueObjectFake("", "fieldName");
             Assert.AreEqual("fieldName", sut.FieldName);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNullFieldName()
         {
             var sut = new ValueObjectFake("");
             Assert.AreEqual("ValueObjectFake", sut.FieldName);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseEmptyFieldName()
         {
             var sut = new ValueObjectFake("", "");
             Assert.AreEqual("ValueObjectFake", sut.FieldName);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseName()
         {
             var sut = new ValueObjectFake("Name");
             Assert.AreEqual("Name", sut.Name);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNullName()
         {
             var sut = new ValueObjectFake(null);
             Assert.AreEqual(null, sut.Name);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseEmptyName()
         {
             var sut = new ValueObjectFake("");
             Assert.AreEqual("", sut.Name);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNameNoErrors()
         {
             var sut = new ValueObjectFake("Name");
             Assert.AreEqual(false, sut.ErrorList.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNullNameHasErrors()
         {
             var sut = new ValueObjectFake(null);
             Assert.AreEqual(true, sut.ErrorList.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseEmptyNameHasErrors()
         {
             var sut = new ValueObjectFake("");
             Assert.AreEqual(true, sut.ErrorList.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNameIsValidTrue()
         {
             var sut = new ValueObjectFake("Name");
             Assert.AreEqual(true, sut.IsValid());
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNullNameIsValidFalse()
         {
             var sut = new ValueObjectFake(null);
             Assert.AreEqual(false, sut.IsValid());
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseEmptyNameIsValidFalse()
         {
             var sut = new ValueObjectFake("");
             Assert.AreEqual(false, sut.IsValid());
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNameInsufficientCharactersIsValidFalse()
         {
             var sut = new ValueObjectFake("N");
             Assert.AreEqual(false, sut.IsValid());
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNameInsufficientCharactersHasErrors()
         {
             var sut = new ValueObjectFake("N");
             Assert.AreEqual(true, sut.ErrorList.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNameMaximumExceededIsValidFalse()
         {
             var sut = new ValueObjectFake("Name Name Name Name");
             Assert.AreEqual(false, sut.IsValid());
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNameMaximumExceededHasErrors()
         {
             var sut = new ValueObjectFake("Name Name Name Name");
             Assert.AreEqual(true, sut.ErrorList.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectVerifyNameMinLengthValue()
         { 
             Assert.AreEqual(3, ValueObjectFake.NameMinLength);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectVerifyNameMaxLengthValue()
         { 
             Assert.AreEqual(15, ValueObjectFake.NameMaxLength);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectVerifyNameIsRequired()
         { 
             Assert.AreEqual(true, ValueObjectFake.NameRequired);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNameMaximumExceededVerifyMessage()
         {
             var sut = new ValueObjectFake("Name Name Name Name");
@@ -148,7 +148,7 @@ namespace DesignByContract.Domain.Core.Tests.ValueObjects
                                         as ErrorItemDetail)?.Message);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNameMaximumExceededVerifyLevel()
         {
             var sut = new ValueObjectFake("Name Name Name Name");
@@ -158,7 +158,7 @@ namespace DesignByContract.Domain.Core.Tests.ValueObjects
                                         as ErrorItemDetail)?.Level.ToString());
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNameMaximumExceededVerifyFieldName()
         {
             var sut = new ValueObjectFake("Name Name Name Name");
@@ -168,7 +168,7 @@ namespace DesignByContract.Domain.Core.Tests.ValueObjects
                                         as ErrorItemDetail)?.FieldName);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNameInsufficientCharactersVerifyMessage()
         {
             var sut = new ValueObjectFake("N");
@@ -178,7 +178,7 @@ namespace DesignByContract.Domain.Core.Tests.ValueObjects
                                         as ErrorItemDetail)?.Message);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNameInsufficientCharactersVerifyLevel()
         {
             var sut = new ValueObjectFake("N");
@@ -188,7 +188,7 @@ namespace DesignByContract.Domain.Core.Tests.ValueObjects
                                         as ErrorItemDetail)?.Level.ToString());
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectNewWhenParseNameInsufficientCharactersVerifyFieldName()
         {
             var sut = new ValueObjectFake("N");
@@ -198,7 +198,7 @@ namespace DesignByContract.Domain.Core.Tests.ValueObjects
                                         as ErrorItemDetail)?.FieldName);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectWhenSetFieldName()
         {
             var sut = new ValueObjectFake("Name", "FieldName");

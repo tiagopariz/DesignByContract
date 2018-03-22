@@ -1,14 +1,14 @@
 ﻿using DesignByContract.Domain.Core.Interfaces.Specifications;
 using DesignByContract.Domain.Core.Specifications;
 using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Entities;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace DesignByContract.Domain.Core.Tests.Specifications
 {
-    [TestClass]
+    [TestFixture]
     public class OrNotTests
     {
-        [TestMethod]
+        [Test]
         public void OrNotWhenFilterWithTwoSpecificationsReturnTrue()
         {
             ISpecification<EntityFakeForSpecification> isCustomer = new Expression<EntityFakeForSpecification>(x => x.Category == "Customer");
@@ -17,7 +17,7 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
             Assert.IsTrue(sut.IsSatisfiedBy(new EntityFakeForSpecification { Category = "Partner", City = "Rio" }));
         }
 
-        [TestMethod]
+        [Test]
         public void OrNotWhenFilterWithTwoSpecificationsReturnFalse()
         {
             ISpecification<EntityFakeForSpecification> isCustomer = new Expression<EntityFakeForSpecification>(x => x.Category == "Customer");
@@ -26,7 +26,7 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
             Assert.IsFalse(sut.IsSatisfiedBy(new EntityFakeForSpecification { Category = "Customer", City = "Rio" }));
         }
 
-        [TestMethod]
+        [Test]
         public void OrNotWhenFilterWithManySpecificationsReturnTrue()
         {
             ISpecification<EntityFakeForSpecification> isCustomer = new Expression<EntityFakeForSpecification>(x => x.Category == "Customer");
@@ -37,7 +37,7 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
             Assert.IsTrue(sut.IsSatisfiedBy(new EntityFakeForSpecification { Category = "Customer", City = "Rio", Active = false }));
         }
 
-        [TestMethod]
+        [Test]
         public void OrNotWhenFilterWithManySpecificationsReturnFalse()
         {
             ISpecification<EntityFakeForSpecification> isCustomer = new Expression<EntityFakeForSpecification>(x => x.Category == "Customer");

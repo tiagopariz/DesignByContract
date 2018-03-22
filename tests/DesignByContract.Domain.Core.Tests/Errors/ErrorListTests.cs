@@ -1,34 +1,34 @@
 ﻿using DesignByContract.Domain.Core.Errors;
 using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.ValueObjects;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace DesignByContract.Domain.Core.Tests.Errors
 {
-    [TestClass]
+    [TestFixture]
     public class ErrorlistTests
     {
-        [TestMethod]
+        [Test]
         public void ErrorlistNewInvalidErrorListNotNull()
         {
             var valueObjectFake = new ValueObjectFake("N");
             Assert.IsTrue(valueObjectFake.ErrorList != null);
         }
 
-        [TestMethod]
+        [Test]
         public void ErrorlistNewInvalidErrorListAnyReturnTrue()
         {
             var valueObjectFake = new ValueObjectFake("N");
             Assert.IsTrue(valueObjectFake.ErrorList.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void ErrorlistNewValidErrorListAnyReturnFalse()
         {
             var valueObjectFake = new ValueObjectFake("Name");
             Assert.IsFalse(valueObjectFake.ErrorList.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void ErrorlistNewInvalidErrorListIncludeReturnTrue()
         {
             var requiredError = new ErrorItemDetail("The Name is required.", new Critical(), "");
@@ -37,7 +37,7 @@ namespace DesignByContract.Domain.Core.Tests.Errors
             Assert.IsTrue(valueObjectFake.ErrorList.Includes(requiredError));
         }
 
-        [TestMethod]
+        [Test]
         public void ErrorlistNewInvalidErrorListIncludeReturnFalse()
         {
             var requiredError = new ErrorItemDetail("The Name is required.", new Critical(), "");
@@ -45,7 +45,7 @@ namespace DesignByContract.Domain.Core.Tests.Errors
             Assert.IsFalse(valueObjectFake.ErrorList.Includes(requiredError));
         }
 
-        [TestMethod]
+        [Test]
         public void ErrorlistNewInvalidErrorListAddReturnTrue()
         {
             var requiredError = new ErrorItemDetail("The Name is required.", new Critical(), "");
@@ -54,7 +54,7 @@ namespace DesignByContract.Domain.Core.Tests.Errors
             Assert.IsTrue(valueObjectFake.ErrorList.Includes(requiredError));
         }
 
-        [TestMethod]
+        [Test]
         public void ErrorlistNewInvalidErrorListAddReturnFalse()
         {
             var requiredError = new ErrorItemDetail("The Name is required.", new Critical(), "");
@@ -64,7 +64,7 @@ namespace DesignByContract.Domain.Core.Tests.Errors
             Assert.IsFalse(valueObjectFake.ErrorList.Includes(requiredError));
         }
 
-        [TestMethod]
+        [Test]
         public void ErrorlistNewInvalidErrorListAddWithArgsReturnTrue()
         {
             var requiredError = new ErrorItemDetail("The {0} is required.", new Critical(), "", "Name");
@@ -73,7 +73,7 @@ namespace DesignByContract.Domain.Core.Tests.Errors
             Assert.IsTrue(valueObjectFake.ErrorList.Includes(requiredError));
         }
 
-        [TestMethod]
+        [Test]
         public void ErrorlistNewInvalidErrorListAddWithArgsReturnFalse()
         {
             var requiredError = new ErrorItemDetail("The {0} is required.", new Critical(), "", "Name");
@@ -83,7 +83,7 @@ namespace DesignByContract.Domain.Core.Tests.Errors
             Assert.IsFalse(valueObjectFake.ErrorList.Includes(requiredError));
         }
 
-        [TestMethod]
+        [Test]
         public void ErrorlistNewInvalidErrorConcatSuccess()
         {
             var requiredWarning = new ErrorItemDetail("The Name is required.", new Warning(), "");

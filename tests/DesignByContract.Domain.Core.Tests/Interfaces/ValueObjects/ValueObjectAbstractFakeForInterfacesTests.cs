@@ -1,15 +1,15 @@
 ﻿using DesignByContract.Domain.Core.Errors;
 using DesignByContract.Domain.Core.Interfaces.ValueObjects;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace DesignByContract.Domain.Core.Tests.Interfaces.ValueObjects
 {
-    [TestClass]
+    [TestFixture]
     public abstract class ValueObjectAbstractFakeForInterfacesTests
     {
         public abstract IValueObject GetValueObjectInstance();
 
-        [TestMethod]
+        [Test]
         public void ValueObjectErrorListAddReturnAnyTrue()
         {
             var entity = GetValueObjectInstance();
@@ -18,7 +18,7 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.ValueObjects
             Assert.IsTrue(errorList.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectValidSpecificationReturnSpecificarion()
         {
             var entity = GetValueObjectInstance();
@@ -26,7 +26,7 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.ValueObjects
             Assert.IsTrue(validation != null);
         }
 
-        [TestMethod]
+        [Test]
         public void ValueObjectFieldNameReturnClassName()
         {
             var entity = GetValueObjectInstance();

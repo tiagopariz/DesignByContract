@@ -1,11 +1,11 @@
 ﻿using DesignByContract.Domain.Core.Interfaces.Entities;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System;
 using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Entities;
 
 namespace DesignByContract.Domain.Core.Tests.Interfaces.Entities
 {
-    [TestClass]
+    [TestFixture]
     public class EntityFakeForInterfacesTests : EntityAbstractFakeForInterfacesTests
     {
         public override IEntity GetEntityInstanceParseEmptyId()

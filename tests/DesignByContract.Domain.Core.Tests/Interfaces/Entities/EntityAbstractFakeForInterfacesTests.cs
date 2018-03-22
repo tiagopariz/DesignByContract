@@ -1,17 +1,17 @@
 ﻿using DesignByContract.Domain.Core.Errors;
 using DesignByContract.Domain.Core.Interfaces.Entities;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System;
 
 namespace DesignByContract.Domain.Core.Tests.Interfaces.Entities
 {
-    [TestClass]
+    [TestFixture]
     public abstract class EntityAbstractFakeForInterfacesTests
     {
         public abstract IEntity GetEntityInstanceParseEmptyId();
         public abstract IEntity GetEntityInstanceParseValidId();
 
-        [TestMethod]
+        [Test]
         public void EntityParseEmptyIdReturnValidGuid()
         {
             var entity = GetEntityInstanceParseEmptyId();
@@ -19,7 +19,7 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.Entities
             Assert.IsTrue(Guid.Empty != id);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityParseValidIdReturnValidGuid()
         {
             var entity = GetEntityInstanceParseValidId();
@@ -27,7 +27,7 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.Entities
             Assert.IsTrue(Guid.Empty != id);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityErrorListAddReturnAnyTrue()
         {
             var entity = GetEntityInstanceParseValidId();
@@ -36,7 +36,7 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.Entities
             Assert.IsTrue(errorList.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityValidSpecificationReturnSpecificarion()
         {
             var entity = GetEntityInstanceParseValidId();
@@ -44,7 +44,7 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.Entities
             Assert.IsTrue(validation != null);
         }
 
-        [TestMethod]
+        [Test]
         public void EntityFieldNameReturnClassName()
         {
             var entity = GetEntityInstanceParseValidId();

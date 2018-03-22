@@ -1,15 +1,15 @@
 ﻿using DesignByContract.Domain.Core.Interfaces.Notifications;
 using DesignByContract.Domain.Core.Tests.Mocks.DomainCoreFake.Notification;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace DesignByContract.Domain.Core.Tests.Interfaces.Notifications
 {
-    [TestClass]
+    [TestFixture]
     public abstract class NotificationAbstractFakeForInterfacesTests
     {
         public abstract INotification GetNotificationInstance();
         
-        [TestMethod]
+        [Test]
         public void NotificationListAddItemDetailReturnIncludesTrue()
         {
             var entity = GetNotificationInstance();
@@ -18,7 +18,7 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.Notifications
             Assert.IsTrue(entity.Includes(itemDetail));
         }
 
-        [TestMethod]
+        [Test]
         public void NotificationListReturnAnyTrue()
         {
             var entity = GetNotificationInstance();
@@ -27,7 +27,7 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.Notifications
             Assert.IsTrue(entity.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void NotificationListAddItemDetailReturnIncludesFalse()
         {
             var entity = GetNotificationInstance();
@@ -37,7 +37,7 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.Notifications
             Assert.IsFalse(entity.Includes(itemDetail2));
         }
 
-        [TestMethod]
+        [Test]
         public void NotificationAddItemDetailReturnIncludesTrue()
         {
             var entity = GetNotificationInstance();
@@ -46,7 +46,7 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.Notifications
             Assert.IsTrue(entity.Includes(itemDetail));
         }
 
-        [TestMethod]
+        [Test]
         public void NotificationAddItemDetailReturnIncludesFalse()
         {
             var entity = GetNotificationInstance();
@@ -56,7 +56,7 @@ namespace DesignByContract.Domain.Core.Tests.Interfaces.Notifications
             Assert.IsFalse(entity.Includes(itemDetail2));
         }
 
-        [TestMethod]
+        [Test]
         public void NotificationConcatItemDetailReturnCount2()
         {
             var entity1 = GetNotificationInstance();

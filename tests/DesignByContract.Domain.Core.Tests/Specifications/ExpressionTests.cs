@@ -1,14 +1,14 @@
 ﻿using DesignByContract.Domain.Core.Interfaces.Specifications;
 using DesignByContract.Domain.Core.Specifications;
 using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Entities;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace DesignByContract.Domain.Core.Tests.Specifications
 {
-    [TestClass]
+    [TestFixture]
     public class ExpressionTests
     {
-        [TestMethod]
+        [Test]
         public void ExpressionWhenFilterWithTwoSpecificationsReturnTrue()
         {
             ISpecification<EntityFakeForSpecification> sut =
@@ -17,7 +17,7 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
             Assert.IsTrue(sut.IsSatisfiedBy(new EntityFakeForSpecification { Category = "Customer", City = "New York" }));
         }
 
-        [TestMethod]
+        [Test]
         public void ExpressionWhenFilterWithTwoSpecificationsReturnFalse()
         {
             ISpecification<EntityFakeForSpecification> sut = 
@@ -26,7 +26,7 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
             Assert.IsFalse(sut.IsSatisfiedBy(new EntityFakeForSpecification { Category = "Customer", City = "Rio" }));
         }
 
-        [TestMethod]
+        [Test]
         public void ExpressionWhenFilterWithManySpecificationsReturnTrue()
         {
             ISpecification<EntityFakeForSpecification> isCustomer = new Expression<EntityFakeForSpecification>(x => x.Category == "Customer");
@@ -37,7 +37,7 @@ namespace DesignByContract.Domain.Core.Tests.Specifications
             Assert.IsTrue(sut.IsSatisfiedBy(new EntityFakeForSpecification { Category = "Customer", City = "New York", Active = true }));
         }
 
-        [TestMethod]
+        [Test]
         public void ExpressionWhenFilterWithManySpecificationsReturnFalse()
         {
             ISpecification<EntityFakeForSpecification> isCustomer = new Expression<EntityFakeForSpecification>(x => x.Category == "Customer");

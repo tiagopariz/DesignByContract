@@ -1,10 +1,10 @@
 ﻿using DesignByContract.Domain.Core.Interfaces.Notifications;
 using DesignByContract.Domain.Core.Tests.Mocks.DomainCoreFake.Notification;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace DesignByContract.Domain.Core.Tests.Interfaces.Notifications
 {
-    [TestClass]
+    [TestFixture]
     public class ItemDetailFakeForInterfacesTests : ItemDetailAbstractFakeForInterfacesTests
     {
         public override IItemDetail GetItemDetailInstance(string message, params string[] args)

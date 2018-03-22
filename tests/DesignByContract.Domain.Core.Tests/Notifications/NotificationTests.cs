@@ -1,20 +1,20 @@
 ﻿using DesignByContract.Domain.Core.Tests.Mocks.DomainCoreFake.Notification;
 using DesignByContract.Domain.Core.Tests.Mocks.DomainFake.Entities;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace DesignByContract.Domain.Core.Tests.Notifications
 {
-    [TestClass]
+    [TestFixture]
     public class NotificationTests
     {
-        [TestMethod]
+        [Test]
         public void NotificationNewHasList()
         {
             var fake = new EntityFakeForNotification { Name = "Test"};
             Assert.IsTrue(fake.NotificationFake != null);
         }
 
-        [TestMethod]
+        [Test]
         public void NotificationNewAnyReturnTrue()
         {
             var fake = new EntityFakeForNotification { Name = "Test" };
@@ -22,14 +22,14 @@ namespace DesignByContract.Domain.Core.Tests.Notifications
             Assert.IsTrue(fake.NotificationFake.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void NotificationNewAnyReturnFalse()
         {
             var fake = new EntityFakeForNotification { Name = "Test" };
             Assert.IsFalse(fake.NotificationFake.Any);
         }
 
-        [TestMethod]
+        [Test]
         public void NotificationNewListIncludeReturnTrue()
         {
             var required = new ItemDetailFake("The Name is required.");
@@ -38,7 +38,7 @@ namespace DesignByContract.Domain.Core.Tests.Notifications
             Assert.IsTrue(fake.NotificationFake.Includes(required));
         }
 
-        [TestMethod]
+        [Test]
         public void NotificationNewListIncludeReturnFalse()
         {
             var required = new ItemDetailFake("The Name is required.");
@@ -46,7 +46,7 @@ namespace DesignByContract.Domain.Core.Tests.Notifications
             Assert.IsFalse(fake.NotificationFake.Includes(required));
         }
 
-        [TestMethod]
+        [Test]
         public void NotificationNewListAddReturnTrue()
         {
             var required = new ItemDetailFake("The Name is required.");
@@ -55,7 +55,7 @@ namespace DesignByContract.Domain.Core.Tests.Notifications
             Assert.IsTrue(fake.NotificationFake.Includes(required));
         }
 
-        [TestMethod]
+        [Test]
         public void NotificationNewListAddReturnFalse()
         {
             var required = new ItemDetailFake("The Name is required.");
@@ -65,7 +65,7 @@ namespace DesignByContract.Domain.Core.Tests.Notifications
             Assert.IsFalse(fake.NotificationFake.Includes(required));
         }
 
-        [TestMethod]
+        [Test]
         public void NotificationNewListAddWithArgsReturnTrue()
         {
             var required = new ItemDetailFake("The {0} is required.", "Name");
@@ -74,7 +74,7 @@ namespace DesignByContract.Domain.Core.Tests.Notifications
             Assert.IsTrue(fake.NotificationFake.Includes(required));
         }
 
-        [TestMethod]
+        [Test]
         public void NotificationNewListAddWithArgsReturnFalse()
         {
             var required = new ItemDetailFake("The {0} is required.", "Name");
@@ -84,7 +84,7 @@ namespace DesignByContract.Domain.Core.Tests.Notifications
             Assert.IsFalse(fake.NotificationFake.Includes(required));
         }
 
-        [TestMethod]
+        [Test]
         public void NotificationNewConcatSuccess()
         {
             var requiredWarning = new ItemDetailFake("The Name is required.");
