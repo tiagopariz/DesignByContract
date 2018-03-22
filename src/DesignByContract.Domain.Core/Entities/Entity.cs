@@ -37,10 +37,5 @@ namespace DesignByContract.Domain.Core.Entities
         {
             return (propertyExpression.Body as MemberExpression)?.Member.Name ?? "";
         }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

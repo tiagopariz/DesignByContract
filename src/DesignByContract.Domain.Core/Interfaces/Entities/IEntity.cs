@@ -4,7 +4,7 @@ using System;
 
 namespace DesignByContract.Domain.Core.Interfaces.Entities
 {
-    public interface IEntity : IDisposable
+    public interface IEntity
     {
         Guid Id { get; }
         ErrorList ErrorList { get; }
