@@ -1,5 +1,5 @@
-﻿using DesignByContract.Domain.Contracts.ValueObjects;
-using DesignByContract.Domain.Core.ValueObjects;
+﻿using DesignByContract.Core.Domain.ValueObjects;
+using DesignByContract.Domain.Contracts.ValueObjects;
 
 namespace DesignByContract.Domain.ValueObjects
 {

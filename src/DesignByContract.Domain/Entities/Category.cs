@@ -1,6 +1,6 @@
-﻿using DesignByContract.Domain.Core.Entities;
-using System;
+﻿using DesignByContract.Core.Domain.Entities;
 using DesignByContract.Domain.Contracts.Entities;
+using System;
 
 namespace DesignByContract.Domain.Entities
 {

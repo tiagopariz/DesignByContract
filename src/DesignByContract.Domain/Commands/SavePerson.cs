@@ -1,5 +1,5 @@
-﻿using DesignByContract.Domain.Core.Commands;
-using DesignByContract.Domain.Core.Errors;
+﻿using DesignByContract.Core.Domain.Commands;
+using DesignByContract.Core.Domain.Errors;
 using DesignByContract.Domain.Entities;
 
 namespace DesignByContract.Domain.Commands
@@ -12,9 +12,9 @@ namespace DesignByContract.Domain.Commands
             : base(person)
         {
             _person = person;
-            var errorDescription = 
-                new ErrorItemDetail("New person instance create on memory.", 
-                                    new Warning(), 
+            var errorDescription =
+                new ErrorItemDetail("New person instance create on memory.",
+                                    new Warning(),
                                     "Person");
             _person.ErrorList.Add(errorDescription);
         }
@@ -27,7 +27,7 @@ namespace DesignByContract.Domain.Commands
             }
             else
             {
-                var errorDescription = 
+                var errorDescription =
                     new ErrorItemDetail("Registration not saved.",
                                         new Critical(),
                                         "Person");
@@ -37,7 +37,7 @@ namespace DesignByContract.Domain.Commands
 
         private void SavePersonInBackendSystems()
         {
-            var errorDescription = 
+            var errorDescription =
                 new ErrorItemDetail("Registration succeeded.",
                                     new Information(),
                                     "Person");

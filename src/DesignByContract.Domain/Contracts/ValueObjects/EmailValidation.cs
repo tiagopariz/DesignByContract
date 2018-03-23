@@ -1,7 +1,7 @@
-﻿using System.Text.RegularExpressions;
-using DesignByContract.Domain.Core.Errors;
-using DesignByContract.Domain.Core.Specifications;
+﻿using DesignByContract.Core.Domain.Errors;
+using DesignByContract.Core.Domain.Specifications;
 using DesignByContract.Domain.ValueObjects;
+using System.Text.RegularExpressions;
 
 namespace DesignByContract.Domain.Contracts.ValueObjects
 {

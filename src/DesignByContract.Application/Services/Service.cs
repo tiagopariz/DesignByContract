@@ -1,4 +1,4 @@
-﻿using DesignByContract.Domain.Core.Entities;
+﻿using DesignByContract.Core.Domain.Entities;
 using System.Collections;
 using System.Linq;
 
@@ -8,13 +8,13 @@ namespace DesignByContract.Application.Services
     {
         protected Entity ErrorEntity;
 
-        public bool HasErrors => 
+        public bool HasErrors =>
             ErrorEntity != null && ErrorEntity.ErrorList.Any;
-        public bool HasCriticals => 
+        public bool HasCriticals =>
             ErrorEntity != null && ErrorEntity.ErrorList.HasCriticals;
         public bool HasWarnings =>
             ErrorEntity != null && ErrorEntity.ErrorList.HasWarnings;
-        public bool HasInformations => 
+        public bool HasInformations =>
             ErrorEntity != null && ErrorEntity.ErrorList.HasInformations;
 
         public IEnumerable Errors()

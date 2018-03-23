@@ -1,7 +1,7 @@
-﻿using DesignByContract.Domain.Core.Entities;
+﻿using DesignByContract.Core.Domain.Entities;
+using DesignByContract.Domain.Contracts.Entities;
 using DesignByContract.Domain.ValueObjects;
 using System;
-using DesignByContract.Domain.Contracts.Entities;
 
 namespace DesignByContract.Domain.Entities
 {
@@ -17,7 +17,7 @@ namespace DesignByContract.Domain.Entities
                       Email email,
                       Category category,
                       Person manager = null,
-                      string fieldName = null) 
+                      string fieldName = null)
             : base(id, fieldName)
         {
 

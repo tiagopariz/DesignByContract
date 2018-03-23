@@ -39,9 +39,9 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DesignByContract.Domain.Core\DesignByContract.Domain.Core.csproj">
-      <Project>{B16FFC43-AC50-4F9F-8D08-9B75B92A16D0}</Project>
-      <Name>DesignByContract.Domain.Core</Name>
+    <ProjectReference Include="..\..\core\src\DesignByContract.Core.Domain\DesignByContract.Core.Domain.csproj">
+      <Project>{b16ffc43-ac50-4f9f-8d08-9b75b92a16d0}</Project>
+      <Name>DesignByContract.Core.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\DesignByContract.Domain\DesignByContract.Domain.csproj">
       <Project>{8BE05555-264E-4AFF-9485-978F03DF8EF3}</Project>

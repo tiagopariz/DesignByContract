@@ -47,13 +47,13 @@
     <Folder Include="Interfaces\ValueObjects\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DesignByContract.Domain.Core\DesignByContract.Domain.Core.csproj">
-      <Project>{B16FFC43-AC50-4F9F-8D08-9B75B92A16D0}</Project>
-      <Name>DesignByContract.Domain.Core</Name>
-    </ProjectReference>
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <ProjectReference Include="..\..\core\src\DesignByContract.Core.Domain\DesignByContract.Core.Domain.csproj">
+      <Project>{b16ffc43-ac50-4f9f-8d08-9b75b92a16d0}</Project>
+      <Name>DesignByContract.Core.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

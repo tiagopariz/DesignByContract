@@ -1,5 +1,5 @@
-﻿using DesignByContract.Domain.Core.Errors;
-using DesignByContract.Domain.Core.Specifications;
+﻿using DesignByContract.Core.Domain.Errors;
+using DesignByContract.Core.Domain.Specifications;
 using DesignByContract.Domain.Entities;
 
 namespace DesignByContract.Domain.Contracts.Entities

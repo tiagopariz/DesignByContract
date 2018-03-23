@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\packages\NUnit.3.10.1\build\NUnit.props" Condition="Exists('..\..\..\packages\NUnit.3.10.1\build\NUnit.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BDD795C-2969-40A0-829E-E0AD5728B9CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignByContract.Core.Tests.Domain</RootNamespace>
+    <AssemblyName>DesignByContract.Core.Tests.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Commands\CommandTests.cs" />
+    <Compile Include="Interfaces\Notifications\NotificationAbstractFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\Notifications\ItemDetailAbstractFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\Notifications\NotificationFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\Notifications\ItemDetailFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\Specifications\SpecificationAbstractFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\Specifications\SpecificationFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\ValueObjects\ValueObjectAbstractFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\ValueObjects\ValueObjectFakeForInterfacesTests.cs" />
+    <Compile Include="Mocks\DomainCoreFake\Notification\NotificationFakeForInterfaces.cs" />
+    <Compile Include="Mocks\DomainCoreFake\Notification\ItemDetailFakeForInterfaces.cs" />
+    <Compile Include="Mocks\DomainCoreFake\Specifications\SpecificationFakeForInterfaces.cs" />
+    <Compile Include="Mocks\DomainFake\Contracts\Entities\EntityFakeValidationForInterfaces.cs" />
+    <Compile Include="Mocks\DomainCoreFake\Errors\LevelFakeForInterfaces.cs" />
+    <Compile Include="Interfaces\Entities\EntityFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\Entities\EntityAbstractFakeForInterfacesTests.cs" />
+    <Compile Include="Mocks\DomainFake\Contracts\ValueObjects\ValueObjectFakeValidationForInterfaces.cs" />
+    <Compile Include="Mocks\DomainFake\Contracts\ValueObjects\ValueObjectFakeValidationForSpecification.cs" />
+    <Compile Include="Mocks\DomainFake\ValueObjects\ValueObjectFakeForInterfaces.cs" />
+    <Compile Include="Mocks\DomainFake\Entities\EntityFakeForSpecification.cs" />
+    <Compile Include="Mocks\DomainFake\Entities\EntityFakeForInterfaces.cs" />
+    <Compile Include="Mocks\DomainFake\ValueObjects\ValueObjectFakeForSpecification.cs" />
+    <Compile Include="Entities\EntityTests.cs" />
+    <Compile Include="Errors\ErrorListTests.cs" />
+    <Compile Include="Mocks\DomainFake\Commands\SaveEntityFake.cs" />
+    <Compile Include="Mocks\DomainFake\Contracts\Entities\EntityFakeValidation.cs" />
+    <Compile Include="Mocks\DomainFake\Contracts\ValueObjects\ValueObjectFakeValidation.cs" />
+    <Compile Include="Mocks\DomainFake\Entities\EntityFake.cs" />
+    <Compile Include="Mocks\DomainFake\ValueObjects\ValueObjectFake.cs" />
+    <Compile Include="Mocks\DomainCoreFake\Notification\ItemDetailFake.cs" />
+    <Compile Include="Mocks\DomainCoreFake\Notification\NotificationFake.cs" />
+    <Compile Include="Mocks\DomainFake\Entities\EntityFakeForNotification.cs" />
+    <Compile Include="Interfaces\Errors\LevelAbstractFakeForInterfacesTests.cs" />
+    <Compile Include="Interfaces\Errors\LevelFakeForInterfacesTests.cs" />
+    <Compile Include="Notifications\ItemDetailTests.cs" />
+    <Compile Include="Notifications\NotificationTests.cs" />
+    <Compile Include="Specifications\OrTests.cs" />
+    <Compile Include="Specifications\OrNotTests.cs" />
+    <Compile Include="Specifications\AndNotTests.cs" />
+    <Compile Include="Specifications\NotTests.cs" />
+    <Compile Include="Specifications\ExpressionTests.cs" />
+    <Compile Include="Specifications\AndTests.cs" />
+    <Compile Include="Specifications\SpecificationTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValueObjects\ValueObjectTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mocks\DomainCoreFake\Entities\" />
+    <Folder Include="Mocks\DomainFake\Interfaces\Entities\" />
+    <Folder Include="Mocks\DomainFake\Interfaces\ValueObjects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DesignByContract.Core.Domain\DesignByContract.Core.Domain.csproj">
+      <Project>{b16ffc43-ac50-4f9f-8d08-9b75b92a16d0}</Project>
+      <Name>DesignByContract.Core.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\NUnit.3.10.1\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\NUnit.3.10.1\build\NUnit.props'))" />
+  </Target>
+</Project>
