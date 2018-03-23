@@ -42,6 +42,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\core\src\DesignByContract.Core.Application\DesignByContract.Core.Application.csproj">
+      <Project>{7a3430cd-023e-4506-b6b2-d9e476c068d9}</Project>
+      <Name>DesignByContract.Core.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DesignByContract.Application\DesignByContract.Application.csproj">
       <Project>{0446545C-A064-4C03-8B85-58982B683269}</Project>
       <Name>DesignByContract.Application</Name>

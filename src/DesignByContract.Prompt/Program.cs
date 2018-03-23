@@ -1,7 +1,7 @@
-﻿using System;
-using DesignByContract.Application.Services;
+﻿using DesignByContract.Application.Services.Entities;
+using DesignByContract.Core.Application.Services;
 using DesignByContract.Prompt.Dto;
-using DesignByContract.Application.Services.Entities;
+using System;
 
 namespace DesignByContract.Prompt
 {

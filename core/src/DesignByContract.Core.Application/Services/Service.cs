@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Linq;
 
-namespace DesignByContract.Application.Services
+namespace DesignByContract.Core.Application.Services
 {
     public abstract class Service
     {

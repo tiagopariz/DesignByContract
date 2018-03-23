@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0446545C-A064-4C03-8B85-58982B683269}</ProjectGuid>
+    <ProjectGuid>{7A3430CD-023E-4506-B6B2-D9E476C068D9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DesignByContract.Application</RootNamespace>
-    <AssemblyName>DesignByContract.Application</AssemblyName>
+    <RootNamespace>DesignByContract.Core.Application</RootNamespace>
+    <AssemblyName>DesignByContract.Core.Application</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,31 +31,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Entities\PersonService.cs" />
+    <Compile Include="Services\Service.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\core\src\DesignByContract.Core.Application\DesignByContract.Core.Application.csproj">
-      <Project>{7a3430cd-023e-4506-b6b2-d9e476c068d9}</Project>
-      <Name>DesignByContract.Core.Application</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\core\src\DesignByContract.Core.Domain\DesignByContract.Core.Domain.csproj">
+    <ProjectReference Include="..\DesignByContract.Core.Domain\DesignByContract.Core.Domain.csproj">
       <Project>{b16ffc43-ac50-4f9f-8d08-9b75b92a16d0}</Project>
       <Name>DesignByContract.Core.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DesignByContract.Domain\DesignByContract.Domain.csproj">
-      <Project>{8BE05555-264E-4AFF-9485-978F03DF8EF3}</Project>
-      <Name>DesignByContract.Domain</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
