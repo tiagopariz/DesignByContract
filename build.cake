@@ -5,7 +5,41 @@
 var target = Argument("target", "Default");
 var projectName = "DesignByContract";
 
+// Build Core
+
+Task("BuildProjectsCore")
+    .Does(() =>
+    {
+        foreach(var project in GetFiles("./core/src/**/*.csproj"))
+        {
+            MSBuild(project.GetDirectory().FullPath,
+                new MSBuildSettings {
+                    Verbosity = Verbosity.Minimal,
+                    Configuration = "Debug"
+                }
+            );
+        }
+    });
+
+Task("BuildProjectsCoreTests")
+    .IsDependentOn("BuildProjectsCore")
+    .Does(() =>
+    {
+        foreach(var test in GetFiles("./core/tests/**/*.csproj"))
+        {
+            MSBuild(test.GetDirectory().FullPath,
+                new MSBuildSettings {
+                    Verbosity = Verbosity.Minimal,
+                    Configuration = "Debug"
+                }
+            );
+        }
+    });
+
+// Build Domain
+
 Task("BuildProjects")
+    .IsDependentOn("BuildProjectsCoreTests")
     .Does(() =>
     {
         foreach(var project in GetFiles("./src/**/*.csproj"))
@@ -34,6 +68,8 @@ Task("BuildTests")
         }
     });
 
+// OpenCover
+
 Task("OpenCover")
     .IsDependentOn("BuildTests")
     .Does(() =>
@@ -42,13 +78,13 @@ Task("OpenCover")
         {
             Register = "user",
             SkipAutoProps = true,
-            ArgumentCustomization = args => args.Append("-coverbytest:*.Tests.dll").Append("-mergebyhash")
+            ArgumentCustomization = args => args.Append("-coverbytest:*.Tests.*dll").Append("-mergebyhash")
         };
 
         var outputFile = new FilePath("./docs/testsResults/Reports/CodeCoverageReport.xml");
 
         OpenCover(tool => {
-            var testAssemblies = GetFiles("./tests/**/bin/Debug/*.Tests.dll");
+            var testAssemblies = GetFiles("./**/bin/Debug/*.Tests.*dll");
             tool.NUnit3(testAssemblies);
             },
             outputFile,

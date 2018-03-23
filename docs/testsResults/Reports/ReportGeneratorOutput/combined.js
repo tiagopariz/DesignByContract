@@ -321,142 +321,431 @@ window.matchMedia || (window.matchMedia = function() {
 }());
 
 
-var historyChartData08cc634f3b1d45fca3069e817aebabf7 = {
+var historyChartDataf10d7c8950294c2a9552d87204fbb317 = {
+    "series" : [[0,100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/4)<br />Total lines: 14','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (4/4)<br />Total lines: 14']
+};
+
+var historyChartData00aeb1dbdfeb40758a03a139e73849f4 = {
+    "series" : [[0,68.4],[0,75]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/19)<br /><span class="branchcoverage"></span> Branch coverage: 0% (0/8)<br />Total lines: 41','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 68.4% (13/19)<br /><span class="branchcoverage"></span> Branch coverage: 75% (6/8)<br />Total lines: 41']
+};
+
+var historyChartDataf1ef9d465aa841ba841a4365c50431d1 = {
+    "series" : [[80,100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 80% (4/5)<br />Total lines: 16','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (5/5)<br />Total lines: 16']
+};
+
+var historyChartData50c4ae61d54c43fcaec39870f00d8f65 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 100% (5/5)<br />Total lines: 21']
+};
+
+var historyChartDatabbeb2a7fc6864887b651782eab82161e = {
+    "series" : [[16.6,50]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 16.6% (1/6)<br />Total lines: 22','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 50% (3/6)<br />Total lines: 22']
+};
+
+var historyChartDatac205f50e54e64330bf521cb7aefbcc04 = {
+    "series" : [[0,80]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/5)<br />Total lines: 16','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 80% (4/5)<br />Total lines: 16']
+};
+
+var historyChartDatac0e590903ad84fe89de41210102515cd = {
+    "series" : [[0,80]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/5)<br />Total lines: 16','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 80% (4/5)<br />Total lines: 16']
+};
+
+var historyChartData37ede74606ac47a29e80f697ef884e03 = {
+    "series" : [[60,100],[50,100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 60% (6/10)<br /><span class="branchcoverage"></span> Branch coverage: 50% (2/4)<br />Total lines: 23','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (10/10)<br /><span class="branchcoverage"></span> Branch coverage: 100% (4/4)<br />Total lines: 23']
+};
+
+var historyChartData1ebc2718eada409e99df690d2e0a023f = {
+    "series" : [[25,100],[0,50]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 25% (4/16)<br /><span class="branchcoverage"></span> Branch coverage: 0% (0/4)<br />Total lines: 33','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (16/16)<br /><span class="branchcoverage"></span> Branch coverage: 50% (2/4)<br />Total lines: 33']
+};
+
+var historyChartData2f831c94926a461885a4088436b25421 = {
+    "series" : [[0,100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/8)<br />Total lines: 21','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (8/8)<br />Total lines: 21']
+};
+
+var historyChartData95f6130a6263467989c5ac799cfe59f0 = {
+    "series" : [[0,100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/8)<br />Total lines: 21','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (8/8)<br />Total lines: 21']
+};
+
+var historyChartData84f78d2b92644f6da1267d7627aa39da = {
+    "series" : [[0,100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/5)<br />Total lines: 17','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (5/5)<br />Total lines: 17']
+};
+
+var historyChartData9cb00c4333b54a838f4029e1155dc262 = {
+    "series" : [[0,100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/5)<br />Total lines: 17','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (5/5)<br />Total lines: 17']
+};
+
+var historyChartDatac439ed68cdcd416d8ed1825ee049f2cd = {
+    "series" : [[0,100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/10)<br />Total lines: 23','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (10/10)<br />Total lines: 23']
+};
+
+var historyChartDataa48e0499ca744cdcacc7cfab552a7c4e = {
+    "series" : [[0,100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/8)<br />Total lines: 21','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (8/8)<br />Total lines: 21']
+};
+
+var historyChartData2ed7ae354f7f4ee2be50fe3e4d573040 = {
+    "series" : [[0,100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/5)<br />Total lines: 19','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (5/5)<br />Total lines: 19']
+};
+
+var historyChartData0b90212bdcfa448ea34262ac393e4112 = {
+    "series" : [[78.5,100],[50,100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 78.5% (11/14)<br /><span class="branchcoverage"></span> Branch coverage: 50% (1/2)<br />Total lines: 31','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (14/14)<br /><span class="branchcoverage"></span> Branch coverage: 100% (2/2)<br />Total lines: 31']
+};
+
+var historyChartData3c22d4f1bf124f95b471aa7cd6c2e46b = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (4/4)<br />Total lines: 19']
+};
+
+var historyChartData4a9a22436b154ee3a6d7f2fec6cbfadb = {
+    "series" : [[100],[50]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (160/160)<br /><span class="branchcoverage"></span> Branch coverage: 50% (6/12)<br />Total lines: 276']
+};
+
+var historyChartDataebbcaae18de1413fbd8d918584e0cb9c = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (59/59)<br />Total lines: 102']
+};
+
+var historyChartData2a59b63cb6a540468792c4665d1b9115 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (25/25)<br />Total lines: 54']
+};
+
+var historyChartDataf884733b21e2401c962237fda7aba33b = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (6/6)<br />Total lines: 21']
+};
+
+var historyChartData3962211e0aca4860b8e949501d3c4fe8 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (8/8)<br />Total lines: 25']
+};
+
+var historyChartDataf8d1d56d27e540f5854b12d95b810f4f = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (3/3)<br />Total lines: 15']
+};
+
+var historyChartDatabb5c54504034428095112b711747f40f = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (8/8)<br />Total lines: 26']
+};
+
+var historyChartData4b53d89a6e3e4356a7c5d0e98153ab29 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (3/3)<br />Total lines: 15']
+};
+
+var historyChartData3218dbf05abd4f93b0e9768df3516cb7 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (40/40)<br />Total lines: 70']
+};
+
+var historyChartData8858d1ad347f4922bdc437e741a52d38 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (3/3)<br />Total lines: 15']
+};
+
+var historyChartData25c8a917f5ca4840865e8a6b5de6e86a = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (34/34)<br />Total lines: 63']
+};
+
+var historyChartDatad05b179070064580b54818cba65eb453 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (3/3)<br />Total lines: 15']
+};
+
+var historyChartDatafb308a83cdbc47208317343b3a5e946d = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (15/15)<br />Total lines: 36']
+};
+
+var historyChartData6bbbc405ad0a49b69cc245f3a9440c37 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (3/3)<br />Total lines: 15']
+};
+
+var historyChartData4a2d9f0ff0cd4ebeae8c653acea82f6d = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (5/5)<br />Total lines: 16']
+};
+
+var historyChartDataed4b6de555554df79290dd0cbf75c6e6 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (3/3)<br />Total lines: 13']
+};
+
+var historyChartData6dc2c5ec99984893ba64577a5d7fdaf1 = {
+    "series" : [[100],[75]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (10/10)<br /><span class="branchcoverage"></span> Branch coverage: 75% (3/4)<br />Total lines: 23']
+};
+
+var historyChartData616e9875d86c4b04bd0b27e890be0f2e = {
+    "series" : [[100],[50]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (16/16)<br /><span class="branchcoverage"></span> Branch coverage: 50% (2/4)<br />Total lines: 33']
+};
+
+var historyChartData6edae305d2f84a48a206b305cce1cc98 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (6/6)<br />Total lines: 21']
+};
+
+var historyChartData6d35a1230d3747f0a2a99c0d41489262 = {
+    "series" : [[75.8],[50]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 75.8% (22/29)<br /><span class="branchcoverage"></span> Branch coverage: 50% (1/2)<br />Total lines: 47']
+};
+
+var historyChartData26f7c05ee2a94b8c92b316ad75ee604e = {
+    "series" : [[100],[70]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (10/10)<br /><span class="branchcoverage"></span> Branch coverage: 70% (7/10)<br />Total lines: 25']
+};
+
+var historyChartData53b9761aa0534f09af9d1f23a1ac86f1 = {
+    "series" : [[0]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/3)<br />Total lines: 12']
+};
+
+var historyChartDatac05345209390408f8ff14d7c08ec973f = {
+    "series" : [[100],[95.8]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (19/19)<br /><span class="branchcoverage"></span> Branch coverage: 95.8% (23/24)<br />Total lines: 38']
+};
+
+var historyChartData2a557f5af37c4504bcc9c1653110ad29 = {
+    "series" : [[0]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/3)<br />Total lines: 12']
+};
+
+var historyChartDatad87a834bcd544ff2a782cb9fd061438f = {
+    "series" : [[57.8],[45.8]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 57.8% (11/19)<br /><span class="branchcoverage"></span> Branch coverage: 45.8% (11/24)<br />Total lines: 38']
+};
+
+var historyChartDatab15cbd1aa31f4642abd3983772f557b2 = {
+    "series" : [[100],[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (10/10)<br /><span class="branchcoverage"></span> Branch coverage: 100% (2/2)<br />Total lines: 33']
+};
+
+var historyChartData11cb3b2723db4e96accff64892a2cd8a = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (4/4)<br />Total lines: 15']
+};
+
+var historyChartData38f0c194ba454bb7a9c609fc96340da3 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (1/1)<br />Total lines: 14']
+};
+
+var historyChartData47c1e7aebb374f23a85c531952a71e7a = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (1/1)<br />Total lines: 14']
+};
+
+var historyChartData2615e7f626a3488fae31e4f45dc85ac0 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (10/10)<br />Total lines: 29']
+};
+
+var historyChartDatacbdddf4e98cb43b3bc68505fb7b97ba1 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (4/4)<br />Total lines: 14']
+};
+
+var historyChartData6d4b922ad22348e2913bca67e7ed071c = {
+    "series" : [[90]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 90% (9/10)<br />Total lines: 29']
+};
+
+var historyChartData1395347fb29d4a6596ceca01ea02162b = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (32/32)<br />Total lines: 65']
+};
+
+var historyChartDataf4538324f00a41f7bfdb8bff4903f9c2 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (60/60)<br />Total lines: 103']
+};
+
+var historyChartDataf29825ee786b4fa0a4a2952c3b68a99b = {
+    "series" : [[78.5]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 78.5% (22/28)<br />Total lines: 50']
+};
+
+var historyChartDatae87c9604d9914539ae4b5bc3c4104747 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (28/28)<br />Total lines: 51']
+};
+
+var historyChartData8e85521bfcf14fe3a10dc18257cb4174 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (28/28)<br />Total lines: 51']
+};
+
+var historyChartData933103f89c3e4c8b9119eb94acef33fe = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (28/28)<br />Total lines: 51']
+};
+
+var historyChartData9c29f4c2696c48f7901d0f9f6db8c2bd = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (28/28)<br />Total lines: 51']
+};
+
+var historyChartDatac58623a7f4e64b009e908f1c123cf700 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (28/28)<br />Total lines: 51']
+};
+
+var historyChartData9b67094d1cb24ac098b2e14cd0088315 = {
+    "series" : [[100]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (10/10)<br />Total lines: 26']
+};
+
+var historyChartData25e903be0222433fbb21746f90ab7647 = {
+    "series" : [[100],[50]],
+    "tooltips" : ['<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 100% (120/120)<br /><span class="branchcoverage"></span> Branch coverage: 50% (6/12)<br />Total lines: 209']
+};
+
+var historyChartDatab3c9e1acd32344d4bb800fd3aa7da04d = {
     "series" : [[0],[0]],
     "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/29)<br /><span class="branchcoverage"></span> Branch coverage: 0% (0/2)<br />Total lines: 47']
 };
 
-var historyChartData31b124e996a7448391eda73fcd1643aa = {
+var historyChartDataeccdd9118e7b4946b96352efd6e82b56 = {
     "series" : [[0],[0]],
     "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/20)<br /><span class="branchcoverage"></span> Branch coverage: 0% (0/24)<br />Total lines: 39']
 };
 
-var historyChartData29bbafbbaf124cc5a51be9e0bed1599a = {
+var historyChartData46e94770432b44b4876144508493939d = {
     "series" : [[0],[0]],
     "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/26)<br /><span class="branchcoverage"></span> Branch coverage: 0% (0/36)<br />Total lines: 47']
 };
 
-var historyChartData897cb7b15112447fb644420a18e7d984 = {
+var historyChartData32c0b90a7cc94eb9938ba07e9582ea0d = {
     "series" : [[100],[71.8]],
     "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 100% (24/24)<br /><span class="branchcoverage"></span> Branch coverage: 71.8% (23/32)<br />Total lines: 46']
 };
 
-var historyChartData87bfb1be3cbb4c0c8133f4a08ce0b951 = {
+var historyChartData7fdb16a6a0ae4a5a8508476f737eb7db = {
     "series" : [[0],[0]],
     "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/19)<br /><span class="branchcoverage"></span> Branch coverage: 0% (0/24)<br />Total lines: 38']
 };
 
-var historyChartData256a1532094c4c52a425dc3d65e52a6d = {
+var historyChartDatafe6d98f6620140a59826d38ad41f7e46 = {
     "series" : [[0]],
     "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/9)<br />Total lines: 31']
 };
 
-var historyChartDataf50d4fb226ca49048bb03a68411f1b79 = {
+var historyChartData51ca4acd0396412eb76afb30f153e013 = {
     "series" : [[0],[0]],
     "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/16)<br /><span class="branchcoverage"></span> Branch coverage: 0% (0/8)<br />Total lines: 48']
 };
 
-var historyChartDatad8281857cb714869a668ed22fb64612a = {
+var historyChartDatac3fe39f88d774a0294078f39df3e127e = {
     "series" : [[90]],
     "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 90% (9/10)<br />Total lines: 29']
 };
 
-var historyChartData462f400d8d3143ce9fb7782bd2659def = {
+var historyChartDataf79b140b2dc04b1c86e2414cb2c72ce0 = {
     "series" : [[0]],
     "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 0% (0/10)<br />Total lines: 29']
 };
 
-var historyChartData9b2e8d6f7d3d43098beb56aa7f80bb72 = {
-    "series" : [[100]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 100% (4/4)<br />Total lines: 14']
-};
-
-var historyChartDatad9ab4ec4009e49f49cb77a7225f63736 = {
-    "series" : [[68.4],[75]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 68.4% (13/19)<br /><span class="branchcoverage"></span> Branch coverage: 75% (6/8)<br />Total lines: 41']
-};
-
-var historyChartData54c59c4fed944bbd902773ac840585e5 = {
-    "series" : [[100]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 100% (5/5)<br />Total lines: 16']
-};
-
-var historyChartDatabef5b312954641c09f59a88e5179369c = {
-    "series" : [[100]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 100% (5/5)<br />Total lines: 21']
-};
-
-var historyChartDatac6a2cb31ffd947ffb61e12db6c005223 = {
-    "series" : [[50]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 50% (3/6)<br />Total lines: 22']
-};
-
-var historyChartDataad9629591dfc4e64aa388db155f89a3c = {
-    "series" : [[80]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 80% (4/5)<br />Total lines: 16']
-};
-
-var historyChartDatab6e82d0205404caa8adf0dfd241d4218 = {
-    "series" : [[80]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 80% (4/5)<br />Total lines: 16']
-};
-
-var historyChartDatadfe3b434c6e741878666283be9da8774 = {
+var historyChartDataeae63a69b470407b8d28cf04f4ff40e9 = {
     "series" : [[100],[100]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 100% (10/10)<br /><span class="branchcoverage"></span> Branch coverage: 100% (4/4)<br />Total lines: 23']
+    "tooltips" : ['<h3>23/03/2018 - 13:13:37</h3><br /><span class="linecoverage"></span> Line coverage: 100% (32/32)<br /><span class="branchcoverage"></span> Branch coverage: 100% (2/2)<br />Total lines: 71']
 };
 
-var historyChartData9cad728ca5dc45da9ddcad93b72742d8 = {
-    "series" : [[100],[50]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 100% (16/16)<br /><span class="branchcoverage"></span> Branch coverage: 50% (2/4)<br />Total lines: 33']
-};
-
-var historyChartData0a6a5b3b204c40489b8843a4702781c5 = {
-    "series" : [[100]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 100% (8/8)<br />Total lines: 21']
-};
-
-var historyChartDatab2d350e5a73243aab28661c56ccf2b32 = {
-    "series" : [[100]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 100% (8/8)<br />Total lines: 21']
-};
-
-var historyChartDatacfe1df9cd09f42f2be465b6fa261499d = {
-    "series" : [[100]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 100% (5/5)<br />Total lines: 17']
-};
-
-var historyChartData2ba8c48727614e0ca9f9d816a26d0db3 = {
-    "series" : [[100]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 100% (5/5)<br />Total lines: 17']
-};
-
-var historyChartData02e2766344ec4430a5c775822c98a980 = {
-    "series" : [[100]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 100% (10/10)<br />Total lines: 23']
-};
-
-var historyChartDatab48bac6b2ddd4b65b4ca6ab78fa21cae = {
-    "series" : [[100]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 100% (8/8)<br />Total lines: 21']
-};
-
-var historyChartData3c977f2805734e9489644e8f46ebab5f = {
-    "series" : [[100]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 100% (5/5)<br />Total lines: 19']
-};
-
-var historyChartDataf100c8091dc445ba923cf24a80e46db4 = {
-    "series" : [[100],[100]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 100% (14/14)<br /><span class="branchcoverage"></span> Branch coverage: 100% (2/2)<br />Total lines: 31']
-};
-
-var historyChartDatab29167c8e2f7490e86970b0806fae8bc = {
-    "series" : [[53.1,22.2,53.1],[25.6,13.1,25.6]],
-    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 53.1% (160/301)<br /><span class="branchcoverage"></span> Branch coverage: 25.6% (37/144)<br />Total lines: 726','<h3>22/03/2018 - 21:56:27</h3><br /><span class="linecoverage"></span> Line coverage: 22.2% (2211/9950)<br /><span class="branchcoverage"></span> Branch coverage: 13.1% (530/4017)<br />Total lines: 726','<h3>22/03/2018 - 21:58:09</h3><br /><span class="linecoverage"></span> Line coverage: 53.1% (160/301)<br /><span class="branchcoverage"></span> Branch coverage: 25.6% (37/144)<br />Total lines: 726']
+var historyChartDataee0216fc98d94facb94169876305bd61 = {
+    "series" : [[53.1,22.2,53.1,21.2,86.2,86.5],[25.6,13.1,25.6,18,41.1,41.6]],
+    "tooltips" : ['<h3>22/03/2018 - 21:54:08</h3><br /><span class="linecoverage"></span> Line coverage: 53.1% (160/301)<br /><span class="branchcoverage"></span> Branch coverage: 25.6% (37/144)<br />Total lines: 726','<h3>22/03/2018 - 21:56:27</h3><br /><span class="linecoverage"></span> Line coverage: 22.2% (2211/9950)<br /><span class="branchcoverage"></span> Branch coverage: 13.1% (530/4017)<br />Total lines: 726','<h3>22/03/2018 - 21:58:09</h3><br /><span class="linecoverage"></span> Line coverage: 53.1% (160/301)<br /><span class="branchcoverage"></span> Branch coverage: 25.6% (37/144)<br />Total lines: 726','<h3>23/03/2018 - 10:28:49</h3><br /><span class="linecoverage"></span> Line coverage: 21.2% (64/301)<br /><span class="branchcoverage"></span> Branch coverage: 18% (26/144)<br />Total lines: 726','<h3>23/03/2018 - 10:35:40</h3><br /><span class="linecoverage"></span> Line coverage: 86.2% (1059/1228)<br /><span class="branchcoverage"></span> Branch coverage: 41.1% (98/238)<br />Total lines: 2627','<h3>23/03/2018 - 13:13:37</h3><br /><span class="linecoverage"></span> Line coverage: 86.5% (1091/1260)<br /><span class="branchcoverage"></span> Branch coverage: 41.6% (100/240)<br />Total lines: 2698']
 };
 
 var assemblies = [
+  {
+    "name": "DesignByContract.Core.Domain",
+    "classes": [
+      { "name": "DesignByContract.Core.Domain.Commands.Command", "reportPath": "DesignByContract.Core.Domain_Command.htm", "coveredLines": 4, "uncoveredLines": 0, "coverableLines": 4, "totalLines": 14, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [0,100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Domain.Entities.Entity", "reportPath": "DesignByContract.Core.Domain_Entity.htm", "coveredLines": 13, "uncoveredLines": 6, "coverableLines": 19, "totalLines": 41, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 6, "totalBranches": 8, "lineCoverageHistory": [0,68.4], "branchCoverageHistory": [0,75] },
+      { "name": "DesignByContract.Core.Domain.Errors.Critical", "reportPath": "DesignByContract.Core.Domain_Critical.htm", "coveredLines": 5, "uncoveredLines": 0, "coverableLines": 5, "totalLines": 16, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [80,100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Domain.Errors.ErrorItemDetail", "reportPath": "DesignByContract.Core.Domain_ErrorItemDetail.htm", "coveredLines": 5, "uncoveredLines": 0, "coverableLines": 5, "totalLines": 21, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Domain.Errors.ErrorList", "reportPath": "DesignByContract.Core.Domain_ErrorList.htm", "coveredLines": 3, "uncoveredLines": 3, "coverableLines": 6, "totalLines": 22, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [16.6,50], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Domain.Errors.Information", "reportPath": "DesignByContract.Core.Domain_Information.htm", "coveredLines": 4, "uncoveredLines": 1, "coverableLines": 5, "totalLines": 16, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [0,80], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Domain.Errors.Warning", "reportPath": "DesignByContract.Core.Domain_Warning.htm", "coveredLines": 4, "uncoveredLines": 1, "coverableLines": 5, "totalLines": 16, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [0,80], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Domain.Notifications.ItemDetail", "reportPath": "DesignByContract.Core.Domain_ItemDetail.htm", "coveredLines": 10, "uncoveredLines": 0, "coverableLines": 10, "totalLines": 23, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 4, "totalBranches": 4, "lineCoverageHistory": [60,100], "branchCoverageHistory": [50,100] },
+      { "name": "DesignByContract.Core.Domain.Notifications.Notification", "reportPath": "DesignByContract.Core.Domain_Notification.htm", "coveredLines": 16, "uncoveredLines": 0, "coverableLines": 16, "totalLines": 33, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 2, "totalBranches": 4, "lineCoverageHistory": [25,100], "branchCoverageHistory": [0,50] },
+      { "name": "DesignByContract.Core.Domain.Specifications.And`1", "reportPath": "DesignByContract.Core.Domain_And_1.htm", "coveredLines": 8, "uncoveredLines": 0, "coverableLines": 8, "totalLines": 21, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [0,100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Domain.Specifications.AndNot`1", "reportPath": "DesignByContract.Core.Domain_AndNot_1.htm", "coveredLines": 8, "uncoveredLines": 0, "coverableLines": 8, "totalLines": 21, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [0,100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Domain.Specifications.Expression`1", "reportPath": "DesignByContract.Core.Domain_Expression_1.htm", "coveredLines": 5, "uncoveredLines": 0, "coverableLines": 5, "totalLines": 17, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [0,100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Domain.Specifications.Not`1", "reportPath": "DesignByContract.Core.Domain_Not_1.htm", "coveredLines": 5, "uncoveredLines": 0, "coverableLines": 5, "totalLines": 17, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [0,100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Domain.Specifications.Or`1", "reportPath": "DesignByContract.Core.Domain_Or_1.htm", "coveredLines": 10, "uncoveredLines": 0, "coverableLines": 10, "totalLines": 23, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [0,100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Domain.Specifications.OrNot`1", "reportPath": "DesignByContract.Core.Domain_OrNot_1.htm", "coveredLines": 8, "uncoveredLines": 0, "coverableLines": 8, "totalLines": 21, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [0,100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Domain.Specifications.Specification`1", "reportPath": "DesignByContract.Core.Domain_Specification_1.htm", "coveredLines": 5, "uncoveredLines": 0, "coverableLines": 5, "totalLines": 19, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [0,100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Domain.ValueObjects.ValueObject", "reportPath": "DesignByContract.Core.Domain_ValueObject.htm", "coveredLines": 14, "uncoveredLines": 0, "coverableLines": 14, "totalLines": 31, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 2, "totalBranches": 2, "lineCoverageHistory": [78.5,100], "branchCoverageHistory": [50,100] },
+    ]},
+  {
+    "name": "DesignByContract.Core.Tests.Domain",
+    "classes": [
+      { "name": "DesignByContract.Core.Tests.Domain.Commands.CommandTests", "reportPath": "DesignByContract.Core.Tests.Domain_CommandTests.htm", "coveredLines": 4, "uncoveredLines": 0, "coverableLines": 4, "totalLines": 19, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Entities.EntityTests", "reportPath": "DesignByContract.Core.Tests.Domain_EntityTests.htm", "coveredLines": 160, "uncoveredLines": 0, "coverableLines": 160, "totalLines": 276, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 6, "totalBranches": 12, "lineCoverageHistory": [100], "branchCoverageHistory": [50] },
+      { "name": "DesignByContract.Core.Tests.Domain.Errors.ErrorlistTests", "reportPath": "DesignByContract.Core.Tests.Domain_ErrorlistTests.htm", "coveredLines": 59, "uncoveredLines": 0, "coverableLines": 59, "totalLines": 102, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Interfaces.Entities.EntityAbstractFakeForInterfacesTests", "reportPath": "DesignByContract.Core.Tests.Domain_EntityAbstractFakeForInterfacesTests.htm", "coveredLines": 25, "uncoveredLines": 0, "coverableLines": 25, "totalLines": 54, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Interfaces.Entities.EntityFakeForInterfacesTests", "reportPath": "DesignByContract.Core.Tests.Domain_EntityFakeForInterfacesTests.htm", "coveredLines": 6, "uncoveredLines": 0, "coverableLines": 6, "totalLines": 21, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Interfaces.Errors.LevelAbstractFakeForInterfacesTests", "reportPath": "DesignByContract.Core.Tests.Domain_LevelAbstractFakeForInterfacesTests.htm", "coveredLines": 8, "uncoveredLines": 0, "coverableLines": 8, "totalLines": 25, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Interfaces.Errors.LevelFakeForInterfacesTests", "reportPath": "DesignByContract.Core.Tests.Domain_LevelFakeForInterfacesTests.htm", "coveredLines": 3, "uncoveredLines": 0, "coverableLines": 3, "totalLines": 15, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Interfaces.Notifications.ItemDetailAbstractFakeForInterfacesTests", "reportPath": "DesignByContract.Core.Tests.Domain_ItemDetailAbstractFakeForInterfacesTests.htm", "coveredLines": 8, "uncoveredLines": 0, "coverableLines": 8, "totalLines": 26, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Interfaces.Notifications.ItemDetailFakeForInterfacesTests", "reportPath": "DesignByContract.Core.Tests.Domain_ItemDetailFakeForInterfacesTests.htm", "coveredLines": 3, "uncoveredLines": 0, "coverableLines": 3, "totalLines": 15, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Interfaces.Notifications.NotificationAbstractFakeForInterfacesTests", "reportPath": "DesignByContract.Core.Tests.Domain_NotificationAbstractFakeForInterfacesTests.htm", "coveredLines": 40, "uncoveredLines": 0, "coverableLines": 40, "totalLines": 70, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Interfaces.Notifications.NotificationFakeForInterfacesTests", "reportPath": "DesignByContract.Core.Tests.Domain_NotificationFakeForInterfacesTests.htm", "coveredLines": 3, "uncoveredLines": 0, "coverableLines": 3, "totalLines": 15, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Interfaces.Specifications.SpecificationAbstractFakeForInterfacesTests", "reportPath": "DesignByContract.Core.Tests.Domain_SpecificationAbstractFakeForInterfacesTests.htm", "coveredLines": 34, "uncoveredLines": 0, "coverableLines": 34, "totalLines": 63, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Interfaces.Specifications.SpecificationFakeForInterfacesTests", "reportPath": "DesignByContract.Core.Tests.Domain_SpecificationFakeForInterfacesTests.htm", "coveredLines": 3, "uncoveredLines": 0, "coverableLines": 3, "totalLines": 15, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Interfaces.ValueObjects.ValueObjectAbstractFakeForInterfacesTests", "reportPath": "DesignByContract.Core.Tests.Domain_ValueObjectAbstractFakeForInterfacesTests.htm", "coveredLines": 15, "uncoveredLines": 0, "coverableLines": 15, "totalLines": 36, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Interfaces.ValueObjects.ValueObjectFakeForInterfacesTests", "reportPath": "DesignByContract.Core.Tests.Domain_ValueObjectFakeForInterfacesTests.htm", "coveredLines": 3, "uncoveredLines": 0, "coverableLines": 3, "totalLines": 15, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainCoreFake.Errors.LevelFakeForInterfaces", "reportPath": "DesignByContract.Core.Tests.Domain_LevelFakeForInterfaces.htm", "coveredLines": 5, "uncoveredLines": 0, "coverableLines": 5, "totalLines": 16, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainCoreFake.Notification.ItemDetailFake", "reportPath": "DesignByContract.Core.Tests.Domain_ItemDetailFake.htm", "coveredLines": 3, "uncoveredLines": 0, "coverableLines": 3, "totalLines": 13, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainCoreFake.Notification.ItemDetailFakeForInterfaces", "reportPath": "DesignByContract.Core.Tests.Domain_ItemDetailFakeForInterfaces.htm", "coveredLines": 10, "uncoveredLines": 0, "coverableLines": 10, "totalLines": 23, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 3, "totalBranches": 4, "lineCoverageHistory": [100], "branchCoverageHistory": [75] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainCoreFake.Notification.NotificationFake", "reportPath": "DesignByContract.Core.Tests.Domain_NotificationFake.htm", "coveredLines": 0, "uncoveredLines": 0, "coverableLines": 0, "totalLines": 0, "coverageType": "MethodCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [0], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainCoreFake.Notification.NotificationFakeForInterfaces", "reportPath": "DesignByContract.Core.Tests.Domain_NotificationFakeForInterfaces.htm", "coveredLines": 16, "uncoveredLines": 0, "coverableLines": 16, "totalLines": 33, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 2, "totalBranches": 4, "lineCoverageHistory": [100], "branchCoverageHistory": [50] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainCoreFake.Specifications.SpecificationFakeForInterfaces`1", "reportPath": "DesignByContract.Core.Tests.Domain_SpecificationFakeForInterfaces_1.htm", "coveredLines": 6, "uncoveredLines": 0, "coverableLines": 6, "totalLines": 21, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Commands.SaveEntityFake", "reportPath": "DesignByContract.Core.Tests.Domain_SaveEntityFake.htm", "coveredLines": 22, "uncoveredLines": 7, "coverableLines": 29, "totalLines": 47, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 1, "totalBranches": 2, "lineCoverageHistory": [75.8], "branchCoverageHistory": [50] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Contracts.Entities.EntityFakeValidation`1", "reportPath": "DesignByContract.Core.Tests.Domain_EntityFakeValidation_1.htm", "coveredLines": 10, "uncoveredLines": 0, "coverableLines": 10, "totalLines": 25, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 7, "totalBranches": 10, "lineCoverageHistory": [100], "branchCoverageHistory": [70] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Contracts.Entities.EntityFakeValidationForInterfaces`1", "reportPath": "DesignByContract.Core.Tests.Domain_EntityFakeValidationForInterfaces_1.htm", "coveredLines": 0, "uncoveredLines": 3, "coverableLines": 3, "totalLines": 12, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [0], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Contracts.ValueObjects.ValueObjectFakeValidation`1", "reportPath": "DesignByContract.Core.Tests.Domain_ValueObjectFakeValidation_1.htm", "coveredLines": 19, "uncoveredLines": 0, "coverableLines": 19, "totalLines": 38, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 23, "totalBranches": 24, "lineCoverageHistory": [100], "branchCoverageHistory": [95.8] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Contracts.ValueObjects.ValueObjectFakeValidationForInterfaces`1", "reportPath": "DesignByContract.Core.Tests.Domain_ValueObjectFakeValidationForInterfaces_1.htm", "coveredLines": 0, "uncoveredLines": 3, "coverableLines": 3, "totalLines": 12, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [0], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Contracts.ValueObjects.ValueObjectFakeValidationForSpecification`1", "reportPath": "DesignByContract.Core.Tests.Domain_ValueObjectFakeValidationForSpecification_1.htm", "coveredLines": 11, "uncoveredLines": 8, "coverableLines": 19, "totalLines": 38, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 11, "totalBranches": 24, "lineCoverageHistory": [57.8], "branchCoverageHistory": [45.8] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Entities.EntityFake", "reportPath": "DesignByContract.Core.Tests.Domain_EntityFake.htm", "coveredLines": 10, "uncoveredLines": 0, "coverableLines": 10, "totalLines": 33, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 2, "totalBranches": 2, "lineCoverageHistory": [100], "branchCoverageHistory": [100] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Entities.EntityFakeForInterfaces", "reportPath": "DesignByContract.Core.Tests.Domain_EntityFakeForInterfaces.htm", "coveredLines": 4, "uncoveredLines": 0, "coverableLines": 4, "totalLines": 15, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Entities.EntityFakeForNotification", "reportPath": "DesignByContract.Core.Tests.Domain_EntityFakeForNotification.htm", "coveredLines": 1, "uncoveredLines": 0, "coverableLines": 1, "totalLines": 14, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Entities.EntityFakeForSpecification", "reportPath": "DesignByContract.Core.Tests.Domain_EntityFakeForSpecification.htm", "coveredLines": 1, "uncoveredLines": 0, "coverableLines": 1, "totalLines": 14, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainFake.ValueObjects.ValueObjectFake", "reportPath": "DesignByContract.Core.Tests.Domain_ValueObjectFake.htm", "coveredLines": 10, "uncoveredLines": 0, "coverableLines": 10, "totalLines": 29, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainFake.ValueObjects.ValueObjectFakeForInterfaces", "reportPath": "DesignByContract.Core.Tests.Domain_ValueObjectFakeForInterfaces.htm", "coveredLines": 4, "uncoveredLines": 0, "coverableLines": 4, "totalLines": 14, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Mocks.DomainFake.ValueObjects.ValueObjectFakeForSpecification", "reportPath": "DesignByContract.Core.Tests.Domain_ValueObjectFakeForSpecification.htm", "coveredLines": 9, "uncoveredLines": 1, "coverableLines": 10, "totalLines": 29, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [90], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Notifications.ItemDetailTests", "reportPath": "DesignByContract.Core.Tests.Domain_ItemDetailTests.htm", "coveredLines": 32, "uncoveredLines": 0, "coverableLines": 32, "totalLines": 65, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Notifications.NotificationTests", "reportPath": "DesignByContract.Core.Tests.Domain_NotificationTests.htm", "coveredLines": 60, "uncoveredLines": 0, "coverableLines": 60, "totalLines": 103, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Specifications.AndNotTests", "reportPath": "DesignByContract.Core.Tests.Domain_AndNotTests.htm", "coveredLines": 22, "uncoveredLines": 6, "coverableLines": 28, "totalLines": 50, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [78.5], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Specifications.AndTests", "reportPath": "DesignByContract.Core.Tests.Domain_AndTests.htm", "coveredLines": 28, "uncoveredLines": 0, "coverableLines": 28, "totalLines": 51, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Specifications.ExpressionTests", "reportPath": "DesignByContract.Core.Tests.Domain_ExpressionTests.htm", "coveredLines": 28, "uncoveredLines": 0, "coverableLines": 28, "totalLines": 51, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Specifications.NotTests", "reportPath": "DesignByContract.Core.Tests.Domain_NotTests.htm", "coveredLines": 28, "uncoveredLines": 0, "coverableLines": 28, "totalLines": 51, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Specifications.OrNotTests", "reportPath": "DesignByContract.Core.Tests.Domain_OrNotTests.htm", "coveredLines": 28, "uncoveredLines": 0, "coverableLines": 28, "totalLines": 51, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Specifications.OrTests", "reportPath": "DesignByContract.Core.Tests.Domain_OrTests.htm", "coveredLines": 28, "uncoveredLines": 0, "coverableLines": 28, "totalLines": 51, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.Specifications.SpecificationTests", "reportPath": "DesignByContract.Core.Tests.Domain_SpecificationTests.htm", "coveredLines": 10, "uncoveredLines": 0, "coverableLines": 10, "totalLines": 26, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
+      { "name": "DesignByContract.Core.Tests.Domain.ValueObjects.ValueObjectTests", "reportPath": "DesignByContract.Core.Tests.Domain_ValueObjectTests.htm", "coveredLines": 120, "uncoveredLines": 0, "coverableLines": 120, "totalLines": 209, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 6, "totalBranches": 12, "lineCoverageHistory": [100], "branchCoverageHistory": [50] },
+    ]},
   {
     "name": "DesignByContract.Domain",
     "classes": [
@@ -471,25 +760,9 @@ var assemblies = [
       { "name": "DesignByContract.Domain.ValueObjects.PersonName", "reportPath": "DesignByContract.Domain_PersonName.htm", "coveredLines": 0, "uncoveredLines": 10, "coverableLines": 10, "totalLines": 29, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [0], "branchCoverageHistory": [] },
     ]},
   {
-    "name": "DesignByContract.Domain.Core",
+    "name": "DesignByContract.Tests.Domain",
     "classes": [
-      { "name": "DesignByContract.Domain.Core.Commands.Command", "reportPath": "DesignByContract.Domain.Core_Command.htm", "coveredLines": 4, "uncoveredLines": 0, "coverableLines": 4, "totalLines": 14, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
-      { "name": "DesignByContract.Domain.Core.Entities.Entity", "reportPath": "DesignByContract.Domain.Core_Entity.htm", "coveredLines": 13, "uncoveredLines": 6, "coverableLines": 19, "totalLines": 41, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 6, "totalBranches": 8, "lineCoverageHistory": [68.4], "branchCoverageHistory": [75] },
-      { "name": "DesignByContract.Domain.Core.Errors.Critical", "reportPath": "DesignByContract.Domain.Core_Critical.htm", "coveredLines": 5, "uncoveredLines": 0, "coverableLines": 5, "totalLines": 16, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
-      { "name": "DesignByContract.Domain.Core.Errors.ErrorItemDetail", "reportPath": "DesignByContract.Domain.Core_ErrorItemDetail.htm", "coveredLines": 5, "uncoveredLines": 0, "coverableLines": 5, "totalLines": 21, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
-      { "name": "DesignByContract.Domain.Core.Errors.ErrorList", "reportPath": "DesignByContract.Domain.Core_ErrorList.htm", "coveredLines": 3, "uncoveredLines": 3, "coverableLines": 6, "totalLines": 22, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [50], "branchCoverageHistory": [] },
-      { "name": "DesignByContract.Domain.Core.Errors.Information", "reportPath": "DesignByContract.Domain.Core_Information.htm", "coveredLines": 4, "uncoveredLines": 1, "coverableLines": 5, "totalLines": 16, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [80], "branchCoverageHistory": [] },
-      { "name": "DesignByContract.Domain.Core.Errors.Warning", "reportPath": "DesignByContract.Domain.Core_Warning.htm", "coveredLines": 4, "uncoveredLines": 1, "coverableLines": 5, "totalLines": 16, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [80], "branchCoverageHistory": [] },
-      { "name": "DesignByContract.Domain.Core.Notifications.ItemDetail", "reportPath": "DesignByContract.Domain.Core_ItemDetail.htm", "coveredLines": 10, "uncoveredLines": 0, "coverableLines": 10, "totalLines": 23, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 4, "totalBranches": 4, "lineCoverageHistory": [100], "branchCoverageHistory": [100] },
-      { "name": "DesignByContract.Domain.Core.Notifications.Notification", "reportPath": "DesignByContract.Domain.Core_Notification.htm", "coveredLines": 16, "uncoveredLines": 0, "coverableLines": 16, "totalLines": 33, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 2, "totalBranches": 4, "lineCoverageHistory": [100], "branchCoverageHistory": [50] },
-      { "name": "DesignByContract.Domain.Core.Specifications.And`1", "reportPath": "DesignByContract.Domain.Core_And_1.htm", "coveredLines": 8, "uncoveredLines": 0, "coverableLines": 8, "totalLines": 21, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
-      { "name": "DesignByContract.Domain.Core.Specifications.AndNot`1", "reportPath": "DesignByContract.Domain.Core_AndNot_1.htm", "coveredLines": 8, "uncoveredLines": 0, "coverableLines": 8, "totalLines": 21, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
-      { "name": "DesignByContract.Domain.Core.Specifications.Expression`1", "reportPath": "DesignByContract.Domain.Core_Expression_1.htm", "coveredLines": 5, "uncoveredLines": 0, "coverableLines": 5, "totalLines": 17, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
-      { "name": "DesignByContract.Domain.Core.Specifications.Not`1", "reportPath": "DesignByContract.Domain.Core_Not_1.htm", "coveredLines": 5, "uncoveredLines": 0, "coverableLines": 5, "totalLines": 17, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
-      { "name": "DesignByContract.Domain.Core.Specifications.Or`1", "reportPath": "DesignByContract.Domain.Core_Or_1.htm", "coveredLines": 10, "uncoveredLines": 0, "coverableLines": 10, "totalLines": 23, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
-      { "name": "DesignByContract.Domain.Core.Specifications.OrNot`1", "reportPath": "DesignByContract.Domain.Core_OrNot_1.htm", "coveredLines": 8, "uncoveredLines": 0, "coverableLines": 8, "totalLines": 21, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
-      { "name": "DesignByContract.Domain.Core.Specifications.Specification`1", "reportPath": "DesignByContract.Domain.Core_Specification_1.htm", "coveredLines": 5, "uncoveredLines": 0, "coverableLines": 5, "totalLines": 19, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [100], "branchCoverageHistory": [] },
-      { "name": "DesignByContract.Domain.Core.ValueObjects.ValueObject", "reportPath": "DesignByContract.Domain.Core_ValueObject.htm", "coveredLines": 14, "uncoveredLines": 0, "coverableLines": 14, "totalLines": 31, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 2, "totalBranches": 2, "lineCoverageHistory": [100], "branchCoverageHistory": [100] },
+      { "name": "DesignByContract.Tests.Domain.ValueObjects.EmailTests", "reportPath": "DesignByContract.Tests.Domain_EmailTests.htm", "coveredLines": 32, "uncoveredLines": 0, "coverableLines": 32, "totalLines": 71, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 2, "totalBranches": 2, "lineCoverageHistory": [100], "branchCoverageHistory": [100] },
     ]},
 ];
 
@@ -510,6 +783,18 @@ var riskHotspots = [
     "metrics": [
       { "value": 22, "exceeded": true },
       { "value": 65536, "exceeded": true },
+    ]},
+  {
+    "assembly": "DesignByContract.Core.Tests.Domain", "class": "DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Contracts.ValueObjects.ValueObjectFakeValidation`1", "reportPath": "DesignByContract.Core.Tests.Domain_ValueObjectFakeValidation_1.htm", "method": "IsSatisfiedBy(...)",
+    "metrics": [
+      { "value": 17, "exceeded": true },
+      { "value": 4096, "exceeded": true },
+    ]},
+  {
+    "assembly": "DesignByContract.Core.Tests.Domain", "class": "DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Contracts.ValueObjects.ValueObjectFakeValidationForSpecification`1", "reportPath": "DesignByContract.Core.Tests.Domain_ValueObjectFakeValidationForSpecification_1.htm", "method": "IsSatisfiedBy(...)",
+    "metrics": [
+      { "value": 17, "exceeded": true },
+      { "value": 4096, "exceeded": true },
     ]},
   {
     "assembly": "DesignByContract.Domain", "class": "DesignByContract.Domain.Contracts.Entities.CategoryValidation`1", "reportPath": "DesignByContract.Domain_CategoryValidation_1.htm", "method": "IsSatisfiedBy(...)",

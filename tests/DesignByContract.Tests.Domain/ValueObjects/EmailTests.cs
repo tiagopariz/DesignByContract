@@ -1,7 +1,7 @@
 ﻿using DesignByContract.Domain.ValueObjects;
 using NUnit.Framework;
 
-namespace DesignByContract.Domain.Tests.ValueObjects
+namespace DesignByContract.Tests.Domain.ValueObjects
 {
     [TestFixture]
     public class EmailTests
