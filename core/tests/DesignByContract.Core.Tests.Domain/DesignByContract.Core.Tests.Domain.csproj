@@ -47,11 +47,11 @@
     <Compile Include="Interfaces\Specifications\SpecificationFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\ValueObjects\ValueObjectAbstractFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\ValueObjects\ValueObjectFakeForInterfacesTests.cs" />
-    <Compile Include="Mocks\DomainCoreFake\Notification\NotificationFakeForInterfaces.cs" />
-    <Compile Include="Mocks\DomainCoreFake\Notification\ItemDetailFakeForInterfaces.cs" />
-    <Compile Include="Mocks\DomainCoreFake\Specifications\SpecificationFakeForInterfaces.cs" />
+    <Compile Include="Mocks\CoreDomainFake\Notification\NotificationFakeForInterfaces.cs" />
+    <Compile Include="Mocks\CoreDomainFake\Notification\ItemDetailFakeForInterfaces.cs" />
+    <Compile Include="Mocks\CoreDomainFake\Specifications\SpecificationFakeForInterfaces.cs" />
     <Compile Include="Mocks\DomainFake\Contracts\Entities\EntityFakeValidationForInterfaces.cs" />
-    <Compile Include="Mocks\DomainCoreFake\Errors\LevelFakeForInterfaces.cs" />
+    <Compile Include="Mocks\CoreDomainFake\Errors\LevelFakeForInterfaces.cs" />
     <Compile Include="Interfaces\Entities\EntityFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\Entities\EntityAbstractFakeForInterfacesTests.cs" />
     <Compile Include="Mocks\DomainFake\Contracts\ValueObjects\ValueObjectFakeValidationForInterfaces.cs" />
@@ -67,8 +67,8 @@
     <Compile Include="Mocks\DomainFake\Contracts\ValueObjects\ValueObjectFakeValidation.cs" />
     <Compile Include="Mocks\DomainFake\Entities\EntityFake.cs" />
     <Compile Include="Mocks\DomainFake\ValueObjects\ValueObjectFake.cs" />
-    <Compile Include="Mocks\DomainCoreFake\Notification\ItemDetailFake.cs" />
-    <Compile Include="Mocks\DomainCoreFake\Notification\NotificationFake.cs" />
+    <Compile Include="Mocks\CoreDomainFake\Notification\ItemDetailFake.cs" />
+    <Compile Include="Mocks\CoreDomainFake\Notification\NotificationFake.cs" />
     <Compile Include="Mocks\DomainFake\Entities\EntityFakeForNotification.cs" />
     <Compile Include="Interfaces\Errors\LevelAbstractFakeForInterfacesTests.cs" />
     <Compile Include="Interfaces\Errors\LevelFakeForInterfacesTests.cs" />
@@ -85,7 +85,7 @@
     <Compile Include="ValueObjects\ValueObjectTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Mocks\DomainCoreFake\Entities\" />
+    <Folder Include="Mocks\CoreDomainFake\Entities\" />
     <Folder Include="Mocks\DomainFake\Interfaces\Entities\" />
     <Folder Include="Mocks\DomainFake\Interfaces\ValueObjects\" />
   </ItemGroup>

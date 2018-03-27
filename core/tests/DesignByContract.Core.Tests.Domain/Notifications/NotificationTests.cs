@@ -1,4 +1,4 @@
-﻿using DesignByContract.Core.Tests.Domain.Mocks.DomainCoreFake.Notification;
+﻿using DesignByContract.Core.Tests.Domain.Mocks.CoreDomainFake.Notification;
 using DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Entities;
 using NUnit.Framework;
 

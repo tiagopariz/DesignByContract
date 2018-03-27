@@ -1,6 +1,6 @@
 ﻿using DesignByContract.Core.Domain.Interfaces.Notifications;
 
-namespace DesignByContract.Core.Tests.Domain.Mocks.DomainCoreFake.Notification
+namespace DesignByContract.Core.Tests.Domain.Mocks.CoreDomainFake.Notification
 {
     public class ItemDetailFakeForInterfaces : IItemDetail
     {

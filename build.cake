@@ -78,19 +78,19 @@ Task("OpenCover")
         {
             Register = "user",
             SkipAutoProps = true,
-            ArgumentCustomization = args => args.Append("-coverbytest:*.Tests.*dll").Append("-mergebyhash")
+            ArgumentCustomization = args => args.Append("-coverbytest:*.Tests.*.dll").Append("-mergebyhash")
         };
 
         var outputFile = new FilePath("./docs/testsResults/Reports/CodeCoverageReport.xml");
 
         OpenCover(tool => {
-            var testAssemblies = GetFiles("./**/bin/Debug/*.Tests.*dll");
+            var testAssemblies = GetFiles("./**/bin/Debug/*.Tests.*.dll");
             tool.NUnit3(testAssemblies);
             },
             outputFile,
             openCoverSettings
                 .WithFilter("+[" + projectName + "*]*")
-                .WithFilter("-[" + projectName + ".*.Tests]*")
+                .WithFilter("-[*.Tests.*]*")
         );
     });
 

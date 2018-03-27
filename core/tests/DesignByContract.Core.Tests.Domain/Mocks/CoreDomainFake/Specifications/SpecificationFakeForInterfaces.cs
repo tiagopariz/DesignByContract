@@ -1,7 +1,7 @@
 ﻿using DesignByContract.Core.Domain.Interfaces.Specifications;
 using DesignByContract.Core.Domain.Specifications;
 
-namespace DesignByContract.Core.Tests.Domain.Mocks.DomainCoreFake.Specifications
+namespace DesignByContract.Core.Tests.Domain.Mocks.CoreDomainFake.Specifications
 {
     public class SpecificationFakeForInterfaces<T> : ISpecification<T>
     {
