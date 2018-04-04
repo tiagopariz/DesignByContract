@@ -29,8 +29,8 @@ namespace DesignByContract.Domain.Contracts.ValueObjects
             if ((personName?.Name ?? "").Length > NameMaxLength)
                 personName?.ErrorList.Add(
                     new ErrorItemDetail("Nome excedeu o limite máximo de caracteres",
-                    new Critical(),
-                    personName.FieldName));
+                                        new Critical(),
+                                        personName.FieldName));
 
             return !personName?.ErrorList.HasCriticals ?? false;
         }

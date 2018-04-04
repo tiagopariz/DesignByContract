@@ -37,9 +37,9 @@ namespace DesignByContract.Domain.Contracts.Entities
                                         "Category"));
 
             person?.ErrorList.Concat(person.Name?.ErrorList,
-                                        person.Email?.ErrorList,
-                                        person.Category?.ErrorList,
-                                        person.Manager?.ErrorList);
+                                     person.Email?.ErrorList,
+                                     person.Category?.ErrorList,
+                                     person.Manager?.ErrorList);
 
             return !person?.ErrorList.HasCriticals ?? false;
         }
