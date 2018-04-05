@@ -53,6 +53,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Entities\PersonTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValueObjects\EmailTests.cs" />
   </ItemGroup>
@@ -60,7 +61,6 @@
     <Folder Include="Commands\" />
     <Folder Include="Contracts\Entities\" />
     <Folder Include="Contracts\ValueObjects\" />
-    <Folder Include="Entities\" />
     <Folder Include="Interfaces\Entities\" />
     <Folder Include="Interfaces\ValueObjects\" />
   </ItemGroup>
