@@ -42,6 +42,14 @@
     <Compile Include="ProgramTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\core\src\DesignByContract.Core.Application\DesignByContract.Core.Application.csproj">
+      <Project>{7A3430CD-023E-4506-B6B2-D9E476C068D9}</Project>
+      <Name>DesignByContract.Core.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\DesignByContract.Application\DesignByContract.Application.csproj">
+      <Project>{0446545C-A064-4C03-8B85-58982B683269}</Project>
+      <Name>DesignByContract.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\src\DesignByContract.Prompt\DesignByContract.Prompt.csproj">
       <Project>{a152e746-f461-4f7d-861a-fc30a208ca73}</Project>
       <Name>DesignByContract.Prompt</Name>

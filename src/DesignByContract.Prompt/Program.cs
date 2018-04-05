@@ -5,7 +5,7 @@ using System;
 
 namespace DesignByContract.Prompt
 {
-    internal class Program
+    public static class Program
     {
         private static void Main()
         {
