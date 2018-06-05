@@ -5,31 +5,31 @@ using NUnit.Framework;
 namespace DesignByContract.Core.Tests.Domain.Errors
 {
     [TestFixture]
-    public class ErrorlistTests
+    public class ErrorListTests
     {
         [Test]
-        public void ErrorlistNewInvalidErrorListNotNull()
+        public void ErrorListNewInvalidErrorListNotNull()
         {
             var valueObjectFake = new ValueObjectFake("N");
             Assert.IsTrue(valueObjectFake.ErrorList != null);
         }
 
         [Test]
-        public void ErrorlistNewInvalidErrorListAnyReturnTrue()
+        public void ErrorListNewInvalidErrorListAnyReturnTrue()
         {
             var valueObjectFake = new ValueObjectFake("N");
             Assert.IsTrue(valueObjectFake.ErrorList.Any);
         }
 
         [Test]
-        public void ErrorlistNewValidErrorListAnyReturnFalse()
+        public void ErrorListNewValidErrorListAnyReturnFalse()
         {
             var valueObjectFake = new ValueObjectFake("Name");
             Assert.IsFalse(valueObjectFake.ErrorList.Any);
         }
 
         [Test]
-        public void ErrorlistNewInvalidErrorListIncludeReturnTrue()
+        public void ErrorListNewInvalidErrorListIncludeReturnTrue()
         {
             var requiredError = new ErrorItemDetail("The Name is required.", new Critical(), "");
             var valueObjectFake = new ValueObjectFake("");
@@ -38,7 +38,7 @@ namespace DesignByContract.Core.Tests.Domain.Errors
         }
 
         [Test]
-        public void ErrorlistNewInvalidErrorListIncludeReturnFalse()
+        public void ErrorListNewInvalidErrorListIncludeReturnFalse()
         {
             var requiredError = new ErrorItemDetail("The Name is required.", new Critical(), "");
             var valueObjectFake = new ValueObjectFake("");
@@ -46,7 +46,7 @@ namespace DesignByContract.Core.Tests.Domain.Errors
         }
 
         [Test]
-        public void ErrorlistNewInvalidErrorListAddReturnTrue()
+        public void ErrorListNewInvalidErrorListAddReturnTrue()
         {
             var requiredError = new ErrorItemDetail("The Name is required.", new Critical(), "");
             var valueObjectFake = new ValueObjectFake("");
@@ -55,7 +55,7 @@ namespace DesignByContract.Core.Tests.Domain.Errors
         }
 
         [Test]
-        public void ErrorlistNewInvalidErrorListAddReturnFalse()
+        public void ErrorListNewInvalidErrorListAddReturnFalse()
         {
             var requiredError = new ErrorItemDetail("The Name is required.", new Critical(), "");
             var requiredWarning = new ErrorItemDetail("The Name is required.", new Warning(), "");
@@ -65,7 +65,7 @@ namespace DesignByContract.Core.Tests.Domain.Errors
         }
 
         [Test]
-        public void ErrorlistNewInvalidErrorListAddWithArgsReturnTrue()
+        public void ErrorListNewInvalidErrorListAddWithArgsReturnTrue()
         {
             var requiredError = new ErrorItemDetail("The {0} is required.", new Critical(), "", "Name");
             var valueObjectFake = new ValueObjectFake("");
@@ -74,7 +74,7 @@ namespace DesignByContract.Core.Tests.Domain.Errors
         }
 
         [Test]
-        public void ErrorlistNewInvalidErrorListAddWithArgsReturnFalse()
+        public void ErrorListNewInvalidErrorListAddWithArgsReturnFalse()
         {
             var requiredError = new ErrorItemDetail("The {0} is required.", new Critical(), "", "Name");
             var requiredWarning = new ErrorItemDetail("The {0} is required.", new Warning(), "", "Name");
@@ -84,7 +84,7 @@ namespace DesignByContract.Core.Tests.Domain.Errors
         }
 
         [Test]
-        public void ErrorlistNewInvalidErrorConcatSuccess()
+        public void ErrorListNewInvalidErrorConcatSuccess()
         {
             var requiredWarning = new ErrorItemDetail("The Name is required.", new Warning(), "");
             var valueObjectFake1 = new ValueObjectFake("");
