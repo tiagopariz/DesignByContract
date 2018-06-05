@@ -51,7 +51,7 @@ namespace DesignByContract.Core.Tests.Domain.Notifications
         {
             var required = new ItemDetailFake("The Name is required.");
             var fake = new EntityFakeForNotification { Name = "Test" };
-            fake.NotificationFake.List.Add(required);
+            fake.NotificationFake.Add(required);
             Assert.IsTrue(fake.NotificationFake.Includes(required));
         }
 
@@ -61,7 +61,7 @@ namespace DesignByContract.Core.Tests.Domain.Notifications
             var required = new ItemDetailFake("The Name is required.");
             var requiredWarning = new ItemDetailFake("The Name is required.");
             var fake = new EntityFakeForNotification { Name = "Test" };
-            fake.NotificationFake.List.Add(requiredWarning);
+            fake.NotificationFake.Add(requiredWarning);
             Assert.IsFalse(fake.NotificationFake.Includes(required));
         }
 
@@ -70,7 +70,7 @@ namespace DesignByContract.Core.Tests.Domain.Notifications
         {
             var required = new ItemDetailFake("The {0} is required.", "Name");
             var fake = new EntityFakeForNotification { Name = "Test" };
-            fake.NotificationFake.List.Add(required);
+            fake.NotificationFake.Add(required);
             Assert.IsTrue(fake.NotificationFake.Includes(required));
         }
 
@@ -80,7 +80,7 @@ namespace DesignByContract.Core.Tests.Domain.Notifications
             var required = new ItemDetailFake("The {0} is required.", "Name");
             var requiredWarning = new ItemDetailFake("The {0} is required.", "Name");
             var fake = new EntityFakeForNotification { Name = "Test" };
-            fake.NotificationFake.List.Add(requiredWarning);
+            fake.NotificationFake.Add(requiredWarning);
             Assert.IsFalse(fake.NotificationFake.Includes(required));
         }
 
@@ -97,7 +97,8 @@ namespace DesignByContract.Core.Tests.Domain.Notifications
 
             fake2.NotificationFake.Concat(fake1.NotificationFake);
 
-            Assert.IsTrue(fake2.NotificationFake.Includes(required) && fake2.NotificationFake.Includes(requiredWarning));
+            Assert.IsTrue(fake2.NotificationFake.Includes(required) &&
+                          fake2.NotificationFake.Includes(requiredWarning));
         }
     }
 }

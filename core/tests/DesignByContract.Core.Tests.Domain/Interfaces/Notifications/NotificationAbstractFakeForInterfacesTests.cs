@@ -14,7 +14,7 @@ namespace DesignByContract.Core.Tests.Domain.Interfaces.Notifications
         {
             var entity = GetNotificationInstance();
             var itemDetail = new ItemDetailFake("Test");
-            entity.List.Add(itemDetail);
+            entity.Add(itemDetail);
             Assert.IsTrue(entity.Includes(itemDetail));
         }
 
@@ -33,7 +33,7 @@ namespace DesignByContract.Core.Tests.Domain.Interfaces.Notifications
             var entity = GetNotificationInstance();
             var itemDetail1 = new ItemDetailFake("Test1");
             var itemDetail2 = new ItemDetailFake("Test2");
-            entity.List.Add(itemDetail1);
+            entity.Add(itemDetail1);
             Assert.IsFalse(entity.Includes(itemDetail2));
         }
 

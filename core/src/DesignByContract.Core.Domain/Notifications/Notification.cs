@@ -6,8 +6,8 @@ namespace DesignByContract.Core.Domain.Notifications
 {
     public abstract class Notification : INotification
     {
-        // TODO: Tornar lista somente acessível pelo Add e Concat
-        public IList<object> List { get; } = new List<object>();
+        private readonly IList<object> _list = new List<object>();
+        public IReadOnlyList<object> List => _list.ToArray();
         public bool Any => List.Any();
 
         public bool Includes(ItemDetail itemDetail)
@@ -17,7 +17,7 @@ namespace DesignByContract.Core.Domain.Notifications
 
         public void Add(ItemDetail description)
         {
-            List.Add(description);
+            _list.Add(description);
         }
 
         public void Concat(params Notification[] args)
@@ -26,7 +26,7 @@ namespace DesignByContract.Core.Domain.Notifications
             {
                 if (notification?.List == null) continue;
                 foreach (var description in notification.List)
-                    List.Add(description);
+                    _list.Add(description);
             }
         }
     }

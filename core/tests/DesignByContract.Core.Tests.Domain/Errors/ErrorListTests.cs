@@ -50,7 +50,7 @@ namespace DesignByContract.Core.Tests.Domain.Errors
         {
             var requiredError = new ErrorItemDetail("The Name is required.", new Critical(), "");
             var valueObjectFake = new ValueObjectFake("");
-            valueObjectFake.ErrorList.List.Add(requiredError);
+            valueObjectFake.ErrorList.Add(requiredError);
             Assert.IsTrue(valueObjectFake.ErrorList.Includes(requiredError));
         }
 
@@ -60,7 +60,7 @@ namespace DesignByContract.Core.Tests.Domain.Errors
             var requiredError = new ErrorItemDetail("The Name is required.", new Critical(), "");
             var requiredWarning = new ErrorItemDetail("The Name is required.", new Warning(), "");
             var valueObjectFake = new ValueObjectFake("");
-            valueObjectFake.ErrorList.List.Add(requiredWarning);
+            valueObjectFake.ErrorList.Add(requiredWarning);
             Assert.IsFalse(valueObjectFake.ErrorList.Includes(requiredError));
         }
 
@@ -69,7 +69,7 @@ namespace DesignByContract.Core.Tests.Domain.Errors
         {
             var requiredError = new ErrorItemDetail("The {0} is required.", new Critical(), "", "Name");
             var valueObjectFake = new ValueObjectFake("");
-            valueObjectFake.ErrorList.List.Add(requiredError);
+            valueObjectFake.ErrorList.Add(requiredError);
             Assert.IsTrue(valueObjectFake.ErrorList.Includes(requiredError));
         }
 
@@ -79,7 +79,7 @@ namespace DesignByContract.Core.Tests.Domain.Errors
             var requiredError = new ErrorItemDetail("The {0} is required.", new Critical(), "", "Name");
             var requiredWarning = new ErrorItemDetail("The {0} is required.", new Warning(), "", "Name");
             var valueObjectFake = new ValueObjectFake("");
-            valueObjectFake.ErrorList.List.Add(requiredWarning);
+            valueObjectFake.ErrorList.Add(requiredWarning);
             Assert.IsFalse(valueObjectFake.ErrorList.Includes(requiredError));
         }
 
