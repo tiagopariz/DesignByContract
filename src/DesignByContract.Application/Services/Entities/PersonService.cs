@@ -23,7 +23,7 @@ namespace DesignByContract.Application.Services.Entities
                                      new PersonName("chefe"),
                                      new Email("chefe@aquelequetudopode.eu"),
                                      new Category(Guid.NewGuid(),
-                                     "Manager"));
+                                                  "Manager"));
 
             _entity = new Person(personId,
                                  new PersonName(name),
