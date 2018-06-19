@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Commands\CommandResult.cs" />
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Errors\ErrorList.cs" />
@@ -38,7 +39,11 @@
     <Compile Include="Errors\Information.cs" />
     <Compile Include="Errors\Warning.cs" />
     <Compile Include="Errors\Critical.cs" />
+    <Compile Include="Interfaces\Commands\ICommandResult.cs" />
+    <Compile Include="Interfaces\Commands\ICommand.cs" />
     <Compile Include="Interfaces\Entities\IEntity.cs" />
+    <Compile Include="Interfaces\Errors\IErrorItemDetail.cs" />
+    <Compile Include="Interfaces\Errors\IErrorList.cs" />
     <Compile Include="Interfaces\Errors\ILevel.cs" />
     <Compile Include="Interfaces\Notifications\IItemDetail.cs" />
     <Compile Include="Interfaces\Notifications\INotification.cs" />

@@ -33,7 +33,7 @@ namespace DesignByContract.Domain.Contracts.Entities
                                         new Critical(),
                                         category.FieldName));
 
-            return !category?.ErrorList.HasCriticals ?? false;
+            return !category?.ErrorList.HasCriticals() ?? false;
         }
     }
 }

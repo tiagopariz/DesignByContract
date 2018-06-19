@@ -3,7 +3,6 @@
     public interface ILevel
     {
         string Description { get; }
-
         string ToString();
     }
 }

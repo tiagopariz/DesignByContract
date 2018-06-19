@@ -1,5 +1,4 @@
 ﻿using DesignByContract.Core.Domain.Interfaces.Notifications;
-using DesignByContract.Core.Domain.Notifications;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,12 +10,12 @@ namespace DesignByContract.Core.Tests.Domain.Mocks.CoreDomainFake.Notification
         public IReadOnlyList<object> List => _list.ToArray();
         public bool Any => List.Any();
 
-        public bool Includes(ItemDetail itemDetail)
+        public bool Includes(IItemDetail itemDetail)
         {
             return List.Contains(itemDetail);
         }
 
-        public void Add(ItemDetail description)
+        public void Add(IItemDetail description)
         {
             _list.Add(description);
         }

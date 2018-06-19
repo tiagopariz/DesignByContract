@@ -19,7 +19,7 @@ namespace DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Contracts.Entities
                                         "Name",
                                         "Name"));
 
-            return !entityFake?.ErrorList.HasCriticals ?? false;
+            return !entityFake?.ErrorList.HasCriticals() ?? false;
         }
     }
 }

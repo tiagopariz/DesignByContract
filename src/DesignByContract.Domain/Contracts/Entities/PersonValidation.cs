@@ -41,7 +41,7 @@ namespace DesignByContract.Domain.Contracts.Entities
                                      person.Category?.ErrorList,
                                      person.Manager?.ErrorList);
 
-            return !person?.ErrorList.HasCriticals ?? false;
+            return !person?.ErrorList.HasCriticals() ?? false;
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using DesignByContract.Core.Domain.Notifications;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace DesignByContract.Core.Domain.Interfaces.Notifications
 {
@@ -7,8 +6,8 @@ namespace DesignByContract.Core.Domain.Interfaces.Notifications
     {
         IReadOnlyList<object> List { get; }
         bool Any { get; }
-
-        bool Includes(ItemDetail itemDetail);
-        void Add(ItemDetail itemDetail);
+        bool Includes(IItemDetail itemDetail);
+        void Add(IItemDetail itemDetail);
+        void Concat(params INotification[] args);
     }
 }

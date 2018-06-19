@@ -10,21 +10,22 @@ namespace DesignByContract.Core.Domain.Notifications
         public IReadOnlyList<object> List => _list.ToArray();
         public bool Any => List.Any();
 
-        public bool Includes(ItemDetail itemDetail)
+        public bool Includes(IItemDetail itemDetail)
         {
             return List.Contains(itemDetail);
         }
 
-        public void Add(ItemDetail description)
+        public void Add(IItemDetail description)
         {
             _list.Add(description);
         }
 
-        public void Concat(params Notification[] args)
+        public void Concat(params INotification[] args)
         {
             foreach (var notification in args)
             {
-                if (notification?.List == null) continue;
+                if (notification?.List == null)
+                    continue;
                 foreach (var description in notification.List)
                     _list.Add(description);
             }

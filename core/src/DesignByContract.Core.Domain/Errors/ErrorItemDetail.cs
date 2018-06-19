@@ -3,7 +3,7 @@ using DesignByContract.Core.Domain.Notifications;
 
 namespace DesignByContract.Core.Domain.Errors
 {
-    public class ErrorItemDetail : ItemDetail
+    public class ErrorItemDetail : ItemDetail, IErrorItemDetail
     {
         public ILevel Level { get; }
         public string FieldName { get; }

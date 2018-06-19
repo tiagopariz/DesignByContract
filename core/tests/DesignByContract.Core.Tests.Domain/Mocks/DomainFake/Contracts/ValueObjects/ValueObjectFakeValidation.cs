@@ -32,7 +32,7 @@ namespace DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Contracts.ValueObj
                                         new Critical(),
                                         valueObjectFake.FieldName));
 
-            return !valueObjectFake?.ErrorList.HasCriticals ?? false;
+            return !valueObjectFake?.ErrorList.HasCriticals() ?? false;
         }
     }
 }

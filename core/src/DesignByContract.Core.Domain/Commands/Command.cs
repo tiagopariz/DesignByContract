@@ -1,14 +1,20 @@
-﻿using DesignByContract.Core.Domain.Entities;
+﻿using DesignByContract.Core.Domain.Interfaces.Commands;
+using DesignByContract.Core.Domain.Interfaces.Entities;
 
 namespace DesignByContract.Core.Domain.Commands
 {
-    public abstract class Command
+    public abstract class Command : ICommand
     {
-        protected Command(Entity entity)
+        protected Command(IEntity entity)
         {
             Entity = entity;
         }
 
-        protected Entity Entity;
+        protected IEntity Entity;
+
+        public void Validate()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

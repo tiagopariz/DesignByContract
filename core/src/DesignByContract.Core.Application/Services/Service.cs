@@ -11,11 +11,11 @@ namespace DesignByContract.Core.Application.Services
         public bool HasErrors =>
             ErrorEntity != null && ErrorEntity.ErrorList.Any;
         public bool HasCriticals =>
-            ErrorEntity != null && ErrorEntity.ErrorList.HasCriticals;
+            ErrorEntity != null && ErrorEntity.ErrorList.HasCriticals();
         public bool HasWarnings =>
-            ErrorEntity != null && ErrorEntity.ErrorList.HasWarnings;
+            ErrorEntity != null && ErrorEntity.ErrorList.HasWarnings();
         public bool HasInformations =>
-            ErrorEntity != null && ErrorEntity.ErrorList.HasInformations;
+            ErrorEntity != null && ErrorEntity.ErrorList.HasInformations();
 
         public IEnumerable Errors()
         {

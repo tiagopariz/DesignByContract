@@ -21,7 +21,7 @@ namespace DesignByContract.Domain.Commands
 
         public void Run()
         {
-            if (!_person.ErrorList.HasCriticals)
+            if (!_person.ErrorList.HasCriticals())
             {
                 SavePersonInBackendSystems();
             }

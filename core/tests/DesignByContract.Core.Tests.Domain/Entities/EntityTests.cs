@@ -15,21 +15,21 @@ namespace DesignByContract.Core.Tests.Domain.Entities
         public void EntityNewWhenParseValidEntityHasCriticalsFalse()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
-            Assert.AreEqual(false, sut.ErrorList.HasCriticals);
+            Assert.AreEqual(false, sut.ErrorList.HasCriticals());
         }
 
         [Test]
         public void EntityNewWhenParseValidEntityHasWarningsFalse()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
-            Assert.AreEqual(false, sut.ErrorList.HasWarnings);
+            Assert.AreEqual(false, sut.ErrorList.HasWarnings());
         }
 
         [Test]
         public void EntityNewWhenParseValidEntityHasInformationsFalse()
         {
             var sut = new EntityFake(Guid.NewGuid(), new ValueObjectFake("Name"));
-            Assert.AreEqual(false, sut.ErrorList.HasInformations);
+            Assert.AreEqual(false, sut.ErrorList.HasInformations());
         }
 
         [Test]

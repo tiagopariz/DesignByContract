@@ -1,14 +1,13 @@
-﻿using DesignByContract.Core.Domain.Errors;
-using DesignByContract.Core.Domain.Specifications;
+﻿using DesignByContract.Core.Domain.Interfaces.Errors;
+using DesignByContract.Core.Domain.Interfaces.Specifications;
 
 namespace DesignByContract.Core.Domain.Interfaces.ValueObjects
 {
     public interface IValueObject
     {
-        ErrorList ErrorList { get; }
-        Specification<object> ValidSpecification { get; }
+        IErrorList ErrorList { get; }
+        ISpecification<object> ValidSpecification { get; }
         string FieldName { get; }
-
         bool IsValid();
     }
 }

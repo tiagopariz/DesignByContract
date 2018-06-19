@@ -3,7 +3,6 @@
     public interface IItemDetail
     {
         string Message { get; }
-
         string ToString();
     }
 }

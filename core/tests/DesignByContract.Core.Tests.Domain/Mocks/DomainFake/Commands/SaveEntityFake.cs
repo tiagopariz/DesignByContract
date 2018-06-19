@@ -21,7 +21,7 @@ namespace DesignByContract.Core.Tests.Domain.Mocks.DomainFake.Commands
 
         public void Run()
         {
-            if (!_entityFake.ErrorList.HasCriticals)
+            if (!_entityFake.ErrorList.HasCriticals())
             {
                 SaveEntityFakeInBackendSystems();
             }

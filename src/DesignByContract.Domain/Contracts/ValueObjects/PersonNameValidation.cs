@@ -32,7 +32,7 @@ namespace DesignByContract.Domain.Contracts.ValueObjects
                                         new Critical(),
                                         personName.FieldName));
 
-            return !personName?.ErrorList.HasCriticals ?? false;
+            return !personName?.ErrorList.HasCriticals() ?? false;
         }
     }
 }

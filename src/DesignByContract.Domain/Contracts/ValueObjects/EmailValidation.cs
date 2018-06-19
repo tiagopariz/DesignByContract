@@ -40,7 +40,7 @@ namespace DesignByContract.Domain.Contracts.ValueObjects
                                         new Critical(),
                                         email.FieldName));
 
-            return !email?.ErrorList.HasCriticals ?? false;
+            return !email?.ErrorList.HasCriticals() ?? false;
         }
     }
 }

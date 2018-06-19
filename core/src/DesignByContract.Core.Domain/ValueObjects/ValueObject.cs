@@ -1,6 +1,7 @@
 ﻿using DesignByContract.Core.Domain.Errors;
+using DesignByContract.Core.Domain.Interfaces.Errors;
+using DesignByContract.Core.Domain.Interfaces.Specifications;
 using DesignByContract.Core.Domain.Interfaces.ValueObjects;
-using DesignByContract.Core.Domain.Specifications;
 
 namespace DesignByContract.Core.Domain.ValueObjects
 {
@@ -14,8 +15,8 @@ namespace DesignByContract.Core.Domain.ValueObjects
             FieldName = fieldName;
         }
 
-        public ErrorList ErrorList { get; } = new ErrorList();
-        public Specification<object> ValidSpecification { get; set; } = null;
+        public IErrorList ErrorList { get; } = new ErrorList();
+        public ISpecification<object> ValidSpecification { get; set; } = null;
         public string FieldName { get; private set; }
 
         public void SetFieldName(string value)
@@ -25,7 +26,7 @@ namespace DesignByContract.Core.Domain.ValueObjects
 
         public bool IsValid()
         {
-            return !ErrorList.HasCriticals;
+            return !ErrorList.HasCriticals();
         }
     }
 }
