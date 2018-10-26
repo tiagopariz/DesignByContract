@@ -8,7 +8,6 @@ namespace DesignByContract.Core.Tests.Application.Services
     [TestFixture]
     public class ServiceTests
     {
-
         [Test]
         public void ServiceNew()
         {

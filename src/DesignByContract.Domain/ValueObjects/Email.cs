@@ -9,7 +9,8 @@ namespace DesignByContract.Domain.ValueObjects
         public const int AddressMaxLength = EmailValidation<object>.AddressMaxLength;
         public const bool AddressRequired = EmailValidation<object>.AddressRequired;
 
-        public Email(string address, string fieldName = null)
+        public Email(string address,
+                     string fieldName = null)
             : base(fieldName)
         {
             Address = address;

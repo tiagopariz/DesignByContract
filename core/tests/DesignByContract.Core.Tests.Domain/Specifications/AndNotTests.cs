@@ -17,12 +17,13 @@ namespace DesignByContract.Core.Tests.Domain.Specifications
             Assert.IsTrue(sut.IsSatisfiedBy(new EntityFakeForSpecification { Category = "Customer", City = "Rio" }));
         }
 
+        [Test]
         public void AndNotWhenFilterWithTwoSpecificationsReturnFalse()
         {
             ISpecification<EntityFakeForSpecification> isCustomer = new Expression<EntityFakeForSpecification>(x => x.Category == "Customer");
             ISpecification<EntityFakeForSpecification> livesInNewYork = new Expression<EntityFakeForSpecification>(x => x.City == "New York");
             var sut = isCustomer.AndNot(livesInNewYork);
-            Assert.IsFalse(sut.IsSatisfiedBy(new EntityFakeForSpecification { Category = "Partner", City = "Rio" }));
+            Assert.IsFalse(sut.IsSatisfiedBy(new EntityFakeForSpecification { Category = "Customer", City = "New York" }));
         }
 
         [Test]

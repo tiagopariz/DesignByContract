@@ -5,8 +5,10 @@ namespace DesignByContract.Core.Tests.Application.Mocks.DomainFake.Entities
 {
     public class EntityFake : Entity
     {
-        public EntityFake(Guid id, string fieldName = null)
-            : base(id, fieldName)
+        public EntityFake(Guid id,
+                          string fieldName = null)
+            : base(id,
+                   fieldName)
         {
 
         }

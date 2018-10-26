@@ -1,8 +1,8 @@
-﻿using DesignByContract.Core.Domain.Interfaces.Notifications;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using DesignByContract.Core.Domain.Interfaces.Notifications;
 
-namespace DesignByContract.Core.Tests.Domain.Mocks.CoreDomainFake.Notification
+namespace DesignByContract.Core.Tests.Domain.Mocks.CoreDomainFake.Notifications
 {
     public class NotificationFakeForInterfaces : INotification
     {

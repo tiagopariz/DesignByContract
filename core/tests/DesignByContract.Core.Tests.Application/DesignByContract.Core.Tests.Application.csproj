@@ -39,7 +39,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Mocks\ApplicationFake\Services\Entities\PersonService.cs" />
+    <Compile Include="Mocks\ApplicationFake\Services\Entities\EntityFakeService.cs" />
     <Compile Include="Mocks\DomainFake\Commands\SaveEntityFake.cs" />
     <Compile Include="Mocks\DomainFake\Entities\EntityFake.cs" />
     <Compile Include="Services\ServiceTests.cs" />

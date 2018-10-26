@@ -40,9 +40,10 @@ namespace DesignByContract.Domain.Entities
             ValidSpecification.IsSatisfiedBy(this);
         }
 
-        public PersonName Name { get; }
-        public Email Email { get; }
-        public Category Category { get; }
-        public Person Manager { get; }
+        public PersonName Name { get; private set; }
+        public Email Email { get; private set; }
+        public Category Category { get; private set; }
+        public DateTime? DateOfBirth { get; private set; }
+        public Person Manager { get; private set; }
     }
 }

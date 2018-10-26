@@ -6,7 +6,8 @@ namespace DesignByContract.Core.Domain.Notifications
     {
         public string Message { get; }
 
-        protected ItemDetail(string message, params string[] args)
+        protected ItemDetail(string message, 
+                             params string[] args)
         {
             Message = message;
 
